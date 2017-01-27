@@ -596,6 +596,12 @@ public class KotlinSteppingTestGenerated extends AbstractKotlinSteppingTest {
             doStepOverTest(fileName);
         }
 
+        @TestMetadata("soNonSuspendableSuspendCall.kt")
+        public void testSoNonSuspendableSuspendCall() throws Exception {
+            String fileName = KotlinTestUtils.navigationMetadata("idea/testData/debugger/tinyApp/src/stepping/stepOver/soNonSuspendableSuspendCall.kt");
+            doStepOverTest(fileName);
+        }
+
         @TestMetadata("soReifiedInlineIfConditionFalse.kt")
         public void testSoReifiedInlineIfConditionFalse() throws Exception {
             String fileName = KotlinTestUtils.navigationMetadata("idea/testData/debugger/tinyApp/src/stepping/stepOver/soReifiedInlineIfConditionFalse.kt");
@@ -605,6 +611,12 @@ public class KotlinSteppingTestGenerated extends AbstractKotlinSteppingTest {
         @TestMetadata("soSimpleInlineIfCondition.kt")
         public void testSoSimpleInlineIfCondition() throws Exception {
             String fileName = KotlinTestUtils.navigationMetadata("idea/testData/debugger/tinyApp/src/stepping/stepOver/soSimpleInlineIfCondition.kt");
+            doStepOverTest(fileName);
+        }
+
+        @TestMetadata("soSuspendableCall.kt")
+        public void testSoSuspendableCall() throws Exception {
+            String fileName = KotlinTestUtils.navigationMetadata("idea/testData/debugger/tinyApp/src/stepping/stepOver/soSuspendableCall.kt");
             doStepOverTest(fileName);
         }
 

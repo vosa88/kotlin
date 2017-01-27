@@ -24,6 +24,7 @@ import com.intellij.execution.configurations.*;
 import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.execution.util.JavaParametersUtil;
 import com.intellij.execution.util.ProgramParametersUtil;
+import com.intellij.injected.editor.VirtualFileWindow;
 import com.intellij.openapi.components.PathMacroManager;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleManager;
@@ -369,7 +370,7 @@ public class JetRunConfiguration extends ModuleBasedConfiguration<RunConfigurati
             if (virtualFileForMainFun == null) throw new CantRunException(noFunctionFoundMessage(psiClass));
 
             ModuleFileIndex fileIndex = ModuleRootManager.getInstance(classModule).getFileIndex();
-            if (fileIndex.isInSourceContent(virtualFileForMainFun)) {
+            if (!(virtualFileForMainFun instanceof VirtualFileWindow) && fileIndex.isInSourceContent(virtualFileForMainFun)) {
                 if (fileIndex.isInTestSourceContent(virtualFileForMainFun)) {
                     return JavaParameters.JDK_AND_CLASSES_AND_TESTS;
                 }
