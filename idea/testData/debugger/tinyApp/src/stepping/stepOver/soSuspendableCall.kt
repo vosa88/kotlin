@@ -1,8 +1,8 @@
 package soSuspendableCall
 
 import forTests.builder
-import kotlin.coroutines.Continuation
-import kotlin.coroutines.suspendCoroutine
+import kotlin.coroutines.experimental.Continuation
+import kotlin.coroutines.experimental.suspendCoroutine
 
 private fun foo(a: Any) {}
 
@@ -12,6 +12,9 @@ fun main(args: Array<String>) {
         run()
         foo("End")
     }
+
+    foo("Main end")
+    Thread.sleep(5000)
 }
 
 suspend fun run() {

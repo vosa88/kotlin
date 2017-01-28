@@ -1,0 +1,130 @@
+/*
+ * Copyright 2010-2017 JetBrains s.r.o.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.jetbrains.kotlin.idea.debugger.stepping
+
+import com.intellij.debugger.DebuggerInvocationUtil
+import com.intellij.debugger.DebuggerManagerEx
+import com.intellij.debugger.engine.DebugProcessImpl
+import com.intellij.debugger.engine.MethodFilter
+import com.intellij.debugger.engine.RequestHint
+import com.intellij.debugger.engine.SuspendContextImpl
+import com.intellij.debugger.ui.breakpoints.BreakpointManager
+import com.intellij.openapi.application.ModalityState
+import com.intellij.openapi.application.runWriteAction
+import com.intellij.psi.PsiFile
+import com.intellij.util.Range
+import com.intellij.xdebugger.XDebuggerManager
+import com.intellij.xdebugger.XDebuggerUtil
+import com.intellij.xdebugger.breakpoints.XLineBreakpoint
+import com.sun.jdi.Location
+import org.jetbrains.java.debugger.breakpoints.properties.JavaLineBreakpointProperties
+import org.jetbrains.kotlin.idea.debugger.breakpoints.KotlinLineBreakpointType
+import org.jetbrains.kotlin.idea.refactoring.getLineEndOffset
+import org.jetbrains.kotlin.idea.util.application.runReadAction
+
+class KotlinSuspendCallStepOverFilter(val line: Int, val file: PsiFile) : MethodFilter {
+    override fun getCallingExpressionLines(): Range<Int>? = Range(line, line) // TODO: Better default for null in isOnTheSameLine()
+
+    override fun locationMatches(process: DebugProcessImpl?, location: Location?): Boolean {
+        // All calls are intercepted. Should intercept only suspended calls and distinguish them from non-suspend calls at the end of coroutine.
+        return true
+    }
+
+    override fun onReached(context: SuspendContextImpl, hint: RequestHint?): Int {
+        return if (true /* TODO: suspended*/) {
+//            createBreakpoint(context, line, file)
+            return RequestHint.STOP
+        }
+        else {
+            RequestHint.STOP
+        }
+    }
+
+//    fun <T : XBreakpointProperties<*>> addLineBreakpoint(
+//            xBreakpointManager: XBreakpointManagerImpl,
+//            type: XLineBreakpointType<T>,
+//            fileUrl: String,
+//            line: Int,
+//            properties: T?,
+//            temporary: Boolean): XLineBreakpoint<T> {
+//        ApplicationManager.getApplication().assertWriteAccessAllowed()
+//        xBreakpointManager.defaultGroup
+//
+//        val state = LineBreakpointState<T>(true, type.id, fileUrl, line, temporary,
+//                                           myTime++, type.defaultSuspendPolicy)
+//        xBreakpointManager.getBreakpointDefaults(type).applyDefaults(state)
+//        state.setGroup(xBreakpointManager.defaultGroup)
+//        val breakpoint = XLineBreakpointImpl(type, xBreakpointManager, properties, state)
+//        xBreakpointManager.addBreakpoint<T>(breakpoint, false, true)
+//        return breakpoint
+//    }
+}
+
+fun createBreakpoint(context: SuspendContextImpl, line: Int, file: PsiFile): Boolean {
+//    val reference = proxy.thisObject()
+//                if (reference != null) {
+    val debugProcess = context.debugProcess
+
+    val project = debugProcess.project
+    val breakpointManager = DebuggerManagerEx.getInstanceEx(project).breakpointManager
+    val xBreakpointManager = XDebuggerManager.getInstance(project).breakpointManager
+
+    val virtualFile = file.virtualFile
+    val offset = file.getLineEndOffset(line) ?: return false
+
+    val createPosition = runReadAction { XDebuggerUtil.getInstance().createPositionByOffset(virtualFile, offset) } ?: return false
+//                val breakpoint = runReadAction { breakpointManager.addRunToCursorBreakpoint(createPosition, true) }
+    val kotlinLineBreakpointType = XDebuggerUtil.getInstance().findBreakpointType(KotlinLineBreakpointType::class.java)
+    val breakpointProperties = kotlinLineBreakpointType.createBreakpointProperties(virtualFile, line + 2)
+    var xBreakpoint: XLineBreakpoint<JavaLineBreakpointProperties>? = null
+
+    DebuggerInvocationUtil.invokeAndWait(project, {
+        runWriteAction {
+            xBreakpoint = xBreakpointManager.addLineBreakpoint(kotlinLineBreakpointType, virtualFile.url, line + 2, breakpointProperties, true)
+        }
+    }, ModalityState.NON_MODAL)
+
+
+    val breakpoint = BreakpointManager.getJavaBreakpoint(xBreakpoint)
+
+    if (breakpoint != null) {
+        // TODO: add filter for check hit was made not from other coroutine
+        try {
+            tada.set(true)
+//                    breakpointManager.applyThreadFilter(debugProcess, null) // clear the filter on resume
+////                        breakpoint.addInstanceFilter(reference.uniqueID())
+//                    breakpoint.isInstanceFiltersEnabled = true
+//                    breakpoint.suspendPolicy = if (context.suspendPolicy == EventRequest.SUSPEND_EVENT_THREAD) DebuggerSettings.SUSPEND_THREAD else DebuggerSettings.SUSPEND_ALL
+
+//            breakpoint.createRequest(debugProcess)
+        }
+        finally {
+            tada.set(false)
+        }
+//                    breakpoint.setRequestHint(hint)
+//                    debugProcess.setRunToCursorBreakpoint(breakpoint)
+//                    DebuggerManagerEx.getInstanceEx(project).breakpointManager.enableBreakpoints(debugProcess)
+//                    debugProcess.session.resume()
+        return true
+    }
+
+    return false
+}
+
+val tada = object : ThreadLocal<Boolean>() {
+    override fun initialValue(): Boolean = false
+}

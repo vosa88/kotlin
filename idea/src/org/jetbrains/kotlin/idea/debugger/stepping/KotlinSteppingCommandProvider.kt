@@ -91,11 +91,24 @@ class KotlinSteppingCommandProvider : JvmSteppingCommandProvider() {
             sourcePosition: SourcePosition): DebugProcessImpl.ResumeCommand? {
         val kotlinSourcePosition = KotlinSourcePosition.create(sourcePosition) ?: return null
 
+        if (isSpecialStepOverNeeded(kotlinSourcePosition)) {
+            return DebuggerSteppingHelper.createStepOverCommand(suspendContext, ignoreBreakpoints, kotlinSourcePosition)
+        }
 
+        // TODO: Don't bother for calls not in doResume, as such calls are ordinal calls than
+        // TODO: Can we see last call of suspend call in coroutine? How to manage cycles?
+        val suspendCalls = getSuspendFunctionCallsIfAny(sourcePosition)
+        if (suspendCalls.isNotEmpty()) {
+            // TODO: How to know coroutine for this suspend call if there're nested calls
+            val file = sourcePosition.elementAt.containingFile
 
-        if (!isSpecialStepOverNeeded(kotlinSourcePosition)) return null
+            createBreakpoint(suspendContext, sourcePosition.line, file)
 
-        return DebuggerSteppingHelper.createStepOverCommand(suspendContext, ignoreBreakpoints, kotlinSourcePosition)
+            return DebugProcessImplHelper.createStepOverCommandWithCustomFilter(
+                    suspendContext, ignoreBreakpoints, KotlinSuspendCallStepOverFilter(sourcePosition.line, file))
+        }
+
+        return null
     }
 
     data class KotlinSourcePosition(val file: KtFile, val function: KtNamedFunction,
@@ -125,11 +138,6 @@ class KotlinSteppingCommandProvider : JvmSteppingCommandProvider() {
 
         val hasInlineCallsOnLine = getInlineFunctionCallsIfAny(sourcePosition).isNotEmpty()
         if (hasInlineCallsOnLine) {
-            return true
-        }
-
-        val suspendCalls = getSuspendFunctionCallsIfAny(sourcePosition)
-        if (suspendCalls.isNotEmpty()) {
             return true
         }
 

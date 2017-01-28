@@ -308,6 +308,12 @@ public class KotlinSteppingTestGenerated extends AbstractKotlinSteppingTest {
             doStepIntoTest(fileName);
         }
 
+        @TestMetadata("stepIntoSuspendFunctionSimple.kt")
+        public void testStepIntoSuspendFunctionSimple() throws Exception {
+            String fileName = KotlinTestUtils.navigationMetadata("idea/testData/debugger/tinyApp/src/stepping/stepInto/stepIntoSuspendFunctionSimple.kt");
+            doStepIntoTest(fileName);
+        }
+
         @TestMetadata("syntheticMethods.kt")
         public void testSyntheticMethods() throws Exception {
             String fileName = KotlinTestUtils.navigationMetadata("idea/testData/debugger/tinyApp/src/stepping/stepInto/syntheticMethods.kt");
