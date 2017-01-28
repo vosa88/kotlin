@@ -498,6 +498,12 @@ public class JvmSmartCompletionTestGenerated extends AbstractJvmSmartCompletionT
         doTest(fileName);
     }
 
+    @TestMetadata("SAMConstructorForTypeAlias.kt")
+    public void testSAMConstructorForTypeAlias() throws Exception {
+        String fileName = KotlinTestUtils.navigationMetadata("idea/idea-completion/testData/smart/SAMConstructorForTypeAlias.kt");
+        doTest(fileName);
+    }
+
     @TestMetadata("SAMExpected1.kt")
     public void testSAMExpected1() throws Exception {
         String fileName = KotlinTestUtils.navigationMetadata("idea/idea-completion/testData/smart/SAMExpected1.kt");
