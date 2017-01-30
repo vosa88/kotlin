@@ -95,12 +95,12 @@ class TypeInstantiationItems(
         }
 
         addSamConstructorItem(items, classifier, classDescriptor, tail)
-        items.addIfNotNull(createTypeInstantiationItem(fuzzyType, tail))
+        items.addIfNotNull(createTypeInstantiationItem(fuzzyType, classDescriptor, tail))
 
         indicesHelper.resolveTypeAliasesUsingIndex(fuzzyType.type, classifier.name.asString()).forEach {
             addSamConstructorItem(items, it, classDescriptor, tail)
             val typeAliasFuzzyType = it.defaultType.toFuzzyType(fuzzyType.freeParameters)
-            items.addIfNotNull(createTypeInstantiationItem(typeAliasFuzzyType, tail))
+            items.addIfNotNull(createTypeInstantiationItem(typeAliasFuzzyType, classDescriptor, tail))
         }
 
         if (classDescriptor != null && !forOrdinaryCompletion && !KotlinBuiltIns.isAny(classDescriptor)) { // do not search inheritors of Any
@@ -134,7 +134,7 @@ class TypeInstantiationItems(
         add(InheritanceSearcher(psiClass, kotlinClassDescriptor, typeArgs, freeParameters, tail))
     }
 
-    private fun createTypeInstantiationItem(fuzzyType: FuzzyType, tail: Tail?): LookupElement? {
+    private fun createTypeInstantiationItem(fuzzyType: FuzzyType, classDescriptor: ClassDescriptor?, tail: Tail?): LookupElement? {
         val classifier = fuzzyType.type.constructor.declarationDescriptor as? ClassifierDescriptorWithTypeParameters ?: return null
 
         var lookupElement = lookupElementFactory.createLookupElement(classifier, useReceiverTypes = false)
@@ -146,7 +146,7 @@ class TypeInstantiationItems(
         // not all inner classes can be instantiated and we handle them via constructors returned by ReferenceVariantsHelper
         if (classifier.isInner) return null
 
-        val isAbstract = classifier.modality == Modality.ABSTRACT
+        val isAbstract = classDescriptor?.modality == Modality.ABSTRACT
         if (forOrdinaryCompletion && isAbstract) return null
 
         val allConstructors = classifier.constructors
@@ -346,7 +346,7 @@ class TypeInstantiationItems(
                     }
                 }
 
-                val lookupElement = createTypeInstantiationItem(inheritorFuzzyType, tail) ?: continue
+                val lookupElement = createTypeInstantiationItem(inheritorFuzzyType, descriptor, tail) ?: continue
                 consumer(lookupElement.assignSmartCompletionPriority(SmartCompletionItemPriority.INHERITOR_INSTANTIATION))
             }
         }
