@@ -300,20 +300,15 @@ class TypeInstantiationItems(
         return FuzzyType(this, freeParameters).freeParameters.isNotEmpty()
     }
 
-    private class HackedSamTypeAliasConstructorDescriptor(val base: SamTypeAliasConstructorDescriptor) : SamTypeAliasConstructorDescriptor by base {
-        override fun getName() = base.typeAliasDescriptor.name
-    }
-
     private fun addSamConstructorItem(collection: MutableCollection<LookupElement>,
                                       classifier: ClassifierDescriptorWithTypeParameters,
                                       classDescriptor: ClassDescriptor?,
                                       tail: Tail?) {
         if (classDescriptor?.kind == ClassKind.INTERFACE) {
             val samConstructor = if (classifier is TypeAliasDescriptor) {
-                val original = JavaSyntheticConstructorsProvider.getSyntheticConstructors(classifier, NoLookupLocation.FROM_IDE)
-                                       .filterIsInstance<SamTypeAliasConstructorDescriptor>()
-                                       .singleOrNull() ?: return
-                HackedSamTypeAliasConstructorDescriptor(original)
+                JavaSyntheticConstructorsProvider.getSyntheticConstructors(classifier, NoLookupLocation.FROM_IDE)
+                        .filterIsInstance<SamTypeAliasConstructorDescriptor>()
+                        .singleOrNull() ?: return
             }
             else {
                 val container = classifier.containingDeclaration
