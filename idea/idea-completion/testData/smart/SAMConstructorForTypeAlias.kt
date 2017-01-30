@@ -10,4 +10,4 @@ fun usage() {
     usesRunnable(<caret>)
 }
 
-// EXIST: {"lookupString":"TaRunnable","tailText":"() (<root>)","typeText":"Runnable"}
+// EXIST: {"lookupString":"TaRunnable","tailText":" {...} (function: () -> Unit) (<root>)","typeText":"Runnable"}
