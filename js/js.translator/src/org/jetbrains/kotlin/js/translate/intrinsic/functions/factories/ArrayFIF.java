@@ -17,11 +17,11 @@
 package org.jetbrains.kotlin.js.translate.intrinsic.functions.factories;
 
 import com.google.common.collect.Lists;
-import org.jetbrains.kotlin.js.backend.ast.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.kotlin.builtins.KotlinBuiltIns;
 import org.jetbrains.kotlin.builtins.PrimitiveType;
+import org.jetbrains.kotlin.js.backend.ast.*;
 import org.jetbrains.kotlin.js.patterns.DescriptorPredicate;
 import org.jetbrains.kotlin.js.patterns.NamePredicate;
 import org.jetbrains.kotlin.js.translate.context.Namer;
@@ -126,13 +126,14 @@ public final class ArrayFIF extends CompositeFIF {
         add(pattern(ARRAYS, "iterator"), new KotlinFunctionIntrinsic("arrayIterator"));
 
         add(pattern(NUMBER_ARRAY, "<init>(Int)"), new KotlinFunctionIntrinsic("newArray", JsNumberLiteral.ZERO));
-        add(pattern(CHAR_ARRAY, "<init>(Int)"), new KotlinFunctionIntrinsic("newArray", JsNumberLiteral.ZERO));
+        add(pattern(CHAR_ARRAY, "<init>(Int)"), new KotlinFunctionIntrinsic("newCharArray"));
         add(pattern(BOOLEAN_ARRAY, "<init>(Int)"), new KotlinFunctionIntrinsic("newArray", JsLiteral.FALSE));
         add(pattern(LONG_ARRAY, "<init>(Int)"), new KotlinFunctionIntrinsic("newArray", new JsNameRef(Namer.LONG_ZERO, Namer.kotlinLong())));
 
         add(pattern(ARRAYS, "<init>(Int,Function1)"), new KotlinFunctionIntrinsic("newArrayF"));
 
         add(pattern("kotlin", "arrayOfNulls"), new KotlinFunctionIntrinsic("newArray", JsLiteral.NULL));
+        add(pattern("kotlin", "charArrayOf"), new KotlinFunctionIntrinsic("newCharArrayOf"));
 
         add(ARRAY_FACTORY_METHODS, ARRAY_INTRINSIC);
     }

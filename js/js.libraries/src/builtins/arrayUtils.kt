@@ -38,3 +38,14 @@ fun <T> arrayWithFun(size: Int, init: (Int) -> T): Array<T> {
     }
     return result
 }
+
+@JsName("newCharArray")
+fun <T> newCharArray(size: Int): CharArray = withCharType(fillArray(Array(size), 0))
+
+@JsName("newCharArrayOf")
+fun <T> newCharArrayOf(vararg chars: Char): CharArray = withCharType(chars)
+
+private fun withCharType(charArray: dynamic): CharArray {
+    charArray.`$type$` = "CharArray"
+    return charArray
+}
