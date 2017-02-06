@@ -36,6 +36,7 @@ import org.jetbrains.kotlin.psi.psiUtil.getQualifiedExpressionForReceiver
 import org.jetbrains.kotlin.psi.psiUtil.parents
 import org.jetbrains.kotlin.renderer.DescriptorRenderer
 import org.jetbrains.kotlin.resolve.BindingContext
+import org.jetbrains.kotlin.resolve.calls.callUtil.getCall
 import org.jetbrains.kotlin.resolve.calls.callUtil.getCalleeExpressionIfAny
 import org.jetbrains.kotlin.resolve.calls.callUtil.getResolvedCall
 import org.jetbrains.kotlin.resolve.calls.model.VariableAsFunctionResolvedCall
@@ -425,16 +426,29 @@ class ShortenReferences(val options: (KtElement) -> Options = { Options.DEFAULT 
 
             val selector = element.selectorExpression ?: return AnalyzeQualifiedElementResult.Skip
             val callee = selector.getCalleeExpressionIfAny() as? KtReferenceExpression ?: return AnalyzeQualifiedElementResult.Skip
+
+            val resolvedCalls = callee.getCall(bindingContext)
+                                        ?.resolveCandidates(bindingContext, resolutionFacade)
+                                        ?.map { it.resultingDescriptor.original } ?: emptyList()
+
             val targets = callee.targets(bindingContext)
             val varAsFunResolvedCall = callee.getResolvedCall(bindingContext) as? VariableAsFunctionResolvedCall
+
             if (targets.isEmpty()) return AnalyzeQualifiedElementResult.Skip
 
             val (newContext, selectorCopy) = copyAndAnalyzeSelector(element, bindingContext)
             val newCallee = selectorCopy.getCalleeExpressionIfAny() as KtReferenceExpression
+
+            val newResolvedCalls = newCallee.getCall(newContext)
+                                           ?.resolveCandidates(newContext, resolutionFacade)
+                                           ?.map { it.resultingDescriptor.original } ?: emptyList()
+
             val targetsWhenShort = newCallee.targets(newContext)
+
             val varAsFunResolvedCallWhenShort = newCallee.getResolvedCall(newContext) as? VariableAsFunctionResolvedCall
             val targetsMatch = targetsMatch(targets, targetsWhenShort)
                                && (varAsFunResolvedCall == null || resolvedCallsMatch(varAsFunResolvedCall, varAsFunResolvedCallWhenShort))
+                               || newResolvedCalls.any { it in resolvedCalls }
 
             if (receiver is KtThisExpression) {
                 if (!targetsMatch) return AnalyzeQualifiedElementResult.Skip
