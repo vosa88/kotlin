@@ -287,7 +287,6 @@ object KeywordCompletion {
     private fun buildFilesWithKeywordApplication(keywordTokenType: KtKeywordToken, prefixText: String, psiFactory: KtPsiFactory): Sequence<KtFile> {
         return computeKeywordApplications(prefixText, keywordTokenType)
                 .map { application -> psiFactory.createFile(prefixText + application) }
-                .onEach { print(it.text + " ") }
     }
 
 
@@ -363,7 +362,7 @@ object KeywordCompletion {
 
         return fun (keywordTokenType): Boolean {
             val files = buildFilesWithKeywordApplication(keywordTokenType, prefixText, psiFactory)
-            return files.any { file -> val x = isKeywordCorrectlyApplied(keywordTokenType, file); println(x); x }
+            return files.any { file -> isKeywordCorrectlyApplied(keywordTokenType, file); }
         }
     }
 
