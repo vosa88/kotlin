@@ -84,6 +84,12 @@ public class ShortenRefsTestGenerated extends AbstractShortenRefsTest {
         doTest(fileName);
     }
 
+    @TestMetadata("KotlinRepeat.kt")
+    public void testKotlinRepeat() throws Exception {
+        String fileName = KotlinTestUtils.navigationMetadata("idea/testData/shortenRefs/KotlinRepeat.kt");
+        doTest(fileName);
+    }
+
     @TestMetadata("kt11633.kt")
     public void testKt11633() throws Exception {
         String fileName = KotlinTestUtils.navigationMetadata("idea/testData/shortenRefs/kt11633.kt");

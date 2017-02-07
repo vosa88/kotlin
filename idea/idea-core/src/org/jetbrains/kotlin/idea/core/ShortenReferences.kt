@@ -32,6 +32,7 @@ import org.jetbrains.kotlin.idea.util.ImportInsertHelper
 import org.jetbrains.kotlin.idea.util.getResolutionScope
 import org.jetbrains.kotlin.incremental.components.NoLookupLocation
 import org.jetbrains.kotlin.psi.*
+import org.jetbrains.kotlin.psi.psiUtil.getParentOfType
 import org.jetbrains.kotlin.psi.psiUtil.getQualifiedExpressionForReceiver
 import org.jetbrains.kotlin.psi.psiUtil.parents
 import org.jetbrains.kotlin.renderer.DescriptorRenderer
@@ -357,7 +358,8 @@ class ShortenReferences(val options: (KtElement) -> Options = { Options.DEFAULT 
             if (element.qualifier == null) return AnalyzeQualifiedElementResult.Skip
             val referenceExpression = element.referenceExpression ?: return AnalyzeQualifiedElementResult.Skip
 
-            val target = referenceExpression.targets(bindingContext).singleOrNull() ?: return AnalyzeQualifiedElementResult.Skip
+            val target = referenceExpression.targets(bindingContext).singleOrNull()
+                         ?: return AnalyzeQualifiedElementResult.Skip
 
             val scope = element.getResolutionScope(bindingContext, resolutionFacade)
             val name = target.name
@@ -436,10 +438,10 @@ class ShortenReferences(val options: (KtElement) -> Options = { Options.DEFAULT 
 
             if (targets.isEmpty()) return AnalyzeQualifiedElementResult.Skip
 
-            val (newContext, selectorCopy) = copyAndAnalyzeSelector(element, bindingContext)
-            val newCallee = selectorCopy.getCalleeExpressionIfAny() as KtReferenceExpression
+            val (newContext, selectorAfterShortening) = copyShortenAndAnalyze(element, bindingContext)
+            val newCallee = selectorAfterShortening.getCalleeExpressionIfAny() as KtReferenceExpression
 
-            val newResolvedCalls = newCallee.getCall(newContext)
+            val resolvedCallsWhenShort = newCallee.getCall(newContext)
                                            ?.resolveCandidates(newContext, resolutionFacade)
                                            ?.map { it.resultingDescriptor.original } ?: emptyList()
 
@@ -448,12 +450,13 @@ class ShortenReferences(val options: (KtElement) -> Options = { Options.DEFAULT 
             val varAsFunResolvedCallWhenShort = newCallee.getResolvedCall(newContext) as? VariableAsFunctionResolvedCall
             val targetsMatch = targetsMatch(targets, targetsWhenShort)
                                && (varAsFunResolvedCall == null || resolvedCallsMatch(varAsFunResolvedCall, varAsFunResolvedCallWhenShort))
-                               || newResolvedCalls.any { it in resolvedCalls }
+
+            val resolvedCallsMatch = resolvedCallsWhenShort.any { it in resolvedCalls }
 
             if (receiver is KtThisExpression) {
                 if (!targetsMatch) return AnalyzeQualifiedElementResult.Skip
                 val originalCall = selector.getResolvedCall(bindingContext) ?: return AnalyzeQualifiedElementResult.Skip
-                val newCall = selectorCopy.getResolvedCall(newContext) ?: return AnalyzeQualifiedElementResult.Skip
+                val newCall = selectorAfterShortening.getResolvedCall(newContext) ?: return AnalyzeQualifiedElementResult.Skip
                 val receiverKind = originalCall.explicitReceiverKind
                 val newReceiver = when (receiverKind) {
                                       ExplicitReceiverKind.BOTH_RECEIVERS, ExplicitReceiverKind.EXTENSION_RECEIVER -> newCall.extensionReceiver
@@ -466,29 +469,44 @@ class ShortenReferences(val options: (KtElement) -> Options = { Options.DEFAULT 
             }
 
             return when {
-                targetsMatch -> AnalyzeQualifiedElementResult.ShortenNow
+                targetsMatch || resolvedCallsMatch -> AnalyzeQualifiedElementResult.ShortenNow
 
             // it makes no sense to insert import when there is a conflict with function, property etc
-                targetsWhenShort.any { it !is ClassDescriptor && it !is PackageViewDescriptor } -> AnalyzeQualifiedElementResult.Skip
+                targetsWhenShort.any { it !is ClassifierDescriptorWithTypeParameters && it !is PackageViewDescriptor } -> AnalyzeQualifiedElementResult.Skip
+
 
                 else -> AnalyzeQualifiedElementResult.ImportDescriptors(targets)
             }
         }
 
-        private fun copyAndAnalyzeSelector(element: KtDotQualifiedExpression, bindingContext: BindingContext): Pair<BindingContext, KtExpression> {
+        private fun copyShortenAndAnalyze(element: KtDotQualifiedExpression, bindingContext: BindingContext): Pair<BindingContext, KtExpression> {
             val selector = element.selectorExpression!!
-            val qualifiedAbove = element.getQualifiedExpressionForReceiver()
-            if (qualifiedAbove == null) {
-                val copied = selector.copied()
-                val newBindingContext = copied.analyzeAsReplacement(element, bindingContext, resolutionFacade)
-                return newBindingContext to copied
+
+            //                selector V  V             selector V  V
+            // When processing some.fq.Name::callable or some.fq.Name::class
+            //                 ^  element ^              ^  element ^
+            //
+            // Result should be Name::callable or Name::class
+            //                  ^  ^              ^  ^
+            val doubleColonExpression = element.getParentOfType<KtDoubleColonExpression>(true)
+            if (doubleColonExpression != null && doubleColonExpression.receiverExpression == element) {
+                val doubleColonExpressionCopy = doubleColonExpression.copied()
+                doubleColonExpressionCopy.receiverExpression!!.replace(selector)
+                val newBindingContext = doubleColonExpressionCopy.analyzeAsReplacement(doubleColonExpression, bindingContext, resolutionFacade)
+                return newBindingContext to doubleColonExpressionCopy.receiverExpression!!
             }
-            else {
+
+            val qualifiedAbove = element.getQualifiedExpressionForReceiver()
+            if (qualifiedAbove != null) {
                 val qualifiedAboveCopy = qualifiedAbove.copied()
                 qualifiedAboveCopy.receiverExpression.replace(selector)
                 val newBindingContext = qualifiedAboveCopy.analyzeAsReplacement(qualifiedAbove, bindingContext, resolutionFacade)
                 return newBindingContext to qualifiedAboveCopy.receiverExpression
             }
+
+            val copied = selector.copied()
+            val newBindingContext = copied.analyzeAsReplacement(element, bindingContext, resolutionFacade)
+            return newBindingContext to copied
         }
 
         private fun targetsMatch(targets1: Collection<DeclarationDescriptor>, targets2: Collection<DeclarationDescriptor>): Boolean {
