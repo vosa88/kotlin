@@ -29,6 +29,7 @@ import org.jetbrains.kotlin.idea.imports.canBeReferencedViaImport
 import org.jetbrains.kotlin.idea.imports.getImportableTargets
 import org.jetbrains.kotlin.idea.util.ImportDescriptorResult
 import org.jetbrains.kotlin.idea.util.ImportInsertHelper
+import org.jetbrains.kotlin.idea.util.ShadowedDeclarationsFilter
 import org.jetbrains.kotlin.idea.util.getResolutionScope
 import org.jetbrains.kotlin.incremental.components.NoLookupLocation
 import org.jetbrains.kotlin.psi.*
@@ -429,29 +430,43 @@ class ShortenReferences(val options: (KtElement) -> Options = { Options.DEFAULT 
             val selector = element.selectorExpression ?: return AnalyzeQualifiedElementResult.Skip
             val callee = selector.getCalleeExpressionIfAny() as? KtReferenceExpression ?: return AnalyzeQualifiedElementResult.Skip
 
-            val resolvedCalls = callee.getCall(bindingContext)
-                                        ?.resolveCandidates(bindingContext, resolutionFacade)
-                                        ?.map { it.resultingDescriptor.original } ?: emptyList()
 
             val targets = callee.targets(bindingContext)
-            val varAsFunResolvedCall = callee.getResolvedCall(bindingContext) as? VariableAsFunctionResolvedCall
+            val resolvedCall = callee.getResolvedCall(bindingContext)
 
             if (targets.isEmpty()) return AnalyzeQualifiedElementResult.Skip
 
             val (newContext, selectorAfterShortening) = copyShortenAndAnalyze(element, bindingContext)
             val newCallee = selectorAfterShortening.getCalleeExpressionIfAny() as KtReferenceExpression
 
-            val resolvedCallsWhenShort = newCallee.getCall(newContext)
-                                           ?.resolveCandidates(newContext, resolutionFacade)
-                                           ?.map { it.resultingDescriptor.original } ?: emptyList()
-
             val targetsWhenShort = newCallee.targets(newContext)
 
-            val varAsFunResolvedCallWhenShort = newCallee.getResolvedCall(newContext) as? VariableAsFunctionResolvedCall
-            val targetsMatch = targetsMatch(targets, targetsWhenShort)
-                               && (varAsFunResolvedCall == null || resolvedCallsMatch(varAsFunResolvedCall, varAsFunResolvedCallWhenShort))
+            val resolvedCallWhenShort = newCallee.getResolvedCall(newContext)
+            val targetsMatch = targetsMatch(targets, targetsWhenShort) &&
+                               (resolvedCall !is VariableAsFunctionResolvedCall || (
+                                       resolvedCallWhenShort is VariableAsFunctionResolvedCall? &&
+                                       resolvedCallsMatch(resolvedCall, resolvedCallWhenShort)))
 
-            val resolvedCallsMatch = resolvedCallsWhenShort.any { it in resolvedCalls }
+
+            val resolvedCallsMatch = if (resolvedCall != null && resolvedCallWhenShort != null) {
+                resolvedCall.resultingDescriptor.original == resolvedCallWhenShort.resultingDescriptor.original
+            }
+            else {
+                val resolvedCalls = selector.getCall(bindingContext)?.resolveCandidates(bindingContext, resolutionFacade) ?: emptyList()
+                val resolvedCallsWhenShort = selectorAfterShortening.getCall(newContext)?.resolveCandidates(newContext, resolutionFacade) ?: emptyList()
+
+                val descriptorsOfResolvedCallsWhenShort = resolvedCallsWhenShort.map { it.resultingDescriptor.original }
+                val descriptorsOfResolvedCalls = resolvedCalls.map { it.resultingDescriptor.original }
+                descriptorsOfResolvedCallsWhenShort.any {
+                    it in descriptorsOfResolvedCalls && run {
+                        val filter = ShadowedDeclarationsFilter(newContext, resolutionFacade, newCallee, it.extensionReceiverParameter?.value)
+                        val out = filter.filter(descriptorsOfResolvedCallsWhenShort)
+                        it in out
+                    }
+                }
+
+            }
+
 
             if (receiver is KtThisExpression) {
                 if (!targetsMatch) return AnalyzeQualifiedElementResult.Skip
