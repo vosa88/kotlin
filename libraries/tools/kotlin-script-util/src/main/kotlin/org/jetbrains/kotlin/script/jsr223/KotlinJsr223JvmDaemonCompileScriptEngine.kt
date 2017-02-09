@@ -46,7 +46,6 @@ class KotlinJsr223JvmDaemonCompileScriptEngine(
     override val replCompiler by lazy {
         daemon.let {
             KotlinRemoteReplCompiler(
-                    disposable,
                     it,
                     makeAutodeletingFlagFile("jsr223-repl-session"),
                     CompileService.TargetPlatform.JVM,

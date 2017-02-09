@@ -16,8 +16,6 @@
 
 package org.jetbrains.kotlin.daemon.client
 
-import com.intellij.openapi.Disposable
-import com.intellij.openapi.util.Disposer
 import org.jetbrains.kotlin.cli.common.repl.*
 import org.jetbrains.kotlin.daemon.common.CompileService
 import org.jetbrains.kotlin.daemon.common.RemoteOperationsTracer
@@ -29,7 +27,6 @@ import java.io.OutputStream
 // TODO: reduce number of ports used then SOCKET_ANY_FREE_PORT is passed (same problem with other calls)
 
 open class KotlinRemoteReplClientBase(
-        disposable: Disposable,
         protected val compileService: CompileService,
         clientAliveFlagFile: File?,
         targetPlatform: CompileService.TargetPlatform,
@@ -60,20 +57,17 @@ open class KotlinRemoteReplClientBase(
             operationsTracer
     ).get()
 
-    init {
-        Disposer.register(disposable, Disposable {
-            try {
-                compileService.releaseReplSession(sessionId)
-            }
-            catch (ex: java.rmi.RemoteException) {
-                // assuming that communication failed and daemon most likely is already down
-            }
-        })
+    open fun dispose() {
+        try {
+            compileService.releaseReplSession(sessionId)
+        }
+        catch (ex: java.rmi.RemoteException) {
+            // assuming that communication failed and daemon most likely is already down
+        }
     }
 }
 
 class KotlinRemoteReplCompiler(
-        disposable: Disposable,
         compileService: CompileService,
         clientAliveFlagFile: File?,
         targetPlatform: CompileService.TargetPlatform,
@@ -83,7 +77,6 @@ class KotlinRemoteReplCompiler(
         port: Int = SOCKET_ANY_FREE_PORT,
         operationsTracer: RemoteOperationsTracer? = null
 ) : KotlinRemoteReplClientBase(
-        disposable = disposable,
         compileService = compileService,
         clientAliveFlagFile = clientAliveFlagFile,
         targetPlatform = targetPlatform,
@@ -114,7 +107,6 @@ class KotlinRemoteReplCompiler(
 
 // TODO: consider removing daemon eval completely - it is not required now and has questionable security. This will simplify daemon interface as well
 class KotlinRemoteReplEvaluator(
-        disposable: Disposable,
         compileService: CompileService,
         clientAliveFlagFile: File?,
         targetPlatform: CompileService.TargetPlatform,
@@ -129,7 +121,6 @@ class KotlinRemoteReplEvaluator(
         port: Int = SOCKET_ANY_FREE_PORT,
         operationsTracer: RemoteOperationsTracer? = null
 ) : KotlinRemoteReplClientBase(
-        disposable = disposable,
         compileService = compileService,
         clientAliveFlagFile = clientAliveFlagFile,
         targetPlatform = targetPlatform,
