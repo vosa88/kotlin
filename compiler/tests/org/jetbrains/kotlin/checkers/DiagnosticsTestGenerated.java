@@ -11401,6 +11401,12 @@ public class DiagnosticsTestGenerated extends AbstractDiagnosticsTest {
                 doTest(fileName);
             }
 
+            @TestMetadata("nestedObject.kt")
+            public void testNestedObject() throws Exception {
+                String fileName = KotlinTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/inner/nestedObject.kt");
+                doTest(fileName);
+            }
+
             @TestMetadata("nestedVsInnerAccessOuterMember.kt")
             public void testNestedVsInnerAccessOuterMember() throws Exception {
                 String fileName = KotlinTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/inner/nestedVsInnerAccessOuterMember.kt");
