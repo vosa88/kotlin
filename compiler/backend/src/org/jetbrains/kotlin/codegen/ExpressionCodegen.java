@@ -3189,14 +3189,13 @@ public class ExpressionCodegen extends KtVisitor<StackValue, StackValue> impleme
 
     @NotNull
     public StackValue generateThisOrOuter(@NotNull ClassDescriptor calleeContainingClass, boolean isSuper, boolean forceOuter) {
-        boolean isSingleton = calleeContainingClass.getKind().isSingleton();
-        if (isSingleton) {
+        // Do not refer to enum entry from its constructor by the corresponding field, because it hasn't been initialized yet
+        boolean isSingletonNotEnumEntry =
+                calleeContainingClass.getKind().isSingleton() && !isEnumEntry(calleeContainingClass);
+        if (isSingletonNotEnumEntry) {
             if (calleeContainingClass.equals(context.getThisDescriptor()) &&
                 !CodegenUtilKt.isJvmStaticInObjectOrClass(context.getFunctionDescriptor())) {
                 return StackValue.local(0, typeMapper.mapType(calleeContainingClass));
-            }
-            else if (isEnumEntry(calleeContainingClass)) {
-                return StackValue.enumEntry(calleeContainingClass, typeMapper);
             }
             else {
                 return StackValue.singleton(calleeContainingClass, typeMapper);
