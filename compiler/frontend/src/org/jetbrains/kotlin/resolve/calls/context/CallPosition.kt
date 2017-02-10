@@ -34,4 +34,6 @@ sealed class CallPosition {
     ) : CallPosition()
 
     class PropertyAssignment(val leftPart: KtExpression?) : CallPosition()
+
+    object CallableReference : CallPosition()
 }

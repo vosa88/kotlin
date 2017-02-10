@@ -637,13 +637,13 @@ class DoubleColonExpressionResolver(
         val call = outerContext.trace[BindingContext.CALL, reference] ?: CallMaker.makeCall(reference, receiver, null, reference, emptyList())
         val temporaryTrace = TemporaryTraceAndCache.create(outerContext, traceTitle, reference)
         val newContext =
-                if (resolutionMode == ResolveArgumentsMode.SHAPE_FUNCTION_ARGUMENTS)
-                    outerContext
-                            .replaceTraceAndCache(temporaryTrace)
+                when (resolutionMode) {
+                    ResolveArgumentsMode.SHAPE_FUNCTION_ARGUMENTS ->
+                        outerContext
                             .replaceExpectedType(TypeUtils.NO_EXPECTED_TYPE)
                             .replaceContextDependency(ContextDependency.DEPENDENT)
-                else
-                    outerContext.replaceTraceAndCache(temporaryTrace)
+                    else -> outerContext
+                }.replaceTraceAndCache(temporaryTrace).replaceCallPosition(CallPosition.CallableReference)
 
         val resolutionResults = callResolver.resolveCallForMember(
                 reference, BasicCallResolutionContext.create(newContext, call, CheckArgumentTypesMode.CHECK_CALLABLE_TYPE)

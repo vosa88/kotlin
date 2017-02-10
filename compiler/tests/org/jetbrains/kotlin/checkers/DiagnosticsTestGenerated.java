@@ -11317,6 +11317,12 @@ public class DiagnosticsTestGenerated extends AbstractDiagnosticsTest {
                 doTest(fileName);
             }
 
+            @TestMetadata("innerConstructorsFromQualifiers.kt")
+            public void testInnerConstructorsFromQualifiers() throws Exception {
+                String fileName = KotlinTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/inner/innerConstructorsFromQualifiers.kt");
+                doTest(fileName);
+            }
+
             @TestMetadata("innerErrorForClassObjects.kt")
             public void testInnerErrorForClassObjects() throws Exception {
                 String fileName = KotlinTestUtils.navigationMetadata("compiler/testData/diagnostics/tests/inner/innerErrorForClassObjects.kt");

@@ -40,6 +40,8 @@ interface ImplicitScopeTower {
     val location: LookupLocation
 
     val isDebuggerContext: Boolean
+
+    val isForCallableReference: Boolean
 }
 
 interface ScopeTowerLevel {
@@ -82,7 +84,7 @@ abstract class ResolutionDiagnostic(val candidateLevel: ResolutionCandidateAppli
 // todo error for this access from nested class
 class VisibilityError(val invisibleMember: DeclarationDescriptorWithVisibility): ResolutionDiagnostic(ResolutionCandidateApplicability.RUNTIME_ERROR)
 class NestedClassViaInstanceReference(val classDescriptor: ClassDescriptor): ResolutionDiagnostic(ResolutionCandidateApplicability.IMPOSSIBLE_TO_GENERATE)
-class InnerClassViaStaticReference(val classDescriptor: ClassDescriptor): ResolutionDiagnostic(ResolutionCandidateApplicability.IMPOSSIBLE_TO_GENERATE)
+object InnerClassConstructorViaStaticReference : ResolutionDiagnostic(ResolutionCandidateApplicability.IMPOSSIBLE_TO_GENERATE)
 class UnsupportedInnerClassCall(val message: String): ResolutionDiagnostic(ResolutionCandidateApplicability.IMPOSSIBLE_TO_GENERATE)
 class UsedSmartCastForDispatchReceiver(val smartCastType: KotlinType): ResolutionDiagnostic(ResolutionCandidateApplicability.RESOLVED)
 

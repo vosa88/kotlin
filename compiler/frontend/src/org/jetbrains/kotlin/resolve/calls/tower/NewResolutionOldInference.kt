@@ -319,6 +319,9 @@ class NewResolutionOldInference(
         override val lexicalScope: LexicalScope get() = resolutionContext.scope
 
         override val isDebuggerContext: Boolean get() = resolutionContext.isDebuggerContext
+
+        override val isForCallableReference: Boolean
+            get() = resolutionContext.callPosition is CallPosition.CallableReference
     }
 
     internal data class MyCandidate<out D: CallableDescriptor>(

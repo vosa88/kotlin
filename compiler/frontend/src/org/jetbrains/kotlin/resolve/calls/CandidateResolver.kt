@@ -54,6 +54,7 @@ import org.jetbrains.kotlin.types.checker.ErrorTypesAreEqualToAnything
 import org.jetbrains.kotlin.types.checker.KotlinTypeChecker
 import org.jetbrains.kotlin.types.expressions.DoubleColonExpressionResolver
 import org.jetbrains.kotlin.types.typeUtil.containsTypeProjectionsInTopLevelArguments
+import org.jetbrains.kotlin.utils.addToStdlib.safeAs
 import java.util.*
 
 class CandidateResolver(
@@ -257,8 +258,23 @@ class CandidateResolver(
             }
         }
 
-        assert((dispatchReceiver != null) == (candidateCall.resultingDescriptor.dispatchReceiverParameter != null)) {
-            "Shouldn't happen because of TaskPrioritizer: $candidateDescriptor"
+        if ((dispatchReceiver != null) != (candidateCall.resultingDescriptor.dispatchReceiverParameter != null)) {
+            val innerClassDescriptorForConstructor =
+                    candidateCall.resultingDescriptor.safeAs<ConstructorDescriptor>()?.constructedClass
+            val expectedReceiverDescriptor =
+                    candidateCall.resultingDescriptor.dispatchReceiverParameter?.containingDeclaration as? ClassDescriptor
+            if (innerClassDescriptorForConstructor != null && expectedReceiverDescriptor != null) {
+                trace.report(
+                        Errors.INNER_CLASS_CONSTRUCTOR_NO_RECEIVER.on(
+                                call.calleeExpression ?: call.callElement,
+                                innerClassDescriptorForConstructor,
+                                expectedReceiverDescriptor
+                        )
+                )
+            }
+            else {
+                assert(false) { "Shouldn't happen because of TaskPrioritizer: $candidateDescriptor" }
+            }
         }
 
         SUCCESS
