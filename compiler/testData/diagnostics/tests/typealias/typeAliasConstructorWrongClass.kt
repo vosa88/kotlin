@@ -27,7 +27,7 @@ class Outer {
 typealias Test5 = Outer.Inner
 
 val test5 = <!UNRESOLVED_REFERENCE!>Test5<!>()
-val test5a = Outer.<!UNRESOLVED_REFERENCE!>Inner<!>()
+val test5a = Outer.<!INNER_CLASS_CONSTRUCTOR_NO_RECEIVER!>Inner<!>()
 val test5b = Outer.<!UNRESOLVED_REFERENCE!>TestInner<!>()
 val test5c = Outer().<!UNRESOLVED_REFERENCE!>TestInner<!>()
 val test5d = Outer().Inner()

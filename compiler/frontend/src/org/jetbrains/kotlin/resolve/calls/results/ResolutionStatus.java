@@ -23,6 +23,7 @@ import java.util.EnumSet;
 public enum ResolutionStatus {
     UNKNOWN_STATUS,
     UNSAFE_CALL_ERROR,
+    INNER_CLASS_CONSTRUCTOR_NO_RECEIVER_ERROR,
     OTHER_ERROR,
     ARGUMENTS_MAPPING_ERROR,
     // '1.foo()' shouldn't be resolved to 'fun String.foo()'
@@ -38,6 +39,7 @@ public enum ResolutionStatus {
     @SuppressWarnings("unchecked")
     public static final EnumSet<ResolutionStatus>[] SEVERITY_LEVELS = new EnumSet[] {
             EnumSet.of(UNSAFE_CALL_ERROR), // weakest
+            EnumSet.of(INNER_CLASS_CONSTRUCTOR_NO_RECEIVER_ERROR),
             EnumSet.of(OTHER_ERROR),
             EnumSet.of(ARGUMENTS_MAPPING_ERROR),
             EnumSet.of(RECEIVER_TYPE_ERROR),

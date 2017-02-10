@@ -163,8 +163,8 @@ internal class QualifierScopeTowerLevel(scopeTower: ImplicitScopeTower, val qual
             }
 
     override fun getFunctions(name: Name, extensionReceiver: ReceiverValueWithSmartCastInfo?) = qualifier.staticScope
-            .getContributedFunctionsAndConstructors(name, location, scopeTower.syntheticConstructorsProvider).map {
-                createCandidateDescriptor(it, dispatchReceiver = null)
+            .getContributedFunctionsAndConstructors(name, location, scopeTower) { descriptor, specialError ->
+                createCandidateDescriptor(descriptor, dispatchReceiver = null, specialError = specialError)
             }
 }
 
@@ -186,9 +186,14 @@ internal open class ScopeBasedTowerLevel protected constructor(
                 createCandidateDescriptor(it, dispatchReceiver = null)
             }
 
-    override fun getFunctions(name: Name, extensionReceiver: ReceiverValueWithSmartCastInfo?): Collection<CandidateWithBoundDispatchReceiver<FunctionDescriptor>>
-            = resolutionScope.getContributedFunctionsAndConstructors(name, location, scopeTower.syntheticConstructorsProvider).map {
-                createCandidateDescriptor(it, dispatchReceiver = null)
+    override fun getFunctions(
+            name: Name,
+            extensionReceiver: ReceiverValueWithSmartCastInfo?
+    ): Collection<CandidateWithBoundDispatchReceiver<FunctionDescriptor>> =
+            resolutionScope.getContributedFunctionsAndConstructors(
+                    name, location, scopeTower
+            ) { descriptor, specialError ->
+                createCandidateDescriptor(descriptor, dispatchReceiver = null, specialError = specialError)
             }
 }
 internal class ImportingScopeBasedTowerLevel(
@@ -266,14 +271,21 @@ private fun KotlinType?.getInnerConstructors(name: Name, location: LookupLocatio
 private fun ResolutionScope.getContributedFunctionsAndConstructors(
         name: Name,
         location: LookupLocation,
-        syntheticConstructorsProvider: SyntheticConstructorsProvider
-): Collection<FunctionDescriptor> {
-    val result = ArrayList<FunctionDescriptor>(getContributedFunctions(name, location))
+        scopeTower: ImplicitScopeTower,
+        candidateDescriptorFactory: (FunctionDescriptor, specialError: ResolutionDiagnostic?) -> CandidateWithBoundDispatchReceiver<FunctionDescriptor>
+): Collection<CandidateWithBoundDispatchReceiver<FunctionDescriptor>> {
+    val result = getContributedFunctions(name, location).map { candidateDescriptorFactory(it, null) }.toMutableList()
 
     val classifier = getContributedClassifier(name, location)
     if (classifier != null) {
-        classifier.getCallableConstructors().filterTo(result) { it.dispatchReceiverParameter == null }
-        syntheticConstructorsProvider.getSyntheticConstructors(classifier, location).filterTo(result) { it.dispatchReceiverParameter == null }
+        val allConstructors =
+                classifier.getCallableConstructors() +
+                scopeTower.syntheticConstructorsProvider.getSyntheticConstructors(classifier, location)
+
+        val (staticClassesConstructors, innerClassesConstructors) = allConstructors.partition { it.dispatchReceiverParameter == null }
+
+        staticClassesConstructors.mapTo(result) { candidateDescriptorFactory(it, null) }
+        innerClassesConstructors.mapTo(result) { candidateDescriptorFactory(it, InnerClassConstructorViaStaticReference) }
     }
 
     return result.toReadOnlyList()

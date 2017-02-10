@@ -15,7 +15,7 @@ open class S(
 class A : S (
     foo(),
     Nested(),
-    <!UNRESOLVED_REFERENCE!>Inner<!>(),
+    <!INNER_CLASS_CONSTRUCTOR_NO_RECEIVER!>Inner<!>(),
     CONST,
     Companion.CONST,
     Nested.CONST,
