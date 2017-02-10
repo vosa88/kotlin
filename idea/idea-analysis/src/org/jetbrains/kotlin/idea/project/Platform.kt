@@ -136,7 +136,7 @@ private fun getExtraLanguageFeatures(
 }
 
 fun KtElement.createCompilerConfiguration(): CompilerConfiguration = CompilerConfiguration().apply {
-    put(CommonConfigurationKeys.LANGUAGE_VERSION_SETTINGS, languageVersionSettings)
+    languageVersionSettings = this@createCompilerConfiguration.languageVersionSettings
     isReadOnly = true
 }
 
