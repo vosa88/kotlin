@@ -45,6 +45,7 @@ import org.jetbrains.kotlin.resolve.calls.model.VariableAsFunctionResolvedCall
 import org.jetbrains.kotlin.resolve.calls.tasks.ExplicitReceiverKind
 import org.jetbrains.kotlin.resolve.lazy.BodyResolveMode
 import org.jetbrains.kotlin.resolve.scopes.receivers.ImplicitReceiver
+import org.jetbrains.kotlin.resolve.scopes.receivers.ReceiverValue
 import org.jetbrains.kotlin.resolve.scopes.utils.findClassifier
 import org.jetbrains.kotlin.resolve.scopes.utils.findPackage
 import org.jetbrains.kotlin.resolve.source.getPsi
@@ -448,23 +449,29 @@ class ShortenReferences(val options: (KtElement) -> Options = { Options.DEFAULT 
                                        resolvedCallsMatch(resolvedCall, resolvedCallWhenShort)))
 
 
+            // If before and after shorten call can be resolved unambiguously, then preform comparing of such calls,
+            // if it matches, then we can preform shortening
+            // Otherwise, collecting candidates both before and after shorten,
+            // then filtering out candidates hidden by more specific signature
+            // (for ex local fun, and extension fun on same receiver with matching names and signature)
+            // Then, checking that any of resolved calls when shorten matches with calls before shorten, it means that there can be
+            // targetMatch == false, but shorten still can be preformed
+            // TODO: Add possibility to check if descriptor from completion can't be resolved after shorten and not preform shorten than
             val resolvedCallsMatch = if (resolvedCall != null && resolvedCallWhenShort != null) {
                 resolvedCall.resultingDescriptor.original == resolvedCallWhenShort.resultingDescriptor.original
             }
             else {
                 val resolvedCalls = selector.getCall(bindingContext)?.resolveCandidates(bindingContext, resolutionFacade) ?: emptyList()
+                val callWhenShort = selectorAfterShortening.getCall(newContext)
                 val resolvedCallsWhenShort = selectorAfterShortening.getCall(newContext)?.resolveCandidates(newContext, resolutionFacade) ?: emptyList()
 
                 val descriptorsOfResolvedCallsWhenShort = resolvedCallsWhenShort.map { it.resultingDescriptor.original }
-                val descriptorsOfResolvedCalls = resolvedCalls.map { it.resultingDescriptor.original }
-                descriptorsOfResolvedCallsWhenShort.any {
-                    it in descriptorsOfResolvedCalls && run {
-                        val filter = ShadowedDeclarationsFilter(newContext, resolutionFacade, newCallee, it.extensionReceiverParameter?.value)
-                        val out = filter.filter(descriptorsOfResolvedCallsWhenShort)
-                        it in out
-                    }
-                }
+                val descriptorsOfResolvedCalls = resolvedCalls.mapTo(mutableSetOf()) { it.resultingDescriptor.original }
 
+                val filter = ShadowedDeclarationsFilter(newContext, resolutionFacade, newCallee, callWhenShort?.explicitReceiver as? ReceiverValue)
+                val availableDescriptorsWhenShort = filter.filter(descriptorsOfResolvedCallsWhenShort)
+
+                availableDescriptorsWhenShort.any { it in descriptorsOfResolvedCalls }
             }
 
 

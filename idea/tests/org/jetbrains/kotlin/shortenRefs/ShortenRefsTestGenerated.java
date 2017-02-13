@@ -72,6 +72,12 @@ public class ShortenRefsTestGenerated extends AbstractShortenRefsTest {
         doTest(fileName);
     }
 
+    @TestMetadata("hiddenByMoreSpecificDeclaration.kt")
+    public void testHiddenByMoreSpecificDeclaration() throws Exception {
+        String fileName = KotlinTestUtils.navigationMetadata("idea/testData/shortenRefs/hiddenByMoreSpecificDeclaration.kt");
+        doTest(fileName);
+    }
+
     @TestMetadata("InterfaceInExpression.kt")
     public void testInterfaceInExpression() throws Exception {
         String fileName = KotlinTestUtils.navigationMetadata("idea/testData/shortenRefs/InterfaceInExpression.kt");
