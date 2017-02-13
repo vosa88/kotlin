@@ -49,13 +49,7 @@ public abstract class CallableReference implements KCallable, Serializable {
     public static final Object NO_RECEIVER = NoReceiver.INSTANCE;
 
     @SinceKotlin(version = "1.2")
-    private static class NoReceiver implements Serializable {
-        private static final NoReceiver INSTANCE = new NoReceiver();
-
-        private Object readResolve() throws ObjectStreamException {
-            return INSTANCE;
-        }
-    }
+    private enum NoReceiver { INSTANCE }
 
     public CallableReference() {
         this(NO_RECEIVER);
