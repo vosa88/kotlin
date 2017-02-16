@@ -20,7 +20,6 @@ import com.intellij.debugger.DebuggerInvocationUtil
 import com.intellij.debugger.DebuggerManagerEx
 import com.intellij.debugger.engine.DebugProcessImpl
 import com.intellij.debugger.engine.MethodFilter
-import com.intellij.debugger.engine.RequestHint
 import com.intellij.debugger.engine.SuspendContextImpl
 import com.intellij.debugger.ui.breakpoints.BreakpointManager
 import com.intellij.openapi.application.ApplicationManager
@@ -54,15 +53,15 @@ class KotlinSuspendCallStepOverFilter(val line: Int, val file: PsiFile) : Method
         return true
     }
 
-    override fun onReached(context: SuspendContextImpl, hint: RequestHint?): Int {
-        return if (true /* TODO: suspended*/) {
-//            createBreakpoint(context, line, file)
-            return RequestHint.RESUME
-        }
-        else {
-            RequestHint.STOP
-        }
-    }
+//    override fun onReached(context: SuspendContextImpl, hint: RequestHint?): Int {
+//        return if (true /* TODO: suspended*/) {
+////            createBreakpoint(context, line, file)
+//            return RequestHint.RESUME
+//        }
+//        else {
+//            RequestHint.STOP
+//        }
+//    }
 
 //    fun <T : XBreakpointProperties<*>> addLineBreakpoint(
 //            xBreakpointManager: XBreakpointManagerImpl,
