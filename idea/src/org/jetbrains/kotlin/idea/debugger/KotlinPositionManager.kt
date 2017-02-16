@@ -41,6 +41,7 @@ import org.jetbrains.kotlin.idea.codeInsight.CodeInsightUtils
 import org.jetbrains.kotlin.idea.debugger.breakpoints.getLambdasAtLineIfAny
 import org.jetbrains.kotlin.idea.debugger.evaluate.KotlinCodeFragmentFactory
 import org.jetbrains.kotlin.idea.debugger.evaluate.KotlinDebuggerCaches
+import org.jetbrains.kotlin.idea.debugger.stepping.tada
 import org.jetbrains.kotlin.idea.decompiler.classFile.KtClsFile
 import org.jetbrains.kotlin.idea.refactoring.getLineCount
 import org.jetbrains.kotlin.idea.refactoring.getLineEndOffset
@@ -267,9 +268,9 @@ class KotlinPositionManager(private val myDebugProcess: DebugProcess) : MultiReq
                 return position.file.getLineEndOffset(position.line) == position.offset
             }
 
-//            if (isSuspendLocationRequest(position) || tada.get()) {
-//                return listOf(type.methodsByName("doResume").first().allLineLocations()[1])
-//            }
+            if (isSuspendLocationRequest(position) || tada.get()) {
+                return listOf(type.methodsByName("doResume").first().allLineLocations()[1])
+            }
 
             val line = position.line + 1
 

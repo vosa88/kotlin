@@ -102,8 +102,6 @@ class KotlinSteppingCommandProvider : JvmSteppingCommandProvider() {
             // TODO: How to know coroutine for this suspend call if there're nested calls
             val file = sourcePosition.elementAt.containingFile
 
-            createBreakpoint(suspendContext, sourcePosition.line, file)
-
             return DebugProcessImplHelper.createStepOverCommandWithCustomFilter(
                     suspendContext, ignoreBreakpoints, KotlinSuspendCallStepOverFilter(sourcePosition.line, file))
         }
@@ -330,13 +328,13 @@ fun getStepOverAction(
         frameProxy: StackFrameProxyImpl,
         isDexDebug: Boolean
 ): Action {
-    val suspendCalls: List<KtCallExpression> = runReadAction {
-        getSuspendFunctionCallsIfAny(kotlinSourcePosition.sourcePosition)
-    }
+//    val suspendCalls: List<KtCallExpression> = runReadAction {
+//        getSuspendFunctionCallsIfAny(kotlinSourcePosition.sourcePosition)
+//    }
 
-    if (suspendCalls.isNotEmpty()) {
-        return getStepOverSuspendAction(location, kotlinSourcePosition.file, kotlinSourcePosition.linesRange, suspendCalls)
-    }
+//    if (suspendCalls.isNotEmpty()) {
+//        return getStepOverSuspendAction(location, kotlinSourcePosition.file, kotlinSourcePosition.linesRange, suspendCalls)
+//    }
 
     val inlineArgumentsToSkip = runReadAction {
         getInlineCallFunctionArgumentsIfAny(kotlinSourcePosition.sourcePosition)
@@ -346,50 +344,50 @@ fun getStepOverAction(
                              inlineArgumentsToSkip, frameProxy, isDexDebug)
 }
 
-fun getStepOverSuspendAction(location: Location,
-                             sourceFile: KtFile,
-                             range: IntRange,
-                             calls: List<KtCallExpression>): Action {
-    val computedReferenceType = location.declaringType() ?: return Action.STEP_OVER()
-
-    fun isLocationSuitable(nextLocation: Location): Boolean {
-        if (nextLocation.method() != location.method() || nextLocation.lineNumber() !in range) {
-            return false
-        }
-
-        return try {
-            nextLocation.sourceName("Kotlin") == sourceFile.name
-        }
-        catch(e: AbsentInformationException) {
-            return true
-        }
-    }
-
-    val locations = computedReferenceType.allLineLocations()
-            .dropWhile { it != location }
-            .drop(1)
-            .filter(::isLocationSuitable)
-            .dropWhile { it.lineNumber() == location.lineNumber() }
-
-    for (locationAtLine in locations) {
-        val xPosition = runReadAction l@ {
-            val lineNumber = locationAtLine.lineNumber()
-            val lineStartOffset = sourceFile.getLineStartOffset(lineNumber - 1) ?: return@l null
-            if (calls.any { it.textRange.contains(lineStartOffset) }) return@l null
-
-            if (locationAtLine.lineNumber() == location.lineNumber()) return@l null
-
-            val elementAt = sourceFile.findElementAt(lineStartOffset) ?: return@l null
-            XSourcePositionImpl.createByElement(elementAt)
-        }
-
-        if (xPosition != null) {
-            return Action.RUN_TO_CURSOR(xPosition)
-        }
-    }
-
-    return Action.STEP_OVER()
-}
+//fun getStepOverSuspendAction(location: Location,
+//                             sourceFile: KtFile,
+//                             range: IntRange,
+//                             calls: List<KtCallExpression>): Action {
+//    val computedReferenceType = location.declaringType() ?: return Action.STEP_OVER()
+//
+//    fun isLocationSuitable(nextLocation: Location): Boolean {
+//        if (nextLocation.method() != location.method() || nextLocation.lineNumber() !in range) {
+//            return false
+//        }
+//
+//        return try {
+//            nextLocation.sourceName("Kotlin") == sourceFile.name
+//        }
+//        catch(e: AbsentInformationException) {
+//            return true
+//        }
+//    }
+//
+//    val locations = computedReferenceType.allLineLocations()
+//            .dropWhile { it != location }
+//            .drop(1)
+//            .filter(::isLocationSuitable)
+//            .dropWhile { it.lineNumber() == location.lineNumber() }
+//
+//    for (locationAtLine in locations) {
+//        val xPosition = runReadAction l@ {
+//            val lineNumber = locationAtLine.lineNumber()
+//            val lineStartOffset = sourceFile.getLineStartOffset(lineNumber - 1) ?: return@l null
+//            if (calls.any { it.textRange.contains(lineStartOffset) }) return@l null
+//
+//            if (locationAtLine.lineNumber() == location.lineNumber()) return@l null
+//
+//            val elementAt = sourceFile.findElementAt(lineStartOffset) ?: return@l null
+//            XSourcePositionImpl.createByElement(elementAt)
+//        }
+//
+//        if (xPosition != null) {
+//            return Action.RUN_TO_CURSOR(xPosition)
+//        }
+//    }
+//
+//    return Action.STEP_OVER()
+//}
 
 fun getStepOverAction(
         location: Location,
