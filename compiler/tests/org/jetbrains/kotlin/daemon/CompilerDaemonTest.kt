@@ -414,7 +414,9 @@ class CompilerDaemonTest : KotlinIntegrationTestBase() {
         fun connectThread(threadNo: Int) = thread(name = "daemonConnect$threadNo") {
             try {
                 withFlagFile(getTestName(true), ".alive") { flagFile ->
-                    val daemonOptions = DaemonOptions(shutdownDelayMilliseconds = 1000, runFilesPath = File(tmpdir, getTestName(true)).absolutePath, verbose = true)
+                    val daemonOptions = DaemonOptions(shutdownDelayMilliseconds = PARALLEL_WAIT_TIMEOUT_S * 1000, // attempt to avoid immediate shutdown of the non-elected daemons
+                                                      runFilesPath = File(tmpdir, getTestName(true)).absolutePath,
+                                                      verbose = true)
                     val logFile = createTempFile("kotlin-daemon-test", ".log")
                     val daemonJVMOptions =
                             configureDaemonJVMOptions("D$COMPILE_DAEMON_LOG_PATH_PROPERTY=\"${logFile.loggerCompatiblePath}\"",
