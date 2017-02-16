@@ -185,6 +185,7 @@ class JsAstSerializer {
                     for (part in case.statements) {
                         entryBuilder.addStatement(serialize(part))
                     }
+                    switchBuilder.addEntry(entryBuilder)
                 }
                 builder.switchStatement = switchBuilder.build()
             }
@@ -327,15 +328,7 @@ class JsAstSerializer {
                     val tagBuilder = DocCommentTag.newBuilder()
                     tagBuilder.nameId = serialize(name)
                     when (value) {
-                        is JsNameRef -> {
-                            val valueName = value.name
-                            if (valueName != null) {
-                                tagBuilder.valueNameId = serialize(value.name!!)
-                            }
-                            else {
-                                tagBuilder.valueStringId = serialize(value.ident)
-                            }
-                        }
+                        is JsNameRef -> tagBuilder.expression = serialize(value)
                         is String -> tagBuilder.valueStringId = serialize(value)
                     }
                     commentBuilder.addTag(tagBuilder)
@@ -392,6 +385,7 @@ class JsAstSerializer {
                     val propertyRefBuilder = PropertyReference.newBuilder()
                     propertyRefBuilder.stringId = serialize(nameRef.ident)
                     qualifier?.let { propertyRefBuilder.qualifier = serialize(it) }
+                    builder.propertyReference = propertyRefBuilder.build()
                 }
             }
 
@@ -436,6 +430,7 @@ class JsAstSerializer {
             varDecl.initExpression?.let { declBuilder.initialValue = serialize(it) }
             varsBuilder.addDeclaration(declBuilder)
         }
+        varsBuilder.multiline = vars.isMultiline
         return varsBuilder.build()
     }
 
@@ -503,6 +498,7 @@ class JsAstSerializer {
         val builder = Name.newBuilder()
         builder.identifier = serialize(name.ident)
         builder.temporary = name.isTemporary
+        nameTableBuilder.addEntry(builder)
         result
     }
 
