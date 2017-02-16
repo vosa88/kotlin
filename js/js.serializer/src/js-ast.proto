@@ -25,25 +25,25 @@ option optimize_for = LITE_RUNTIME;
 
 message Expression {
     oneof expression {
-        int32 simpleNameReference = 2;
-        ThisLiteral thisLiteral = 3;
-        NullLiteral nullLiteral = 4;
-        TrueLiteral trueLiteral = 5;
-        FalseLiteral falseLiteral = 6;
-        StringLiteral stringLiteral = 7;
-        RegExpLiteral regExpLiteral = 8;
-        IntLiteral intLiteral = 9;
-        DoubleLiteral doubleLiteral = 10;
-        ArrayLiteral arrayLiteral = 11;
-        ObjectLiteral objectLiteral = 12;
+        int32 simple_name_reference = 2;
+        ThisLiteral this_literal = 3;
+        NullLiteral null_literal = 4;
+        TrueLiteral true_literal = 5;
+        FalseLiteral false_literal = 6;
+        StringLiteral string_literal = 7;
+        RegExpLiteral reg_exp_literal = 8;
+        IntLiteral int_literal = 9;
+        DoubleLiteral double_literal = 10;
+        ArrayLiteral array_literal = 11;
+        ObjectLiteral object_literal = 12;
         Function function = 13;
-        DocComment docComment = 14;
+        DocComment doc_comment = 14;
         BinaryOperation binary = 15;
         UnaryOperation unary = 16;
         Conditional conditional = 17;
-        ArrayAccess arrayAccess = 18;
-        NameReference nameReference = 19;
-        PropertyReference propertyReference = 20;
+        ArrayAccess array_access = 18;
+        NameReference name_reference = 19;
+        PropertyReference property_reference = 20;
         Invocation invocation = 21;
         Instantiation instantiation = 22;
     }
@@ -62,12 +62,12 @@ message FalseLiteral {
 }
 
 message StringLiteral {
-    required int32 stringId = 1;
+    required int32 string_id = 1;
 }
 
 message RegExpLiteral {
-    required int32 patternStringId = 1;
-    optional int32 flagsStringId = 2;
+    required int32 pattern_string_id = 1;
+    optional int32 flags_string_id = 2;
 }
 
 message IntLiteral {
@@ -94,12 +94,12 @@ message ObjectLiteralEntry {
 
 message Function {
     repeated Parameter parameter = 1;
-    optional int32 nameId = 2;
+    optional int32 name_id = 2;
     required Statement body = 3;
 }
 
 message Parameter {
-    required int32 nameId = 1;
+    required int32 name_id = 1;
 }
 
 message DocComment {
@@ -107,10 +107,10 @@ message DocComment {
 }
 
 message DocCommentTag {
-    required int32 nameId = 1;
+    required int32 name_id = 1;
     oneof value {
-        int32 valueStringId = 2;
-        int32 valueNameId = 3;
+        int32 value_string_id = 2;
+        Expression expression = 3;
     }
 }
 
@@ -178,9 +178,9 @@ message UnaryOperation {
 }
 
 message Conditional {
-    required Expression testExpression = 1;
-    required Expression thenExpression = 2;
-    required Expression elseExpression = 3;
+    required Expression test_expression = 1;
+    required Expression then_expression = 2;
+    required Expression else_expression = 3;
 }
 
 message ArrayAccess {
@@ -189,12 +189,12 @@ message ArrayAccess {
 }
 
 message NameReference {
-    required int32 nameId = 1;
+    required int32 name_id = 1;
     required Expression qualifier = 2;
 }
 
 message PropertyReference {
-    required int32 stringId = 1;
+    required int32 string_id = 1;
     optional Expression qualifier = 2;
 }
 
@@ -214,23 +214,23 @@ message Instantiation {
 
 message Statement {
     oneof statement {
-        Return returnStatement = 1;
-        Throw throwStatement = 2;
-        Break breakStatement = 3;
-        Continue continueStatement = 4;
+        Return return_statement = 1;
+        Throw throw_statement = 2;
+        Break break_statement = 3;
+        Continue continue_statement = 4;
         Debugger debugger = 5;
         ExpressionStatement expression = 6;
         Vars vars = 7;
         Block block = 8;
-        GlobalBlock globalBlock = 9;
+        GlobalBlock global_block = 9;
         Label label = 10;
-        If ifStatement = 11;
-        Switch switchStatement = 12;
-        While whileStatement = 13;
-        DoWhile doWhileStatement = 14;
-        For forStatement = 15;
-        ForIn forInStatement = 16;
-        Try tryStatement = 17;
+        If if_statement = 11;
+        Switch switch_statement = 12;
+        While while_statement = 13;
+        DoWhile do_while_statement = 14;
+        For for_statement = 15;
+        ForIn for_in_statement = 16;
+        Try try_statement = 17;
         Empty empty = 18;
     }
 }
@@ -244,11 +244,11 @@ message Throw {
 }
 
 message Break {
-    optional int32 labelId = 1;
+    optional int32 label_id = 1;
 }
 
 message Continue {
-    optional int32 labelId = 1;
+    optional int32 label_id = 1;
 }
 
 message Debugger {
@@ -260,11 +260,12 @@ message ExpressionStatement {
 
 message Vars {
     repeated VarDeclaration declaration = 1;
+    required bool multiline = 2;
 }
 
 message VarDeclaration {
-    required int32 nameId = 1;
-    optional Expression initialValue = 2;
+    required int32 name_id = 1;
+    optional Expression initial_value = 2;
 }
 
 message Block {
@@ -277,13 +278,13 @@ message GlobalBlock {
 
 message Label {
     required int32 nameId = 1;
-    required Statement innerStatement = 2;
+    required Statement inner_statement = 2;
 }
 
 message If {
     required Expression condition = 1;
-    required Statement thenStatement = 2;
-    optional Statement elseStatement = 3;
+    required Statement then_statement = 2;
+    optional Statement else_statement = 3;
 }
 
 message Switch {
@@ -347,42 +348,42 @@ message Empty {
 // Fragment
 
 message Fragment {
-    repeated ImportedModule importedModule = 1;
-    repeated Import importEntry = 2;
-    optional GlobalBlock declarationBlock = 3;
-    optional GlobalBlock exportBlock = 4;
-    optional GlobalBlock initializerBlock = 5;
-    repeated NameBinding nameBinding = 6;
-    repeated ClassModel classModel = 7;
-    repeated Expression moduleExpression = 8;
-    repeated InlineModule inlineModule = 9;
+    repeated ImportedModule imported_module = 1;
+    repeated Import import_entry = 2;
+    optional GlobalBlock declaration_block = 3;
+    optional GlobalBlock export_block = 4;
+    optional GlobalBlock initializer_block = 5;
+    repeated NameBinding name_binding = 6;
+    repeated ClassModel class_model = 7;
+    repeated Expression module_expression = 8;
+    repeated InlineModule inline_module = 9;
 }
 
 message ImportedModule {
-    required int32 externalNameId = 1;
-    required int32 internalNameId = 2;
-    optional Expression plainReference = 3;
+    required int32 external_name_id = 1;
+    required int32 internal_name_id = 2;
+    optional Expression plain_reference = 3;
 }
 
 message Import {
-    required int32 signatureId = 1;
+    required int32 signature_id = 1;
     required Expression expression = 2;
 }
 
 message NameBinding {
-    required int32 signatureId = 1;
+    required int32 signature_id = 1;
     required int32 nameId = 2;
 }
 
 message ClassModel {
-    required int32 nameId = 1;
-    optional int32 superNameId = 2;
-    optional GlobalBlock postDeclarationBlock = 3;
+    required int32 name_id = 1;
+    optional int32 super_name_id = 2;
+    optional GlobalBlock post_declaration_block = 3;
 }
 
 message InlineModule {
-    required int32 signatureId = 1;
-    required int32 expressionId = 2;
+    required int32 signature_id = 1;
+    required int32 expression_id = 2;
 }
 
 // Tables
@@ -406,7 +407,7 @@ message Name {
 //
 
 message Chunk {
-    required StringTable stringTable = 1;
-    required NameTable nameTable = 2;
+    required StringTable string_table = 1;
+    required NameTable name_table = 2;
     required Fragment fragment = 3;
 }

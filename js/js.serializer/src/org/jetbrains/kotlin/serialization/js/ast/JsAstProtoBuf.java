@@ -13,101 +13,101 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>optional int32 simpleNameReference = 2;</code>
+     * <code>optional int32 simple_name_reference = 2;</code>
      */
     boolean hasSimpleNameReference();
     /**
-     * <code>optional int32 simpleNameReference = 2;</code>
+     * <code>optional int32 simple_name_reference = 2;</code>
      */
     int getSimpleNameReference();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral thisLiteral = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral this_literal = 3;</code>
      */
     boolean hasThisLiteral();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral thisLiteral = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral this_literal = 3;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ThisLiteral getThisLiteral();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral nullLiteral = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral null_literal = 4;</code>
      */
     boolean hasNullLiteral();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral nullLiteral = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral null_literal = 4;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NullLiteral getNullLiteral();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral trueLiteral = 5;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral true_literal = 5;</code>
      */
     boolean hasTrueLiteral();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral trueLiteral = 5;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral true_literal = 5;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.TrueLiteral getTrueLiteral();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral falseLiteral = 6;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral false_literal = 6;</code>
      */
     boolean hasFalseLiteral();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral falseLiteral = 6;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral false_literal = 6;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.FalseLiteral getFalseLiteral();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral stringLiteral = 7;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral string_literal = 7;</code>
      */
     boolean hasStringLiteral();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral stringLiteral = 7;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral string_literal = 7;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringLiteral getStringLiteral();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral regExpLiteral = 8;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral reg_exp_literal = 8;</code>
      */
     boolean hasRegExpLiteral();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral regExpLiteral = 8;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral reg_exp_literal = 8;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.RegExpLiteral getRegExpLiteral();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral intLiteral = 9;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral int_literal = 9;</code>
      */
     boolean hasIntLiteral();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral intLiteral = 9;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral int_literal = 9;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.IntLiteral getIntLiteral();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral doubleLiteral = 10;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral double_literal = 10;</code>
      */
     boolean hasDoubleLiteral();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral doubleLiteral = 10;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral double_literal = 10;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoubleLiteral getDoubleLiteral();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral arrayLiteral = 11;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral array_literal = 11;</code>
      */
     boolean hasArrayLiteral();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral arrayLiteral = 11;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral array_literal = 11;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayLiteral getArrayLiteral();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral objectLiteral = 12;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral object_literal = 12;</code>
      */
     boolean hasObjectLiteral();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral objectLiteral = 12;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral object_literal = 12;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ObjectLiteral getObjectLiteral();
 
@@ -121,11 +121,11 @@ public final class JsAstProtoBuf {
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Function getFunction();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment docComment = 14;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment doc_comment = 14;</code>
      */
     boolean hasDocComment();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment docComment = 14;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment doc_comment = 14;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DocComment getDocComment();
 
@@ -157,29 +157,29 @@ public final class JsAstProtoBuf {
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Conditional getConditional();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess arrayAccess = 18;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess array_access = 18;</code>
      */
     boolean hasArrayAccess();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess arrayAccess = 18;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess array_access = 18;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayAccess getArrayAccess();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference nameReference = 19;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference name_reference = 19;</code>
      */
     boolean hasNameReference();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference nameReference = 19;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference name_reference = 19;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameReference getNameReference();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference propertyReference = 20;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference property_reference = 20;</code>
      */
     boolean hasPropertyReference();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference propertyReference = 20;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference property_reference = 20;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.PropertyReference getPropertyReference();
 
@@ -554,25 +554,25 @@ public final class JsAstProtoBuf {
     private java.lang.Object expression_;
     public enum ExpressionCase
         implements org.jetbrains.kotlin.protobuf.Internal.EnumLite {
-      SIMPLENAMEREFERENCE(2),
-      THISLITERAL(3),
-      NULLLITERAL(4),
-      TRUELITERAL(5),
-      FALSELITERAL(6),
-      STRINGLITERAL(7),
-      REGEXPLITERAL(8),
-      INTLITERAL(9),
-      DOUBLELITERAL(10),
-      ARRAYLITERAL(11),
-      OBJECTLITERAL(12),
+      SIMPLE_NAME_REFERENCE(2),
+      THIS_LITERAL(3),
+      NULL_LITERAL(4),
+      TRUE_LITERAL(5),
+      FALSE_LITERAL(6),
+      STRING_LITERAL(7),
+      REG_EXP_LITERAL(8),
+      INT_LITERAL(9),
+      DOUBLE_LITERAL(10),
+      ARRAY_LITERAL(11),
+      OBJECT_LITERAL(12),
       FUNCTION(13),
-      DOCCOMMENT(14),
+      DOC_COMMENT(14),
       BINARY(15),
       UNARY(16),
       CONDITIONAL(17),
-      ARRAYACCESS(18),
-      NAMEREFERENCE(19),
-      PROPERTYREFERENCE(20),
+      ARRAY_ACCESS(18),
+      NAME_REFERENCE(19),
+      PROPERTY_REFERENCE(20),
       INVOCATION(21),
       INSTANTIATION(22),
       EXPRESSION_NOT_SET(0);
@@ -582,25 +582,25 @@ public final class JsAstProtoBuf {
       }
       public static ExpressionCase valueOf(int value) {
         switch (value) {
-          case 2: return SIMPLENAMEREFERENCE;
-          case 3: return THISLITERAL;
-          case 4: return NULLLITERAL;
-          case 5: return TRUELITERAL;
-          case 6: return FALSELITERAL;
-          case 7: return STRINGLITERAL;
-          case 8: return REGEXPLITERAL;
-          case 9: return INTLITERAL;
-          case 10: return DOUBLELITERAL;
-          case 11: return ARRAYLITERAL;
-          case 12: return OBJECTLITERAL;
+          case 2: return SIMPLE_NAME_REFERENCE;
+          case 3: return THIS_LITERAL;
+          case 4: return NULL_LITERAL;
+          case 5: return TRUE_LITERAL;
+          case 6: return FALSE_LITERAL;
+          case 7: return STRING_LITERAL;
+          case 8: return REG_EXP_LITERAL;
+          case 9: return INT_LITERAL;
+          case 10: return DOUBLE_LITERAL;
+          case 11: return ARRAY_LITERAL;
+          case 12: return OBJECT_LITERAL;
           case 13: return FUNCTION;
-          case 14: return DOCCOMMENT;
+          case 14: return DOC_COMMENT;
           case 15: return BINARY;
           case 16: return UNARY;
           case 17: return CONDITIONAL;
-          case 18: return ARRAYACCESS;
-          case 19: return NAMEREFERENCE;
-          case 20: return PROPERTYREFERENCE;
+          case 18: return ARRAY_ACCESS;
+          case 19: return NAME_REFERENCE;
+          case 20: return PROPERTY_REFERENCE;
           case 21: return INVOCATION;
           case 22: return INSTANTIATION;
           case 0: return EXPRESSION_NOT_SET;
@@ -619,15 +619,15 @@ public final class JsAstProtoBuf {
           expressionCase_);
     }
 
-    public static final int SIMPLENAMEREFERENCE_FIELD_NUMBER = 2;
+    public static final int SIMPLE_NAME_REFERENCE_FIELD_NUMBER = 2;
     /**
-     * <code>optional int32 simpleNameReference = 2;</code>
+     * <code>optional int32 simple_name_reference = 2;</code>
      */
     public boolean hasSimpleNameReference() {
       return expressionCase_ == 2;
     }
     /**
-     * <code>optional int32 simpleNameReference = 2;</code>
+     * <code>optional int32 simple_name_reference = 2;</code>
      */
     public int getSimpleNameReference() {
       if (expressionCase_ == 2) {
@@ -636,15 +636,15 @@ public final class JsAstProtoBuf {
       return 0;
     }
 
-    public static final int THISLITERAL_FIELD_NUMBER = 3;
+    public static final int THIS_LITERAL_FIELD_NUMBER = 3;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral thisLiteral = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral this_literal = 3;</code>
      */
     public boolean hasThisLiteral() {
       return expressionCase_ == 3;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral thisLiteral = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral this_literal = 3;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ThisLiteral getThisLiteral() {
       if (expressionCase_ == 3) {
@@ -653,15 +653,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ThisLiteral.getDefaultInstance();
     }
 
-    public static final int NULLLITERAL_FIELD_NUMBER = 4;
+    public static final int NULL_LITERAL_FIELD_NUMBER = 4;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral nullLiteral = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral null_literal = 4;</code>
      */
     public boolean hasNullLiteral() {
       return expressionCase_ == 4;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral nullLiteral = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral null_literal = 4;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NullLiteral getNullLiteral() {
       if (expressionCase_ == 4) {
@@ -670,15 +670,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NullLiteral.getDefaultInstance();
     }
 
-    public static final int TRUELITERAL_FIELD_NUMBER = 5;
+    public static final int TRUE_LITERAL_FIELD_NUMBER = 5;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral trueLiteral = 5;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral true_literal = 5;</code>
      */
     public boolean hasTrueLiteral() {
       return expressionCase_ == 5;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral trueLiteral = 5;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral true_literal = 5;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.TrueLiteral getTrueLiteral() {
       if (expressionCase_ == 5) {
@@ -687,15 +687,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.TrueLiteral.getDefaultInstance();
     }
 
-    public static final int FALSELITERAL_FIELD_NUMBER = 6;
+    public static final int FALSE_LITERAL_FIELD_NUMBER = 6;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral falseLiteral = 6;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral false_literal = 6;</code>
      */
     public boolean hasFalseLiteral() {
       return expressionCase_ == 6;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral falseLiteral = 6;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral false_literal = 6;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.FalseLiteral getFalseLiteral() {
       if (expressionCase_ == 6) {
@@ -704,15 +704,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.FalseLiteral.getDefaultInstance();
     }
 
-    public static final int STRINGLITERAL_FIELD_NUMBER = 7;
+    public static final int STRING_LITERAL_FIELD_NUMBER = 7;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral stringLiteral = 7;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral string_literal = 7;</code>
      */
     public boolean hasStringLiteral() {
       return expressionCase_ == 7;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral stringLiteral = 7;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral string_literal = 7;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringLiteral getStringLiteral() {
       if (expressionCase_ == 7) {
@@ -721,15 +721,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringLiteral.getDefaultInstance();
     }
 
-    public static final int REGEXPLITERAL_FIELD_NUMBER = 8;
+    public static final int REG_EXP_LITERAL_FIELD_NUMBER = 8;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral regExpLiteral = 8;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral reg_exp_literal = 8;</code>
      */
     public boolean hasRegExpLiteral() {
       return expressionCase_ == 8;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral regExpLiteral = 8;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral reg_exp_literal = 8;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.RegExpLiteral getRegExpLiteral() {
       if (expressionCase_ == 8) {
@@ -738,15 +738,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.RegExpLiteral.getDefaultInstance();
     }
 
-    public static final int INTLITERAL_FIELD_NUMBER = 9;
+    public static final int INT_LITERAL_FIELD_NUMBER = 9;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral intLiteral = 9;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral int_literal = 9;</code>
      */
     public boolean hasIntLiteral() {
       return expressionCase_ == 9;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral intLiteral = 9;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral int_literal = 9;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.IntLiteral getIntLiteral() {
       if (expressionCase_ == 9) {
@@ -755,15 +755,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.IntLiteral.getDefaultInstance();
     }
 
-    public static final int DOUBLELITERAL_FIELD_NUMBER = 10;
+    public static final int DOUBLE_LITERAL_FIELD_NUMBER = 10;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral doubleLiteral = 10;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral double_literal = 10;</code>
      */
     public boolean hasDoubleLiteral() {
       return expressionCase_ == 10;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral doubleLiteral = 10;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral double_literal = 10;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoubleLiteral getDoubleLiteral() {
       if (expressionCase_ == 10) {
@@ -772,15 +772,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoubleLiteral.getDefaultInstance();
     }
 
-    public static final int ARRAYLITERAL_FIELD_NUMBER = 11;
+    public static final int ARRAY_LITERAL_FIELD_NUMBER = 11;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral arrayLiteral = 11;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral array_literal = 11;</code>
      */
     public boolean hasArrayLiteral() {
       return expressionCase_ == 11;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral arrayLiteral = 11;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral array_literal = 11;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayLiteral getArrayLiteral() {
       if (expressionCase_ == 11) {
@@ -789,15 +789,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayLiteral.getDefaultInstance();
     }
 
-    public static final int OBJECTLITERAL_FIELD_NUMBER = 12;
+    public static final int OBJECT_LITERAL_FIELD_NUMBER = 12;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral objectLiteral = 12;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral object_literal = 12;</code>
      */
     public boolean hasObjectLiteral() {
       return expressionCase_ == 12;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral objectLiteral = 12;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral object_literal = 12;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ObjectLiteral getObjectLiteral() {
       if (expressionCase_ == 12) {
@@ -823,15 +823,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Function.getDefaultInstance();
     }
 
-    public static final int DOCCOMMENT_FIELD_NUMBER = 14;
+    public static final int DOC_COMMENT_FIELD_NUMBER = 14;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment docComment = 14;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment doc_comment = 14;</code>
      */
     public boolean hasDocComment() {
       return expressionCase_ == 14;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment docComment = 14;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment doc_comment = 14;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DocComment getDocComment() {
       if (expressionCase_ == 14) {
@@ -891,15 +891,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Conditional.getDefaultInstance();
     }
 
-    public static final int ARRAYACCESS_FIELD_NUMBER = 18;
+    public static final int ARRAY_ACCESS_FIELD_NUMBER = 18;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess arrayAccess = 18;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess array_access = 18;</code>
      */
     public boolean hasArrayAccess() {
       return expressionCase_ == 18;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess arrayAccess = 18;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess array_access = 18;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayAccess getArrayAccess() {
       if (expressionCase_ == 18) {
@@ -908,15 +908,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayAccess.getDefaultInstance();
     }
 
-    public static final int NAMEREFERENCE_FIELD_NUMBER = 19;
+    public static final int NAME_REFERENCE_FIELD_NUMBER = 19;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference nameReference = 19;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference name_reference = 19;</code>
      */
     public boolean hasNameReference() {
       return expressionCase_ == 19;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference nameReference = 19;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference name_reference = 19;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameReference getNameReference() {
       if (expressionCase_ == 19) {
@@ -925,15 +925,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameReference.getDefaultInstance();
     }
 
-    public static final int PROPERTYREFERENCE_FIELD_NUMBER = 20;
+    public static final int PROPERTY_REFERENCE_FIELD_NUMBER = 20;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference propertyReference = 20;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference property_reference = 20;</code>
      */
     public boolean hasPropertyReference() {
       return expressionCase_ == 20;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference propertyReference = 20;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference property_reference = 20;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.PropertyReference getPropertyReference() {
       if (expressionCase_ == 20) {
@@ -1435,47 +1435,47 @@ public final class JsAstProtoBuf {
       public Builder mergeFrom(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression other) {
         if (other == org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance()) return this;
         switch (other.getExpressionCase()) {
-          case SIMPLENAMEREFERENCE: {
+          case SIMPLE_NAME_REFERENCE: {
             setSimpleNameReference(other.getSimpleNameReference());
             break;
           }
-          case THISLITERAL: {
+          case THIS_LITERAL: {
             mergeThisLiteral(other.getThisLiteral());
             break;
           }
-          case NULLLITERAL: {
+          case NULL_LITERAL: {
             mergeNullLiteral(other.getNullLiteral());
             break;
           }
-          case TRUELITERAL: {
+          case TRUE_LITERAL: {
             mergeTrueLiteral(other.getTrueLiteral());
             break;
           }
-          case FALSELITERAL: {
+          case FALSE_LITERAL: {
             mergeFalseLiteral(other.getFalseLiteral());
             break;
           }
-          case STRINGLITERAL: {
+          case STRING_LITERAL: {
             mergeStringLiteral(other.getStringLiteral());
             break;
           }
-          case REGEXPLITERAL: {
+          case REG_EXP_LITERAL: {
             mergeRegExpLiteral(other.getRegExpLiteral());
             break;
           }
-          case INTLITERAL: {
+          case INT_LITERAL: {
             mergeIntLiteral(other.getIntLiteral());
             break;
           }
-          case DOUBLELITERAL: {
+          case DOUBLE_LITERAL: {
             mergeDoubleLiteral(other.getDoubleLiteral());
             break;
           }
-          case ARRAYLITERAL: {
+          case ARRAY_LITERAL: {
             mergeArrayLiteral(other.getArrayLiteral());
             break;
           }
-          case OBJECTLITERAL: {
+          case OBJECT_LITERAL: {
             mergeObjectLiteral(other.getObjectLiteral());
             break;
           }
@@ -1483,7 +1483,7 @@ public final class JsAstProtoBuf {
             mergeFunction(other.getFunction());
             break;
           }
-          case DOCCOMMENT: {
+          case DOC_COMMENT: {
             mergeDocComment(other.getDocComment());
             break;
           }
@@ -1499,15 +1499,15 @@ public final class JsAstProtoBuf {
             mergeConditional(other.getConditional());
             break;
           }
-          case ARRAYACCESS: {
+          case ARRAY_ACCESS: {
             mergeArrayAccess(other.getArrayAccess());
             break;
           }
-          case NAMEREFERENCE: {
+          case NAME_REFERENCE: {
             mergeNameReference(other.getNameReference());
             break;
           }
-          case PROPERTYREFERENCE: {
+          case PROPERTY_REFERENCE: {
             mergePropertyReference(other.getPropertyReference());
             break;
           }
@@ -1662,13 +1662,13 @@ public final class JsAstProtoBuf {
       private int bitField0_;
 
       /**
-       * <code>optional int32 simpleNameReference = 2;</code>
+       * <code>optional int32 simple_name_reference = 2;</code>
        */
       public boolean hasSimpleNameReference() {
         return expressionCase_ == 2;
       }
       /**
-       * <code>optional int32 simpleNameReference = 2;</code>
+       * <code>optional int32 simple_name_reference = 2;</code>
        */
       public int getSimpleNameReference() {
         if (expressionCase_ == 2) {
@@ -1677,7 +1677,7 @@ public final class JsAstProtoBuf {
         return 0;
       }
       /**
-       * <code>optional int32 simpleNameReference = 2;</code>
+       * <code>optional int32 simple_name_reference = 2;</code>
        */
       public Builder setSimpleNameReference(int value) {
         expressionCase_ = 2;
@@ -1686,7 +1686,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional int32 simpleNameReference = 2;</code>
+       * <code>optional int32 simple_name_reference = 2;</code>
        */
       public Builder clearSimpleNameReference() {
         if (expressionCase_ == 2) {
@@ -1698,13 +1698,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral thisLiteral = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral this_literal = 3;</code>
        */
       public boolean hasThisLiteral() {
         return expressionCase_ == 3;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral thisLiteral = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral this_literal = 3;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ThisLiteral getThisLiteral() {
         if (expressionCase_ == 3) {
@@ -1713,7 +1713,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ThisLiteral.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral thisLiteral = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral this_literal = 3;</code>
        */
       public Builder setThisLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ThisLiteral value) {
         if (value == null) {
@@ -1725,7 +1725,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral thisLiteral = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral this_literal = 3;</code>
        */
       public Builder setThisLiteral(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ThisLiteral.Builder builderForValue) {
@@ -1735,7 +1735,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral thisLiteral = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral this_literal = 3;</code>
        */
       public Builder mergeThisLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ThisLiteral value) {
         if (expressionCase_ == 3 &&
@@ -1750,7 +1750,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral thisLiteral = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ThisLiteral this_literal = 3;</code>
        */
       public Builder clearThisLiteral() {
         if (expressionCase_ == 3) {
@@ -1762,13 +1762,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral nullLiteral = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral null_literal = 4;</code>
        */
       public boolean hasNullLiteral() {
         return expressionCase_ == 4;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral nullLiteral = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral null_literal = 4;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NullLiteral getNullLiteral() {
         if (expressionCase_ == 4) {
@@ -1777,7 +1777,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NullLiteral.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral nullLiteral = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral null_literal = 4;</code>
        */
       public Builder setNullLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NullLiteral value) {
         if (value == null) {
@@ -1789,7 +1789,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral nullLiteral = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral null_literal = 4;</code>
        */
       public Builder setNullLiteral(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NullLiteral.Builder builderForValue) {
@@ -1799,7 +1799,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral nullLiteral = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral null_literal = 4;</code>
        */
       public Builder mergeNullLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NullLiteral value) {
         if (expressionCase_ == 4 &&
@@ -1814,7 +1814,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral nullLiteral = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NullLiteral null_literal = 4;</code>
        */
       public Builder clearNullLiteral() {
         if (expressionCase_ == 4) {
@@ -1826,13 +1826,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral trueLiteral = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral true_literal = 5;</code>
        */
       public boolean hasTrueLiteral() {
         return expressionCase_ == 5;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral trueLiteral = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral true_literal = 5;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.TrueLiteral getTrueLiteral() {
         if (expressionCase_ == 5) {
@@ -1841,7 +1841,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.TrueLiteral.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral trueLiteral = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral true_literal = 5;</code>
        */
       public Builder setTrueLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.TrueLiteral value) {
         if (value == null) {
@@ -1853,7 +1853,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral trueLiteral = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral true_literal = 5;</code>
        */
       public Builder setTrueLiteral(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.TrueLiteral.Builder builderForValue) {
@@ -1863,7 +1863,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral trueLiteral = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral true_literal = 5;</code>
        */
       public Builder mergeTrueLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.TrueLiteral value) {
         if (expressionCase_ == 5 &&
@@ -1878,7 +1878,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral trueLiteral = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.TrueLiteral true_literal = 5;</code>
        */
       public Builder clearTrueLiteral() {
         if (expressionCase_ == 5) {
@@ -1890,13 +1890,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral falseLiteral = 6;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral false_literal = 6;</code>
        */
       public boolean hasFalseLiteral() {
         return expressionCase_ == 6;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral falseLiteral = 6;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral false_literal = 6;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.FalseLiteral getFalseLiteral() {
         if (expressionCase_ == 6) {
@@ -1905,7 +1905,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.FalseLiteral.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral falseLiteral = 6;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral false_literal = 6;</code>
        */
       public Builder setFalseLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.FalseLiteral value) {
         if (value == null) {
@@ -1917,7 +1917,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral falseLiteral = 6;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral false_literal = 6;</code>
        */
       public Builder setFalseLiteral(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.FalseLiteral.Builder builderForValue) {
@@ -1927,7 +1927,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral falseLiteral = 6;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral false_literal = 6;</code>
        */
       public Builder mergeFalseLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.FalseLiteral value) {
         if (expressionCase_ == 6 &&
@@ -1942,7 +1942,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral falseLiteral = 6;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.FalseLiteral false_literal = 6;</code>
        */
       public Builder clearFalseLiteral() {
         if (expressionCase_ == 6) {
@@ -1954,13 +1954,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral stringLiteral = 7;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral string_literal = 7;</code>
        */
       public boolean hasStringLiteral() {
         return expressionCase_ == 7;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral stringLiteral = 7;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral string_literal = 7;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringLiteral getStringLiteral() {
         if (expressionCase_ == 7) {
@@ -1969,7 +1969,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringLiteral.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral stringLiteral = 7;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral string_literal = 7;</code>
        */
       public Builder setStringLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringLiteral value) {
         if (value == null) {
@@ -1981,7 +1981,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral stringLiteral = 7;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral string_literal = 7;</code>
        */
       public Builder setStringLiteral(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringLiteral.Builder builderForValue) {
@@ -1991,7 +1991,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral stringLiteral = 7;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral string_literal = 7;</code>
        */
       public Builder mergeStringLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringLiteral value) {
         if (expressionCase_ == 7 &&
@@ -2006,7 +2006,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral stringLiteral = 7;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.StringLiteral string_literal = 7;</code>
        */
       public Builder clearStringLiteral() {
         if (expressionCase_ == 7) {
@@ -2018,13 +2018,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral regExpLiteral = 8;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral reg_exp_literal = 8;</code>
        */
       public boolean hasRegExpLiteral() {
         return expressionCase_ == 8;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral regExpLiteral = 8;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral reg_exp_literal = 8;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.RegExpLiteral getRegExpLiteral() {
         if (expressionCase_ == 8) {
@@ -2033,7 +2033,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.RegExpLiteral.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral regExpLiteral = 8;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral reg_exp_literal = 8;</code>
        */
       public Builder setRegExpLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.RegExpLiteral value) {
         if (value == null) {
@@ -2045,7 +2045,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral regExpLiteral = 8;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral reg_exp_literal = 8;</code>
        */
       public Builder setRegExpLiteral(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.RegExpLiteral.Builder builderForValue) {
@@ -2055,7 +2055,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral regExpLiteral = 8;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral reg_exp_literal = 8;</code>
        */
       public Builder mergeRegExpLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.RegExpLiteral value) {
         if (expressionCase_ == 8 &&
@@ -2070,7 +2070,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral regExpLiteral = 8;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.RegExpLiteral reg_exp_literal = 8;</code>
        */
       public Builder clearRegExpLiteral() {
         if (expressionCase_ == 8) {
@@ -2082,13 +2082,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral intLiteral = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral int_literal = 9;</code>
        */
       public boolean hasIntLiteral() {
         return expressionCase_ == 9;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral intLiteral = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral int_literal = 9;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.IntLiteral getIntLiteral() {
         if (expressionCase_ == 9) {
@@ -2097,7 +2097,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.IntLiteral.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral intLiteral = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral int_literal = 9;</code>
        */
       public Builder setIntLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.IntLiteral value) {
         if (value == null) {
@@ -2109,7 +2109,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral intLiteral = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral int_literal = 9;</code>
        */
       public Builder setIntLiteral(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.IntLiteral.Builder builderForValue) {
@@ -2119,7 +2119,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral intLiteral = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral int_literal = 9;</code>
        */
       public Builder mergeIntLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.IntLiteral value) {
         if (expressionCase_ == 9 &&
@@ -2134,7 +2134,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral intLiteral = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.IntLiteral int_literal = 9;</code>
        */
       public Builder clearIntLiteral() {
         if (expressionCase_ == 9) {
@@ -2146,13 +2146,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral doubleLiteral = 10;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral double_literal = 10;</code>
        */
       public boolean hasDoubleLiteral() {
         return expressionCase_ == 10;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral doubleLiteral = 10;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral double_literal = 10;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoubleLiteral getDoubleLiteral() {
         if (expressionCase_ == 10) {
@@ -2161,7 +2161,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoubleLiteral.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral doubleLiteral = 10;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral double_literal = 10;</code>
        */
       public Builder setDoubleLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoubleLiteral value) {
         if (value == null) {
@@ -2173,7 +2173,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral doubleLiteral = 10;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral double_literal = 10;</code>
        */
       public Builder setDoubleLiteral(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoubleLiteral.Builder builderForValue) {
@@ -2183,7 +2183,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral doubleLiteral = 10;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral double_literal = 10;</code>
        */
       public Builder mergeDoubleLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoubleLiteral value) {
         if (expressionCase_ == 10 &&
@@ -2198,7 +2198,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral doubleLiteral = 10;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoubleLiteral double_literal = 10;</code>
        */
       public Builder clearDoubleLiteral() {
         if (expressionCase_ == 10) {
@@ -2210,13 +2210,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral arrayLiteral = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral array_literal = 11;</code>
        */
       public boolean hasArrayLiteral() {
         return expressionCase_ == 11;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral arrayLiteral = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral array_literal = 11;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayLiteral getArrayLiteral() {
         if (expressionCase_ == 11) {
@@ -2225,7 +2225,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayLiteral.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral arrayLiteral = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral array_literal = 11;</code>
        */
       public Builder setArrayLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayLiteral value) {
         if (value == null) {
@@ -2237,7 +2237,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral arrayLiteral = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral array_literal = 11;</code>
        */
       public Builder setArrayLiteral(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayLiteral.Builder builderForValue) {
@@ -2247,7 +2247,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral arrayLiteral = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral array_literal = 11;</code>
        */
       public Builder mergeArrayLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayLiteral value) {
         if (expressionCase_ == 11 &&
@@ -2262,7 +2262,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral arrayLiteral = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayLiteral array_literal = 11;</code>
        */
       public Builder clearArrayLiteral() {
         if (expressionCase_ == 11) {
@@ -2274,13 +2274,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral objectLiteral = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral object_literal = 12;</code>
        */
       public boolean hasObjectLiteral() {
         return expressionCase_ == 12;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral objectLiteral = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral object_literal = 12;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ObjectLiteral getObjectLiteral() {
         if (expressionCase_ == 12) {
@@ -2289,7 +2289,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ObjectLiteral.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral objectLiteral = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral object_literal = 12;</code>
        */
       public Builder setObjectLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ObjectLiteral value) {
         if (value == null) {
@@ -2301,7 +2301,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral objectLiteral = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral object_literal = 12;</code>
        */
       public Builder setObjectLiteral(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ObjectLiteral.Builder builderForValue) {
@@ -2311,7 +2311,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral objectLiteral = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral object_literal = 12;</code>
        */
       public Builder mergeObjectLiteral(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ObjectLiteral value) {
         if (expressionCase_ == 12 &&
@@ -2326,7 +2326,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral objectLiteral = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ObjectLiteral object_literal = 12;</code>
        */
       public Builder clearObjectLiteral() {
         if (expressionCase_ == 12) {
@@ -2402,13 +2402,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment docComment = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment doc_comment = 14;</code>
        */
       public boolean hasDocComment() {
         return expressionCase_ == 14;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment docComment = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment doc_comment = 14;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DocComment getDocComment() {
         if (expressionCase_ == 14) {
@@ -2417,7 +2417,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DocComment.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment docComment = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment doc_comment = 14;</code>
        */
       public Builder setDocComment(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DocComment value) {
         if (value == null) {
@@ -2429,7 +2429,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment docComment = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment doc_comment = 14;</code>
        */
       public Builder setDocComment(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DocComment.Builder builderForValue) {
@@ -2439,7 +2439,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment docComment = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment doc_comment = 14;</code>
        */
       public Builder mergeDocComment(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DocComment value) {
         if (expressionCase_ == 14 &&
@@ -2454,7 +2454,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment docComment = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DocComment doc_comment = 14;</code>
        */
       public Builder clearDocComment() {
         if (expressionCase_ == 14) {
@@ -2658,13 +2658,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess arrayAccess = 18;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess array_access = 18;</code>
        */
       public boolean hasArrayAccess() {
         return expressionCase_ == 18;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess arrayAccess = 18;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess array_access = 18;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayAccess getArrayAccess() {
         if (expressionCase_ == 18) {
@@ -2673,7 +2673,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayAccess.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess arrayAccess = 18;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess array_access = 18;</code>
        */
       public Builder setArrayAccess(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayAccess value) {
         if (value == null) {
@@ -2685,7 +2685,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess arrayAccess = 18;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess array_access = 18;</code>
        */
       public Builder setArrayAccess(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayAccess.Builder builderForValue) {
@@ -2695,7 +2695,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess arrayAccess = 18;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess array_access = 18;</code>
        */
       public Builder mergeArrayAccess(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ArrayAccess value) {
         if (expressionCase_ == 18 &&
@@ -2710,7 +2710,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess arrayAccess = 18;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ArrayAccess array_access = 18;</code>
        */
       public Builder clearArrayAccess() {
         if (expressionCase_ == 18) {
@@ -2722,13 +2722,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference nameReference = 19;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference name_reference = 19;</code>
        */
       public boolean hasNameReference() {
         return expressionCase_ == 19;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference nameReference = 19;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference name_reference = 19;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameReference getNameReference() {
         if (expressionCase_ == 19) {
@@ -2737,7 +2737,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameReference.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference nameReference = 19;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference name_reference = 19;</code>
        */
       public Builder setNameReference(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameReference value) {
         if (value == null) {
@@ -2749,7 +2749,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference nameReference = 19;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference name_reference = 19;</code>
        */
       public Builder setNameReference(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameReference.Builder builderForValue) {
@@ -2759,7 +2759,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference nameReference = 19;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference name_reference = 19;</code>
        */
       public Builder mergeNameReference(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameReference value) {
         if (expressionCase_ == 19 &&
@@ -2774,7 +2774,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference nameReference = 19;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.NameReference name_reference = 19;</code>
        */
       public Builder clearNameReference() {
         if (expressionCase_ == 19) {
@@ -2786,13 +2786,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference propertyReference = 20;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference property_reference = 20;</code>
        */
       public boolean hasPropertyReference() {
         return expressionCase_ == 20;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference propertyReference = 20;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference property_reference = 20;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.PropertyReference getPropertyReference() {
         if (expressionCase_ == 20) {
@@ -2801,7 +2801,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.PropertyReference.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference propertyReference = 20;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference property_reference = 20;</code>
        */
       public Builder setPropertyReference(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.PropertyReference value) {
         if (value == null) {
@@ -2813,7 +2813,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference propertyReference = 20;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference property_reference = 20;</code>
        */
       public Builder setPropertyReference(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.PropertyReference.Builder builderForValue) {
@@ -2823,7 +2823,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference propertyReference = 20;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference property_reference = 20;</code>
        */
       public Builder mergePropertyReference(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.PropertyReference value) {
         if (expressionCase_ == 20 &&
@@ -2838,7 +2838,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference propertyReference = 20;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.PropertyReference property_reference = 20;</code>
        */
       public Builder clearPropertyReference() {
         if (expressionCase_ == 20) {
@@ -4065,11 +4065,11 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 stringId = 1;</code>
+     * <code>required int32 string_id = 1;</code>
      */
     boolean hasStringId();
     /**
-     * <code>required int32 stringId = 1;</code>
+     * <code>required int32 string_id = 1;</code>
      */
     int getStringId();
   }
@@ -4162,16 +4162,16 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int STRINGID_FIELD_NUMBER = 1;
+    public static final int STRING_ID_FIELD_NUMBER = 1;
     private int stringId_;
     /**
-     * <code>required int32 stringId = 1;</code>
+     * <code>required int32 string_id = 1;</code>
      */
     public boolean hasStringId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 stringId = 1;</code>
+     * <code>required int32 string_id = 1;</code>
      */
     public int getStringId() {
       return stringId_;
@@ -4379,19 +4379,19 @@ public final class JsAstProtoBuf {
 
       private int stringId_ ;
       /**
-       * <code>required int32 stringId = 1;</code>
+       * <code>required int32 string_id = 1;</code>
        */
       public boolean hasStringId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 stringId = 1;</code>
+       * <code>required int32 string_id = 1;</code>
        */
       public int getStringId() {
         return stringId_;
       }
       /**
-       * <code>required int32 stringId = 1;</code>
+       * <code>required int32 string_id = 1;</code>
        */
       public Builder setStringId(int value) {
         bitField0_ |= 0x00000001;
@@ -4400,7 +4400,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 stringId = 1;</code>
+       * <code>required int32 string_id = 1;</code>
        */
       public Builder clearStringId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -4425,20 +4425,20 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 patternStringId = 1;</code>
+     * <code>required int32 pattern_string_id = 1;</code>
      */
     boolean hasPatternStringId();
     /**
-     * <code>required int32 patternStringId = 1;</code>
+     * <code>required int32 pattern_string_id = 1;</code>
      */
     int getPatternStringId();
 
     /**
-     * <code>optional int32 flagsStringId = 2;</code>
+     * <code>optional int32 flags_string_id = 2;</code>
      */
     boolean hasFlagsStringId();
     /**
-     * <code>optional int32 flagsStringId = 2;</code>
+     * <code>optional int32 flags_string_id = 2;</code>
      */
     int getFlagsStringId();
   }
@@ -4536,31 +4536,31 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int PATTERNSTRINGID_FIELD_NUMBER = 1;
+    public static final int PATTERN_STRING_ID_FIELD_NUMBER = 1;
     private int patternStringId_;
     /**
-     * <code>required int32 patternStringId = 1;</code>
+     * <code>required int32 pattern_string_id = 1;</code>
      */
     public boolean hasPatternStringId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 patternStringId = 1;</code>
+     * <code>required int32 pattern_string_id = 1;</code>
      */
     public int getPatternStringId() {
       return patternStringId_;
     }
 
-    public static final int FLAGSSTRINGID_FIELD_NUMBER = 2;
+    public static final int FLAGS_STRING_ID_FIELD_NUMBER = 2;
     private int flagsStringId_;
     /**
-     * <code>optional int32 flagsStringId = 2;</code>
+     * <code>optional int32 flags_string_id = 2;</code>
      */
     public boolean hasFlagsStringId() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional int32 flagsStringId = 2;</code>
+     * <code>optional int32 flags_string_id = 2;</code>
      */
     public int getFlagsStringId() {
       return flagsStringId_;
@@ -4785,19 +4785,19 @@ public final class JsAstProtoBuf {
 
       private int patternStringId_ ;
       /**
-       * <code>required int32 patternStringId = 1;</code>
+       * <code>required int32 pattern_string_id = 1;</code>
        */
       public boolean hasPatternStringId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 patternStringId = 1;</code>
+       * <code>required int32 pattern_string_id = 1;</code>
        */
       public int getPatternStringId() {
         return patternStringId_;
       }
       /**
-       * <code>required int32 patternStringId = 1;</code>
+       * <code>required int32 pattern_string_id = 1;</code>
        */
       public Builder setPatternStringId(int value) {
         bitField0_ |= 0x00000001;
@@ -4806,7 +4806,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 patternStringId = 1;</code>
+       * <code>required int32 pattern_string_id = 1;</code>
        */
       public Builder clearPatternStringId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -4817,19 +4817,19 @@ public final class JsAstProtoBuf {
 
       private int flagsStringId_ ;
       /**
-       * <code>optional int32 flagsStringId = 2;</code>
+       * <code>optional int32 flags_string_id = 2;</code>
        */
       public boolean hasFlagsStringId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional int32 flagsStringId = 2;</code>
+       * <code>optional int32 flags_string_id = 2;</code>
        */
       public int getFlagsStringId() {
         return flagsStringId_;
       }
       /**
-       * <code>optional int32 flagsStringId = 2;</code>
+       * <code>optional int32 flags_string_id = 2;</code>
        */
       public Builder setFlagsStringId(int value) {
         bitField0_ |= 0x00000002;
@@ -4838,7 +4838,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional int32 flagsStringId = 2;</code>
+       * <code>optional int32 flags_string_id = 2;</code>
        */
       public Builder clearFlagsStringId() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -7206,11 +7206,11 @@ public final class JsAstProtoBuf {
     int getParameterCount();
 
     /**
-     * <code>optional int32 nameId = 2;</code>
+     * <code>optional int32 name_id = 2;</code>
      */
     boolean hasNameId();
     /**
-     * <code>optional int32 nameId = 2;</code>
+     * <code>optional int32 name_id = 2;</code>
      */
     int getNameId();
 
@@ -7371,16 +7371,16 @@ public final class JsAstProtoBuf {
       return parameter_.get(index);
     }
 
-    public static final int NAMEID_FIELD_NUMBER = 2;
+    public static final int NAME_ID_FIELD_NUMBER = 2;
     private int nameId_;
     /**
-     * <code>optional int32 nameId = 2;</code>
+     * <code>optional int32 name_id = 2;</code>
      */
     public boolean hasNameId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional int32 nameId = 2;</code>
+     * <code>optional int32 name_id = 2;</code>
      */
     public int getNameId() {
       return nameId_;
@@ -7790,19 +7790,19 @@ public final class JsAstProtoBuf {
 
       private int nameId_ ;
       /**
-       * <code>optional int32 nameId = 2;</code>
+       * <code>optional int32 name_id = 2;</code>
        */
       public boolean hasNameId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional int32 nameId = 2;</code>
+       * <code>optional int32 name_id = 2;</code>
        */
       public int getNameId() {
         return nameId_;
       }
       /**
-       * <code>optional int32 nameId = 2;</code>
+       * <code>optional int32 name_id = 2;</code>
        */
       public Builder setNameId(int value) {
         bitField0_ |= 0x00000002;
@@ -7811,7 +7811,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional int32 nameId = 2;</code>
+       * <code>optional int32 name_id = 2;</code>
        */
       public Builder clearNameId() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -7896,11 +7896,11 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     boolean hasNameId();
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     int getNameId();
   }
@@ -7993,16 +7993,16 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int NAMEID_FIELD_NUMBER = 1;
+    public static final int NAME_ID_FIELD_NUMBER = 1;
     private int nameId_;
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     public boolean hasNameId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     public int getNameId() {
       return nameId_;
@@ -8210,19 +8210,19 @@ public final class JsAstProtoBuf {
 
       private int nameId_ ;
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public boolean hasNameId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public int getNameId() {
         return nameId_;
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public Builder setNameId(int value) {
         bitField0_ |= 0x00000001;
@@ -8231,7 +8231,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public Builder clearNameId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -8749,31 +8749,31 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     boolean hasNameId();
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     int getNameId();
 
     /**
-     * <code>optional int32 valueStringId = 2;</code>
+     * <code>optional int32 value_string_id = 2;</code>
      */
     boolean hasValueStringId();
     /**
-     * <code>optional int32 valueStringId = 2;</code>
+     * <code>optional int32 value_string_id = 2;</code>
      */
     int getValueStringId();
 
     /**
-     * <code>optional int32 valueNameId = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression expression = 3;</code>
      */
-    boolean hasValueNameId();
+    boolean hasExpression();
     /**
-     * <code>optional int32 valueNameId = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression expression = 3;</code>
      */
-    int getValueNameId();
+    org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getExpression();
   }
   /**
    * Protobuf type {@code org.jetbrains.kotlin.serialization.js.ast.DocCommentTag}
@@ -8835,9 +8835,17 @@ public final class JsAstProtoBuf {
               value_ = input.readInt32();
               break;
             }
-            case 24: {
+            case 26: {
+              org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.Builder subBuilder = null;
+              if (valueCase_ == 3) {
+                subBuilder = ((org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression) value_).toBuilder();
+              }
+              value_ = input.readMessage(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression) value_);
+                value_ = subBuilder.buildPartial();
+              }
               valueCase_ = 3;
-              value_ = input.readInt32();
               break;
             }
           }
@@ -8878,8 +8886,8 @@ public final class JsAstProtoBuf {
     private java.lang.Object value_;
     public enum ValueCase
         implements org.jetbrains.kotlin.protobuf.Internal.EnumLite {
-      VALUESTRINGID(2),
-      VALUENAMEID(3),
+      VALUE_STRING_ID(2),
+      EXPRESSION(3),
       VALUE_NOT_SET(0);
       private int value = 0;
       private ValueCase(int value) {
@@ -8887,8 +8895,8 @@ public final class JsAstProtoBuf {
       }
       public static ValueCase valueOf(int value) {
         switch (value) {
-          case 2: return VALUESTRINGID;
-          case 3: return VALUENAMEID;
+          case 2: return VALUE_STRING_ID;
+          case 3: return EXPRESSION;
           case 0: return VALUE_NOT_SET;
           default: throw new java.lang.IllegalArgumentException(
             "Value is undefined for this oneof enum.");
@@ -8905,30 +8913,30 @@ public final class JsAstProtoBuf {
           valueCase_);
     }
 
-    public static final int NAMEID_FIELD_NUMBER = 1;
+    public static final int NAME_ID_FIELD_NUMBER = 1;
     private int nameId_;
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     public boolean hasNameId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     public int getNameId() {
       return nameId_;
     }
 
-    public static final int VALUESTRINGID_FIELD_NUMBER = 2;
+    public static final int VALUE_STRING_ID_FIELD_NUMBER = 2;
     /**
-     * <code>optional int32 valueStringId = 2;</code>
+     * <code>optional int32 value_string_id = 2;</code>
      */
     public boolean hasValueStringId() {
       return valueCase_ == 2;
     }
     /**
-     * <code>optional int32 valueStringId = 2;</code>
+     * <code>optional int32 value_string_id = 2;</code>
      */
     public int getValueStringId() {
       if (valueCase_ == 2) {
@@ -8937,21 +8945,21 @@ public final class JsAstProtoBuf {
       return 0;
     }
 
-    public static final int VALUENAMEID_FIELD_NUMBER = 3;
+    public static final int EXPRESSION_FIELD_NUMBER = 3;
     /**
-     * <code>optional int32 valueNameId = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression expression = 3;</code>
      */
-    public boolean hasValueNameId() {
+    public boolean hasExpression() {
       return valueCase_ == 3;
     }
     /**
-     * <code>optional int32 valueNameId = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression expression = 3;</code>
      */
-    public int getValueNameId() {
+    public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getExpression() {
       if (valueCase_ == 3) {
-        return (java.lang.Integer) value_;
+         return (org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression) value_;
       }
-      return 0;
+      return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
     }
 
     private void initFields() {
@@ -8966,6 +8974,12 @@ public final class JsAstProtoBuf {
       if (!hasNameId()) {
         memoizedIsInitialized = 0;
         return false;
+      }
+      if (hasExpression()) {
+        if (!getExpression().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -8982,8 +8996,7 @@ public final class JsAstProtoBuf {
             2, (int)((java.lang.Integer) value_));
       }
       if (valueCase_ == 3) {
-        output.writeInt32(
-            3, (int)((java.lang.Integer) value_));
+        output.writeMessage(3, (org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression) value_);
       }
       output.writeRawBytes(unknownFields);
     }
@@ -9005,8 +9018,7 @@ public final class JsAstProtoBuf {
       }
       if (valueCase_ == 3) {
         size += org.jetbrains.kotlin.protobuf.CodedOutputStream
-          .computeInt32Size(
-              3, (int)((java.lang.Integer) value_));
+          .computeMessageSize(3, (org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression) value_);
       }
       size += unknownFields.size();
       memoizedSerializedSize = size;
@@ -9150,12 +9162,12 @@ public final class JsAstProtoBuf {
           setNameId(other.getNameId());
         }
         switch (other.getValueCase()) {
-          case VALUESTRINGID: {
+          case VALUE_STRING_ID: {
             setValueStringId(other.getValueStringId());
             break;
           }
-          case VALUENAMEID: {
-            setValueNameId(other.getValueNameId());
+          case EXPRESSION: {
+            mergeExpression(other.getExpression());
             break;
           }
           case VALUE_NOT_SET: {
@@ -9171,6 +9183,12 @@ public final class JsAstProtoBuf {
         if (!hasNameId()) {
           
           return false;
+        }
+        if (hasExpression()) {
+          if (!getExpression().isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -9210,19 +9228,19 @@ public final class JsAstProtoBuf {
 
       private int nameId_ ;
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public boolean hasNameId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public int getNameId() {
         return nameId_;
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public Builder setNameId(int value) {
         bitField0_ |= 0x00000001;
@@ -9231,7 +9249,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public Builder clearNameId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -9241,13 +9259,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional int32 valueStringId = 2;</code>
+       * <code>optional int32 value_string_id = 2;</code>
        */
       public boolean hasValueStringId() {
         return valueCase_ == 2;
       }
       /**
-       * <code>optional int32 valueStringId = 2;</code>
+       * <code>optional int32 value_string_id = 2;</code>
        */
       public int getValueStringId() {
         if (valueCase_ == 2) {
@@ -9256,7 +9274,7 @@ public final class JsAstProtoBuf {
         return 0;
       }
       /**
-       * <code>optional int32 valueStringId = 2;</code>
+       * <code>optional int32 value_string_id = 2;</code>
        */
       public Builder setValueStringId(int value) {
         valueCase_ = 2;
@@ -9265,7 +9283,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional int32 valueStringId = 2;</code>
+       * <code>optional int32 value_string_id = 2;</code>
        */
       public Builder clearValueStringId() {
         if (valueCase_ == 2) {
@@ -9277,33 +9295,61 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional int32 valueNameId = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression expression = 3;</code>
        */
-      public boolean hasValueNameId() {
+      public boolean hasExpression() {
         return valueCase_ == 3;
       }
       /**
-       * <code>optional int32 valueNameId = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression expression = 3;</code>
        */
-      public int getValueNameId() {
+      public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getExpression() {
         if (valueCase_ == 3) {
-          return (java.lang.Integer) value_;
+          return (org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression) value_;
         }
-        return 0;
+        return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
       }
       /**
-       * <code>optional int32 valueNameId = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression expression = 3;</code>
        */
-      public Builder setValueNameId(int value) {
-        valueCase_ = 3;
+      public Builder setExpression(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         value_ = value;
-        
+
+        valueCase_ = 3;
         return this;
       }
       /**
-       * <code>optional int32 valueNameId = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression expression = 3;</code>
        */
-      public Builder clearValueNameId() {
+      public Builder setExpression(
+          org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.Builder builderForValue) {
+        value_ = builderForValue.build();
+
+        valueCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression expression = 3;</code>
+       */
+      public Builder mergeExpression(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
+        if (valueCase_ == 3 &&
+            value_ != org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance()) {
+          value_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.newBuilder((org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+
+        valueCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression expression = 3;</code>
+       */
+      public Builder clearExpression() {
         if (valueCase_ == 3) {
           valueCase_ = 0;
           value_ = null;
@@ -11025,29 +11071,29 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression testExpression = 1;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression test_expression = 1;</code>
      */
     boolean hasTestExpression();
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression testExpression = 1;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression test_expression = 1;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getTestExpression();
 
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression thenExpression = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression then_expression = 2;</code>
      */
     boolean hasThenExpression();
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression thenExpression = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression then_expression = 2;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getThenExpression();
 
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression elseExpression = 3;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression else_expression = 3;</code>
      */
     boolean hasElseExpression();
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression elseExpression = 3;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression else_expression = 3;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getElseExpression();
   }
@@ -11174,46 +11220,46 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int TESTEXPRESSION_FIELD_NUMBER = 1;
+    public static final int TEST_EXPRESSION_FIELD_NUMBER = 1;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression testExpression_;
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression testExpression = 1;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression test_expression = 1;</code>
      */
     public boolean hasTestExpression() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression testExpression = 1;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression test_expression = 1;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getTestExpression() {
       return testExpression_;
     }
 
-    public static final int THENEXPRESSION_FIELD_NUMBER = 2;
+    public static final int THEN_EXPRESSION_FIELD_NUMBER = 2;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression thenExpression_;
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression thenExpression = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression then_expression = 2;</code>
      */
     public boolean hasThenExpression() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression thenExpression = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression then_expression = 2;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getThenExpression() {
       return thenExpression_;
     }
 
-    public static final int ELSEEXPRESSION_FIELD_NUMBER = 3;
+    public static final int ELSE_EXPRESSION_FIELD_NUMBER = 3;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression elseExpression_;
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression elseExpression = 3;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression else_expression = 3;</code>
      */
     public boolean hasElseExpression() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression elseExpression = 3;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression else_expression = 3;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getElseExpression() {
       return elseExpression_;
@@ -11495,19 +11541,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression testExpression_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression testExpression = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression test_expression = 1;</code>
        */
       public boolean hasTestExpression() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression testExpression = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression test_expression = 1;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getTestExpression() {
         return testExpression_;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression testExpression = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression test_expression = 1;</code>
        */
       public Builder setTestExpression(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
         if (value == null) {
@@ -11519,7 +11565,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression testExpression = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression test_expression = 1;</code>
        */
       public Builder setTestExpression(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.Builder builderForValue) {
@@ -11529,7 +11575,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression testExpression = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression test_expression = 1;</code>
        */
       public Builder mergeTestExpression(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
         if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -11544,7 +11590,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression testExpression = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression test_expression = 1;</code>
        */
       public Builder clearTestExpression() {
         testExpression_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
@@ -11555,19 +11601,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression thenExpression_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression thenExpression = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression then_expression = 2;</code>
        */
       public boolean hasThenExpression() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression thenExpression = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression then_expression = 2;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getThenExpression() {
         return thenExpression_;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression thenExpression = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression then_expression = 2;</code>
        */
       public Builder setThenExpression(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
         if (value == null) {
@@ -11579,7 +11625,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression thenExpression = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression then_expression = 2;</code>
        */
       public Builder setThenExpression(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.Builder builderForValue) {
@@ -11589,7 +11635,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression thenExpression = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression then_expression = 2;</code>
        */
       public Builder mergeThenExpression(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
         if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -11604,7 +11650,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression thenExpression = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression then_expression = 2;</code>
        */
       public Builder clearThenExpression() {
         thenExpression_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
@@ -11615,19 +11661,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression elseExpression_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression elseExpression = 3;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression else_expression = 3;</code>
        */
       public boolean hasElseExpression() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression elseExpression = 3;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression else_expression = 3;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getElseExpression() {
         return elseExpression_;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression elseExpression = 3;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression else_expression = 3;</code>
        */
       public Builder setElseExpression(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
         if (value == null) {
@@ -11639,7 +11685,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression elseExpression = 3;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression else_expression = 3;</code>
        */
       public Builder setElseExpression(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.Builder builderForValue) {
@@ -11649,7 +11695,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression elseExpression = 3;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression else_expression = 3;</code>
        */
       public Builder mergeElseExpression(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
         if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -11664,7 +11710,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression elseExpression = 3;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Expression else_expression = 3;</code>
        */
       public Builder clearElseExpression() {
         elseExpression_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
@@ -12223,11 +12269,11 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     boolean hasNameId();
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     int getNameId();
 
@@ -12342,16 +12388,16 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int NAMEID_FIELD_NUMBER = 1;
+    public static final int NAME_ID_FIELD_NUMBER = 1;
     private int nameId_;
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     public boolean hasNameId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     public int getNameId() {
       return nameId_;
@@ -12607,19 +12653,19 @@ public final class JsAstProtoBuf {
 
       private int nameId_ ;
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public boolean hasNameId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public int getNameId() {
         return nameId_;
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public Builder setNameId(int value) {
         bitField0_ |= 0x00000001;
@@ -12628,7 +12674,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public Builder clearNameId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -12713,11 +12759,11 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 stringId = 1;</code>
+     * <code>required int32 string_id = 1;</code>
      */
     boolean hasStringId();
     /**
-     * <code>required int32 stringId = 1;</code>
+     * <code>required int32 string_id = 1;</code>
      */
     int getStringId();
 
@@ -12832,16 +12878,16 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int STRINGID_FIELD_NUMBER = 1;
+    public static final int STRING_ID_FIELD_NUMBER = 1;
     private int stringId_;
     /**
-     * <code>required int32 stringId = 1;</code>
+     * <code>required int32 string_id = 1;</code>
      */
     public boolean hasStringId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 stringId = 1;</code>
+     * <code>required int32 string_id = 1;</code>
      */
     public int getStringId() {
       return stringId_;
@@ -13093,19 +13139,19 @@ public final class JsAstProtoBuf {
 
       private int stringId_ ;
       /**
-       * <code>required int32 stringId = 1;</code>
+       * <code>required int32 string_id = 1;</code>
        */
       public boolean hasStringId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 stringId = 1;</code>
+       * <code>required int32 string_id = 1;</code>
        */
       public int getStringId() {
         return stringId_;
       }
       /**
-       * <code>required int32 stringId = 1;</code>
+       * <code>required int32 string_id = 1;</code>
        */
       public Builder setStringId(int value) {
         bitField0_ |= 0x00000001;
@@ -13114,7 +13160,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 stringId = 1;</code>
+       * <code>required int32 string_id = 1;</code>
        */
       public Builder clearStringId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -14451,38 +14497,38 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return returnStatement = 1;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return return_statement = 1;</code>
      */
     boolean hasReturnStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return returnStatement = 1;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return return_statement = 1;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Return getReturnStatement();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throwStatement = 2;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throw_statement = 2;</code>
      */
     boolean hasThrowStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throwStatement = 2;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throw_statement = 2;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Throw getThrowStatement();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break breakStatement = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break break_statement = 3;</code>
      */
     boolean hasBreakStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break breakStatement = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break break_statement = 3;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Break getBreakStatement();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continueStatement = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continue_statement = 4;</code>
      */
     boolean hasContinueStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continueStatement = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continue_statement = 4;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Continue getContinueStatement();
 
@@ -14523,11 +14569,11 @@ public final class JsAstProtoBuf {
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Block getBlock();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock globalBlock = 9;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock global_block = 9;</code>
      */
     boolean hasGlobalBlock();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock globalBlock = 9;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock global_block = 9;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getGlobalBlock();
 
@@ -14541,65 +14587,65 @@ public final class JsAstProtoBuf {
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Label getLabel();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If ifStatement = 11;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If if_statement = 11;</code>
      */
     boolean hasIfStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If ifStatement = 11;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If if_statement = 11;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.If getIfStatement();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switchStatement = 12;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switch_statement = 12;</code>
      */
     boolean hasSwitchStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switchStatement = 12;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switch_statement = 12;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Switch getSwitchStatement();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While whileStatement = 13;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While while_statement = 13;</code>
      */
     boolean hasWhileStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While whileStatement = 13;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While while_statement = 13;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.While getWhileStatement();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile doWhileStatement = 14;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile do_while_statement = 14;</code>
      */
     boolean hasDoWhileStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile doWhileStatement = 14;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile do_while_statement = 14;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoWhile getDoWhileStatement();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For forStatement = 15;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For for_statement = 15;</code>
      */
     boolean hasForStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For forStatement = 15;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For for_statement = 15;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.For getForStatement();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn forInStatement = 16;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn for_in_statement = 16;</code>
      */
     boolean hasForInStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn forInStatement = 16;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn for_in_statement = 16;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ForIn getForInStatement();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try tryStatement = 17;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try try_statement = 17;</code>
      */
     boolean hasTryStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try tryStatement = 17;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try try_statement = 17;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Try getTryStatement();
 
@@ -14934,23 +14980,23 @@ public final class JsAstProtoBuf {
     private java.lang.Object statement_;
     public enum StatementCase
         implements org.jetbrains.kotlin.protobuf.Internal.EnumLite {
-      RETURNSTATEMENT(1),
-      THROWSTATEMENT(2),
-      BREAKSTATEMENT(3),
-      CONTINUESTATEMENT(4),
+      RETURN_STATEMENT(1),
+      THROW_STATEMENT(2),
+      BREAK_STATEMENT(3),
+      CONTINUE_STATEMENT(4),
       DEBUGGER(5),
       EXPRESSION(6),
       VARS(7),
       BLOCK(8),
-      GLOBALBLOCK(9),
+      GLOBAL_BLOCK(9),
       LABEL(10),
-      IFSTATEMENT(11),
-      SWITCHSTATEMENT(12),
-      WHILESTATEMENT(13),
-      DOWHILESTATEMENT(14),
-      FORSTATEMENT(15),
-      FORINSTATEMENT(16),
-      TRYSTATEMENT(17),
+      IF_STATEMENT(11),
+      SWITCH_STATEMENT(12),
+      WHILE_STATEMENT(13),
+      DO_WHILE_STATEMENT(14),
+      FOR_STATEMENT(15),
+      FOR_IN_STATEMENT(16),
+      TRY_STATEMENT(17),
       EMPTY(18),
       STATEMENT_NOT_SET(0);
       private int value = 0;
@@ -14959,23 +15005,23 @@ public final class JsAstProtoBuf {
       }
       public static StatementCase valueOf(int value) {
         switch (value) {
-          case 1: return RETURNSTATEMENT;
-          case 2: return THROWSTATEMENT;
-          case 3: return BREAKSTATEMENT;
-          case 4: return CONTINUESTATEMENT;
+          case 1: return RETURN_STATEMENT;
+          case 2: return THROW_STATEMENT;
+          case 3: return BREAK_STATEMENT;
+          case 4: return CONTINUE_STATEMENT;
           case 5: return DEBUGGER;
           case 6: return EXPRESSION;
           case 7: return VARS;
           case 8: return BLOCK;
-          case 9: return GLOBALBLOCK;
+          case 9: return GLOBAL_BLOCK;
           case 10: return LABEL;
-          case 11: return IFSTATEMENT;
-          case 12: return SWITCHSTATEMENT;
-          case 13: return WHILESTATEMENT;
-          case 14: return DOWHILESTATEMENT;
-          case 15: return FORSTATEMENT;
-          case 16: return FORINSTATEMENT;
-          case 17: return TRYSTATEMENT;
+          case 11: return IF_STATEMENT;
+          case 12: return SWITCH_STATEMENT;
+          case 13: return WHILE_STATEMENT;
+          case 14: return DO_WHILE_STATEMENT;
+          case 15: return FOR_STATEMENT;
+          case 16: return FOR_IN_STATEMENT;
+          case 17: return TRY_STATEMENT;
           case 18: return EMPTY;
           case 0: return STATEMENT_NOT_SET;
           default: throw new java.lang.IllegalArgumentException(
@@ -14993,15 +15039,15 @@ public final class JsAstProtoBuf {
           statementCase_);
     }
 
-    public static final int RETURNSTATEMENT_FIELD_NUMBER = 1;
+    public static final int RETURN_STATEMENT_FIELD_NUMBER = 1;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return returnStatement = 1;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return return_statement = 1;</code>
      */
     public boolean hasReturnStatement() {
       return statementCase_ == 1;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return returnStatement = 1;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return return_statement = 1;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Return getReturnStatement() {
       if (statementCase_ == 1) {
@@ -15010,15 +15056,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Return.getDefaultInstance();
     }
 
-    public static final int THROWSTATEMENT_FIELD_NUMBER = 2;
+    public static final int THROW_STATEMENT_FIELD_NUMBER = 2;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throwStatement = 2;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throw_statement = 2;</code>
      */
     public boolean hasThrowStatement() {
       return statementCase_ == 2;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throwStatement = 2;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throw_statement = 2;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Throw getThrowStatement() {
       if (statementCase_ == 2) {
@@ -15027,15 +15073,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Throw.getDefaultInstance();
     }
 
-    public static final int BREAKSTATEMENT_FIELD_NUMBER = 3;
+    public static final int BREAK_STATEMENT_FIELD_NUMBER = 3;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break breakStatement = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break break_statement = 3;</code>
      */
     public boolean hasBreakStatement() {
       return statementCase_ == 3;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break breakStatement = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break break_statement = 3;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Break getBreakStatement() {
       if (statementCase_ == 3) {
@@ -15044,15 +15090,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Break.getDefaultInstance();
     }
 
-    public static final int CONTINUESTATEMENT_FIELD_NUMBER = 4;
+    public static final int CONTINUE_STATEMENT_FIELD_NUMBER = 4;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continueStatement = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continue_statement = 4;</code>
      */
     public boolean hasContinueStatement() {
       return statementCase_ == 4;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continueStatement = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continue_statement = 4;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Continue getContinueStatement() {
       if (statementCase_ == 4) {
@@ -15129,15 +15175,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Block.getDefaultInstance();
     }
 
-    public static final int GLOBALBLOCK_FIELD_NUMBER = 9;
+    public static final int GLOBAL_BLOCK_FIELD_NUMBER = 9;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock globalBlock = 9;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock global_block = 9;</code>
      */
     public boolean hasGlobalBlock() {
       return statementCase_ == 9;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock globalBlock = 9;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock global_block = 9;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getGlobalBlock() {
       if (statementCase_ == 9) {
@@ -15163,15 +15209,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Label.getDefaultInstance();
     }
 
-    public static final int IFSTATEMENT_FIELD_NUMBER = 11;
+    public static final int IF_STATEMENT_FIELD_NUMBER = 11;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If ifStatement = 11;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If if_statement = 11;</code>
      */
     public boolean hasIfStatement() {
       return statementCase_ == 11;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If ifStatement = 11;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If if_statement = 11;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.If getIfStatement() {
       if (statementCase_ == 11) {
@@ -15180,15 +15226,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.If.getDefaultInstance();
     }
 
-    public static final int SWITCHSTATEMENT_FIELD_NUMBER = 12;
+    public static final int SWITCH_STATEMENT_FIELD_NUMBER = 12;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switchStatement = 12;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switch_statement = 12;</code>
      */
     public boolean hasSwitchStatement() {
       return statementCase_ == 12;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switchStatement = 12;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switch_statement = 12;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Switch getSwitchStatement() {
       if (statementCase_ == 12) {
@@ -15197,15 +15243,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Switch.getDefaultInstance();
     }
 
-    public static final int WHILESTATEMENT_FIELD_NUMBER = 13;
+    public static final int WHILE_STATEMENT_FIELD_NUMBER = 13;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While whileStatement = 13;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While while_statement = 13;</code>
      */
     public boolean hasWhileStatement() {
       return statementCase_ == 13;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While whileStatement = 13;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While while_statement = 13;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.While getWhileStatement() {
       if (statementCase_ == 13) {
@@ -15214,15 +15260,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.While.getDefaultInstance();
     }
 
-    public static final int DOWHILESTATEMENT_FIELD_NUMBER = 14;
+    public static final int DO_WHILE_STATEMENT_FIELD_NUMBER = 14;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile doWhileStatement = 14;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile do_while_statement = 14;</code>
      */
     public boolean hasDoWhileStatement() {
       return statementCase_ == 14;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile doWhileStatement = 14;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile do_while_statement = 14;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoWhile getDoWhileStatement() {
       if (statementCase_ == 14) {
@@ -15231,15 +15277,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoWhile.getDefaultInstance();
     }
 
-    public static final int FORSTATEMENT_FIELD_NUMBER = 15;
+    public static final int FOR_STATEMENT_FIELD_NUMBER = 15;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For forStatement = 15;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For for_statement = 15;</code>
      */
     public boolean hasForStatement() {
       return statementCase_ == 15;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For forStatement = 15;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For for_statement = 15;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.For getForStatement() {
       if (statementCase_ == 15) {
@@ -15248,15 +15294,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.For.getDefaultInstance();
     }
 
-    public static final int FORINSTATEMENT_FIELD_NUMBER = 16;
+    public static final int FOR_IN_STATEMENT_FIELD_NUMBER = 16;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn forInStatement = 16;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn for_in_statement = 16;</code>
      */
     public boolean hasForInStatement() {
       return statementCase_ == 16;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn forInStatement = 16;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn for_in_statement = 16;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ForIn getForInStatement() {
       if (statementCase_ == 16) {
@@ -15265,15 +15311,15 @@ public final class JsAstProtoBuf {
       return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ForIn.getDefaultInstance();
     }
 
-    public static final int TRYSTATEMENT_FIELD_NUMBER = 17;
+    public static final int TRY_STATEMENT_FIELD_NUMBER = 17;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try tryStatement = 17;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try try_statement = 17;</code>
      */
     public boolean hasTryStatement() {
       return statementCase_ == 17;
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try tryStatement = 17;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try try_statement = 17;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Try getTryStatement() {
       if (statementCase_ == 17) {
@@ -15714,19 +15760,19 @@ public final class JsAstProtoBuf {
       public Builder mergeFrom(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement other) {
         if (other == org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement.getDefaultInstance()) return this;
         switch (other.getStatementCase()) {
-          case RETURNSTATEMENT: {
+          case RETURN_STATEMENT: {
             mergeReturnStatement(other.getReturnStatement());
             break;
           }
-          case THROWSTATEMENT: {
+          case THROW_STATEMENT: {
             mergeThrowStatement(other.getThrowStatement());
             break;
           }
-          case BREAKSTATEMENT: {
+          case BREAK_STATEMENT: {
             mergeBreakStatement(other.getBreakStatement());
             break;
           }
-          case CONTINUESTATEMENT: {
+          case CONTINUE_STATEMENT: {
             mergeContinueStatement(other.getContinueStatement());
             break;
           }
@@ -15746,7 +15792,7 @@ public final class JsAstProtoBuf {
             mergeBlock(other.getBlock());
             break;
           }
-          case GLOBALBLOCK: {
+          case GLOBAL_BLOCK: {
             mergeGlobalBlock(other.getGlobalBlock());
             break;
           }
@@ -15754,31 +15800,31 @@ public final class JsAstProtoBuf {
             mergeLabel(other.getLabel());
             break;
           }
-          case IFSTATEMENT: {
+          case IF_STATEMENT: {
             mergeIfStatement(other.getIfStatement());
             break;
           }
-          case SWITCHSTATEMENT: {
+          case SWITCH_STATEMENT: {
             mergeSwitchStatement(other.getSwitchStatement());
             break;
           }
-          case WHILESTATEMENT: {
+          case WHILE_STATEMENT: {
             mergeWhileStatement(other.getWhileStatement());
             break;
           }
-          case DOWHILESTATEMENT: {
+          case DO_WHILE_STATEMENT: {
             mergeDoWhileStatement(other.getDoWhileStatement());
             break;
           }
-          case FORSTATEMENT: {
+          case FOR_STATEMENT: {
             mergeForStatement(other.getForStatement());
             break;
           }
-          case FORINSTATEMENT: {
+          case FOR_IN_STATEMENT: {
             mergeForInStatement(other.getForInStatement());
             break;
           }
-          case TRYSTATEMENT: {
+          case TRY_STATEMENT: {
             mergeTryStatement(other.getTryStatement());
             break;
           }
@@ -15917,13 +15963,13 @@ public final class JsAstProtoBuf {
       private int bitField0_;
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return returnStatement = 1;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return return_statement = 1;</code>
        */
       public boolean hasReturnStatement() {
         return statementCase_ == 1;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return returnStatement = 1;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return return_statement = 1;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Return getReturnStatement() {
         if (statementCase_ == 1) {
@@ -15932,7 +15978,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Return.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return returnStatement = 1;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return return_statement = 1;</code>
        */
       public Builder setReturnStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Return value) {
         if (value == null) {
@@ -15944,7 +15990,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return returnStatement = 1;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return return_statement = 1;</code>
        */
       public Builder setReturnStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Return.Builder builderForValue) {
@@ -15954,7 +16000,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return returnStatement = 1;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return return_statement = 1;</code>
        */
       public Builder mergeReturnStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Return value) {
         if (statementCase_ == 1 &&
@@ -15969,7 +16015,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return returnStatement = 1;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Return return_statement = 1;</code>
        */
       public Builder clearReturnStatement() {
         if (statementCase_ == 1) {
@@ -15981,13 +16027,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throwStatement = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throw_statement = 2;</code>
        */
       public boolean hasThrowStatement() {
         return statementCase_ == 2;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throwStatement = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throw_statement = 2;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Throw getThrowStatement() {
         if (statementCase_ == 2) {
@@ -15996,7 +16042,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Throw.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throwStatement = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throw_statement = 2;</code>
        */
       public Builder setThrowStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Throw value) {
         if (value == null) {
@@ -16008,7 +16054,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throwStatement = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throw_statement = 2;</code>
        */
       public Builder setThrowStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Throw.Builder builderForValue) {
@@ -16018,7 +16064,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throwStatement = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throw_statement = 2;</code>
        */
       public Builder mergeThrowStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Throw value) {
         if (statementCase_ == 2 &&
@@ -16033,7 +16079,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throwStatement = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Throw throw_statement = 2;</code>
        */
       public Builder clearThrowStatement() {
         if (statementCase_ == 2) {
@@ -16045,13 +16091,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break breakStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break break_statement = 3;</code>
        */
       public boolean hasBreakStatement() {
         return statementCase_ == 3;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break breakStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break break_statement = 3;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Break getBreakStatement() {
         if (statementCase_ == 3) {
@@ -16060,7 +16106,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Break.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break breakStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break break_statement = 3;</code>
        */
       public Builder setBreakStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Break value) {
         if (value == null) {
@@ -16072,7 +16118,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break breakStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break break_statement = 3;</code>
        */
       public Builder setBreakStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Break.Builder builderForValue) {
@@ -16082,7 +16128,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break breakStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break break_statement = 3;</code>
        */
       public Builder mergeBreakStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Break value) {
         if (statementCase_ == 3 &&
@@ -16097,7 +16143,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break breakStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Break break_statement = 3;</code>
        */
       public Builder clearBreakStatement() {
         if (statementCase_ == 3) {
@@ -16109,13 +16155,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continueStatement = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continue_statement = 4;</code>
        */
       public boolean hasContinueStatement() {
         return statementCase_ == 4;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continueStatement = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continue_statement = 4;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Continue getContinueStatement() {
         if (statementCase_ == 4) {
@@ -16124,7 +16170,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Continue.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continueStatement = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continue_statement = 4;</code>
        */
       public Builder setContinueStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Continue value) {
         if (value == null) {
@@ -16136,7 +16182,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continueStatement = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continue_statement = 4;</code>
        */
       public Builder setContinueStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Continue.Builder builderForValue) {
@@ -16146,7 +16192,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continueStatement = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continue_statement = 4;</code>
        */
       public Builder mergeContinueStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Continue value) {
         if (statementCase_ == 4 &&
@@ -16161,7 +16207,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continueStatement = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Continue continue_statement = 4;</code>
        */
       public Builder clearContinueStatement() {
         if (statementCase_ == 4) {
@@ -16429,13 +16475,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock globalBlock = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock global_block = 9;</code>
        */
       public boolean hasGlobalBlock() {
         return statementCase_ == 9;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock globalBlock = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock global_block = 9;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getGlobalBlock() {
         if (statementCase_ == 9) {
@@ -16444,7 +16490,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock globalBlock = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock global_block = 9;</code>
        */
       public Builder setGlobalBlock(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock value) {
         if (value == null) {
@@ -16456,7 +16502,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock globalBlock = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock global_block = 9;</code>
        */
       public Builder setGlobalBlock(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.Builder builderForValue) {
@@ -16466,7 +16512,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock globalBlock = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock global_block = 9;</code>
        */
       public Builder mergeGlobalBlock(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock value) {
         if (statementCase_ == 9 &&
@@ -16481,7 +16527,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock globalBlock = 9;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock global_block = 9;</code>
        */
       public Builder clearGlobalBlock() {
         if (statementCase_ == 9) {
@@ -16557,13 +16603,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If ifStatement = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If if_statement = 11;</code>
        */
       public boolean hasIfStatement() {
         return statementCase_ == 11;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If ifStatement = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If if_statement = 11;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.If getIfStatement() {
         if (statementCase_ == 11) {
@@ -16572,7 +16618,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.If.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If ifStatement = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If if_statement = 11;</code>
        */
       public Builder setIfStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.If value) {
         if (value == null) {
@@ -16584,7 +16630,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If ifStatement = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If if_statement = 11;</code>
        */
       public Builder setIfStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.If.Builder builderForValue) {
@@ -16594,7 +16640,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If ifStatement = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If if_statement = 11;</code>
        */
       public Builder mergeIfStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.If value) {
         if (statementCase_ == 11 &&
@@ -16609,7 +16655,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If ifStatement = 11;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.If if_statement = 11;</code>
        */
       public Builder clearIfStatement() {
         if (statementCase_ == 11) {
@@ -16621,13 +16667,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switchStatement = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switch_statement = 12;</code>
        */
       public boolean hasSwitchStatement() {
         return statementCase_ == 12;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switchStatement = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switch_statement = 12;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Switch getSwitchStatement() {
         if (statementCase_ == 12) {
@@ -16636,7 +16682,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Switch.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switchStatement = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switch_statement = 12;</code>
        */
       public Builder setSwitchStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Switch value) {
         if (value == null) {
@@ -16648,7 +16694,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switchStatement = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switch_statement = 12;</code>
        */
       public Builder setSwitchStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Switch.Builder builderForValue) {
@@ -16658,7 +16704,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switchStatement = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switch_statement = 12;</code>
        */
       public Builder mergeSwitchStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Switch value) {
         if (statementCase_ == 12 &&
@@ -16673,7 +16719,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switchStatement = 12;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Switch switch_statement = 12;</code>
        */
       public Builder clearSwitchStatement() {
         if (statementCase_ == 12) {
@@ -16685,13 +16731,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While whileStatement = 13;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While while_statement = 13;</code>
        */
       public boolean hasWhileStatement() {
         return statementCase_ == 13;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While whileStatement = 13;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While while_statement = 13;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.While getWhileStatement() {
         if (statementCase_ == 13) {
@@ -16700,7 +16746,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.While.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While whileStatement = 13;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While while_statement = 13;</code>
        */
       public Builder setWhileStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.While value) {
         if (value == null) {
@@ -16712,7 +16758,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While whileStatement = 13;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While while_statement = 13;</code>
        */
       public Builder setWhileStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.While.Builder builderForValue) {
@@ -16722,7 +16768,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While whileStatement = 13;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While while_statement = 13;</code>
        */
       public Builder mergeWhileStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.While value) {
         if (statementCase_ == 13 &&
@@ -16737,7 +16783,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While whileStatement = 13;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.While while_statement = 13;</code>
        */
       public Builder clearWhileStatement() {
         if (statementCase_ == 13) {
@@ -16749,13 +16795,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile doWhileStatement = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile do_while_statement = 14;</code>
        */
       public boolean hasDoWhileStatement() {
         return statementCase_ == 14;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile doWhileStatement = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile do_while_statement = 14;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoWhile getDoWhileStatement() {
         if (statementCase_ == 14) {
@@ -16764,7 +16810,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoWhile.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile doWhileStatement = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile do_while_statement = 14;</code>
        */
       public Builder setDoWhileStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoWhile value) {
         if (value == null) {
@@ -16776,7 +16822,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile doWhileStatement = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile do_while_statement = 14;</code>
        */
       public Builder setDoWhileStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoWhile.Builder builderForValue) {
@@ -16786,7 +16832,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile doWhileStatement = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile do_while_statement = 14;</code>
        */
       public Builder mergeDoWhileStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.DoWhile value) {
         if (statementCase_ == 14 &&
@@ -16801,7 +16847,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile doWhileStatement = 14;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.DoWhile do_while_statement = 14;</code>
        */
       public Builder clearDoWhileStatement() {
         if (statementCase_ == 14) {
@@ -16813,13 +16859,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For forStatement = 15;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For for_statement = 15;</code>
        */
       public boolean hasForStatement() {
         return statementCase_ == 15;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For forStatement = 15;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For for_statement = 15;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.For getForStatement() {
         if (statementCase_ == 15) {
@@ -16828,7 +16874,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.For.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For forStatement = 15;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For for_statement = 15;</code>
        */
       public Builder setForStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.For value) {
         if (value == null) {
@@ -16840,7 +16886,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For forStatement = 15;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For for_statement = 15;</code>
        */
       public Builder setForStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.For.Builder builderForValue) {
@@ -16850,7 +16896,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For forStatement = 15;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For for_statement = 15;</code>
        */
       public Builder mergeForStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.For value) {
         if (statementCase_ == 15 &&
@@ -16865,7 +16911,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For forStatement = 15;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.For for_statement = 15;</code>
        */
       public Builder clearForStatement() {
         if (statementCase_ == 15) {
@@ -16877,13 +16923,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn forInStatement = 16;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn for_in_statement = 16;</code>
        */
       public boolean hasForInStatement() {
         return statementCase_ == 16;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn forInStatement = 16;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn for_in_statement = 16;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ForIn getForInStatement() {
         if (statementCase_ == 16) {
@@ -16892,7 +16938,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ForIn.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn forInStatement = 16;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn for_in_statement = 16;</code>
        */
       public Builder setForInStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ForIn value) {
         if (value == null) {
@@ -16904,7 +16950,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn forInStatement = 16;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn for_in_statement = 16;</code>
        */
       public Builder setForInStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ForIn.Builder builderForValue) {
@@ -16914,7 +16960,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn forInStatement = 16;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn for_in_statement = 16;</code>
        */
       public Builder mergeForInStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ForIn value) {
         if (statementCase_ == 16 &&
@@ -16929,7 +16975,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn forInStatement = 16;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.ForIn for_in_statement = 16;</code>
        */
       public Builder clearForInStatement() {
         if (statementCase_ == 16) {
@@ -16941,13 +16987,13 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try tryStatement = 17;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try try_statement = 17;</code>
        */
       public boolean hasTryStatement() {
         return statementCase_ == 17;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try tryStatement = 17;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try try_statement = 17;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Try getTryStatement() {
         if (statementCase_ == 17) {
@@ -16956,7 +17002,7 @@ public final class JsAstProtoBuf {
         return org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Try.getDefaultInstance();
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try tryStatement = 17;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try try_statement = 17;</code>
        */
       public Builder setTryStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Try value) {
         if (value == null) {
@@ -16968,7 +17014,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try tryStatement = 17;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try try_statement = 17;</code>
        */
       public Builder setTryStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Try.Builder builderForValue) {
@@ -16978,7 +17024,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try tryStatement = 17;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try try_statement = 17;</code>
        */
       public Builder mergeTryStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Try value) {
         if (statementCase_ == 17 &&
@@ -16993,7 +17039,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try tryStatement = 17;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Try try_statement = 17;</code>
        */
       public Builder clearTryStatement() {
         if (statementCase_ == 17) {
@@ -17888,11 +17934,11 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>optional int32 labelId = 1;</code>
+     * <code>optional int32 label_id = 1;</code>
      */
     boolean hasLabelId();
     /**
-     * <code>optional int32 labelId = 1;</code>
+     * <code>optional int32 label_id = 1;</code>
      */
     int getLabelId();
   }
@@ -17985,16 +18031,16 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int LABELID_FIELD_NUMBER = 1;
+    public static final int LABEL_ID_FIELD_NUMBER = 1;
     private int labelId_;
     /**
-     * <code>optional int32 labelId = 1;</code>
+     * <code>optional int32 label_id = 1;</code>
      */
     public boolean hasLabelId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional int32 labelId = 1;</code>
+     * <code>optional int32 label_id = 1;</code>
      */
     public int getLabelId() {
       return labelId_;
@@ -18194,19 +18240,19 @@ public final class JsAstProtoBuf {
 
       private int labelId_ ;
       /**
-       * <code>optional int32 labelId = 1;</code>
+       * <code>optional int32 label_id = 1;</code>
        */
       public boolean hasLabelId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional int32 labelId = 1;</code>
+       * <code>optional int32 label_id = 1;</code>
        */
       public int getLabelId() {
         return labelId_;
       }
       /**
-       * <code>optional int32 labelId = 1;</code>
+       * <code>optional int32 label_id = 1;</code>
        */
       public Builder setLabelId(int value) {
         bitField0_ |= 0x00000001;
@@ -18215,7 +18261,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional int32 labelId = 1;</code>
+       * <code>optional int32 label_id = 1;</code>
        */
       public Builder clearLabelId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -18240,11 +18286,11 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>optional int32 labelId = 1;</code>
+     * <code>optional int32 label_id = 1;</code>
      */
     boolean hasLabelId();
     /**
-     * <code>optional int32 labelId = 1;</code>
+     * <code>optional int32 label_id = 1;</code>
      */
     int getLabelId();
   }
@@ -18337,16 +18383,16 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int LABELID_FIELD_NUMBER = 1;
+    public static final int LABEL_ID_FIELD_NUMBER = 1;
     private int labelId_;
     /**
-     * <code>optional int32 labelId = 1;</code>
+     * <code>optional int32 label_id = 1;</code>
      */
     public boolean hasLabelId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional int32 labelId = 1;</code>
+     * <code>optional int32 label_id = 1;</code>
      */
     public int getLabelId() {
       return labelId_;
@@ -18546,19 +18592,19 @@ public final class JsAstProtoBuf {
 
       private int labelId_ ;
       /**
-       * <code>optional int32 labelId = 1;</code>
+       * <code>optional int32 label_id = 1;</code>
        */
       public boolean hasLabelId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional int32 labelId = 1;</code>
+       * <code>optional int32 label_id = 1;</code>
        */
       public int getLabelId() {
         return labelId_;
       }
       /**
-       * <code>optional int32 labelId = 1;</code>
+       * <code>optional int32 label_id = 1;</code>
        */
       public Builder setLabelId(int value) {
         bitField0_ |= 0x00000001;
@@ -18567,7 +18613,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional int32 labelId = 1;</code>
+       * <code>optional int32 label_id = 1;</code>
        */
       public Builder clearLabelId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -19276,6 +19322,15 @@ public final class JsAstProtoBuf {
      * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.VarDeclaration declaration = 1;</code>
      */
     int getDeclarationCount();
+
+    /**
+     * <code>required bool multiline = 2;</code>
+     */
+    boolean hasMultiline();
+    /**
+     * <code>required bool multiline = 2;</code>
+     */
+    boolean getMultiline();
   }
   /**
    * Protobuf type {@code org.jetbrains.kotlin.serialization.js.ast.Vars}
@@ -19335,6 +19390,11 @@ public final class JsAstProtoBuf {
               declaration_.add(input.readMessage(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.VarDeclaration.PARSER, extensionRegistry));
               break;
             }
+            case 16: {
+              bitField0_ |= 0x00000001;
+              multiline_ = input.readBool();
+              break;
+            }
           }
         }
       } catch (org.jetbrains.kotlin.protobuf.InvalidProtocolBufferException e) {
@@ -19371,6 +19431,7 @@ public final class JsAstProtoBuf {
       return PARSER;
     }
 
+    private int bitField0_;
     public static final int DECLARATION_FIELD_NUMBER = 1;
     private java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.VarDeclaration> declaration_;
     /**
@@ -19406,8 +19467,24 @@ public final class JsAstProtoBuf {
       return declaration_.get(index);
     }
 
+    public static final int MULTILINE_FIELD_NUMBER = 2;
+    private boolean multiline_;
+    /**
+     * <code>required bool multiline = 2;</code>
+     */
+    public boolean hasMultiline() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required bool multiline = 2;</code>
+     */
+    public boolean getMultiline() {
+      return multiline_;
+    }
+
     private void initFields() {
       declaration_ = java.util.Collections.emptyList();
+      multiline_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -19415,6 +19492,10 @@ public final class JsAstProtoBuf {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasMultiline()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       for (int i = 0; i < getDeclarationCount(); i++) {
         if (!getDeclaration(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -19431,6 +19512,9 @@ public final class JsAstProtoBuf {
       for (int i = 0; i < declaration_.size(); i++) {
         output.writeMessage(1, declaration_.get(i));
       }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBool(2, multiline_);
+      }
       output.writeRawBytes(unknownFields);
     }
 
@@ -19443,6 +19527,10 @@ public final class JsAstProtoBuf {
       for (int i = 0; i < declaration_.size(); i++) {
         size += org.jetbrains.kotlin.protobuf.CodedOutputStream
           .computeMessageSize(1, declaration_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += org.jetbrains.kotlin.protobuf.CodedOutputStream
+          .computeBoolSize(2, multiline_);
       }
       size += unknownFields.size();
       memoizedSerializedSize = size;
@@ -19540,6 +19628,8 @@ public final class JsAstProtoBuf {
         super.clear();
         declaration_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        multiline_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -19562,11 +19652,17 @@ public final class JsAstProtoBuf {
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Vars buildPartial() {
         org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Vars result = new org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Vars(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
           declaration_ = java.util.Collections.unmodifiableList(declaration_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.declaration_ = declaration_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.multiline_ = multiline_;
+        result.bitField0_ = to_bitField0_;
         return result;
       }
 
@@ -19582,12 +19678,19 @@ public final class JsAstProtoBuf {
           }
           
         }
+        if (other.hasMultiline()) {
+          setMultiline(other.getMultiline());
+        }
         setUnknownFields(
             getUnknownFields().concat(other.unknownFields));
         return this;
       }
 
       public final boolean isInitialized() {
+        if (!hasMultiline()) {
+          
+          return false;
+        }
         for (int i = 0; i < getDeclarationCount(); i++) {
           if (!getDeclaration(i).isInitialized()) {
             
@@ -19741,6 +19844,38 @@ public final class JsAstProtoBuf {
         return this;
       }
 
+      private boolean multiline_ ;
+      /**
+       * <code>required bool multiline = 2;</code>
+       */
+      public boolean hasMultiline() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required bool multiline = 2;</code>
+       */
+      public boolean getMultiline() {
+        return multiline_;
+      }
+      /**
+       * <code>required bool multiline = 2;</code>
+       */
+      public Builder setMultiline(boolean value) {
+        bitField0_ |= 0x00000002;
+        multiline_ = value;
+        
+        return this;
+      }
+      /**
+       * <code>required bool multiline = 2;</code>
+       */
+      public Builder clearMultiline() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        multiline_ = false;
+        
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:org.jetbrains.kotlin.serialization.js.ast.Vars)
     }
 
@@ -19757,20 +19892,20 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     boolean hasNameId();
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     int getNameId();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initialValue = 2;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initial_value = 2;</code>
      */
     boolean hasInitialValue();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initialValue = 2;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initial_value = 2;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getInitialValue();
   }
@@ -19876,31 +20011,31 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int NAMEID_FIELD_NUMBER = 1;
+    public static final int NAME_ID_FIELD_NUMBER = 1;
     private int nameId_;
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     public boolean hasNameId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     public int getNameId() {
       return nameId_;
     }
 
-    public static final int INITIALVALUE_FIELD_NUMBER = 2;
+    public static final int INITIAL_VALUE_FIELD_NUMBER = 2;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression initialValue_;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initialValue = 2;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initial_value = 2;</code>
      */
     public boolean hasInitialValue() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initialValue = 2;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initial_value = 2;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getInitialValue() {
       return initialValue_;
@@ -20137,19 +20272,19 @@ public final class JsAstProtoBuf {
 
       private int nameId_ ;
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public boolean hasNameId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public int getNameId() {
         return nameId_;
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public Builder setNameId(int value) {
         bitField0_ |= 0x00000001;
@@ -20158,7 +20293,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public Builder clearNameId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -20169,19 +20304,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression initialValue_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initialValue = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initial_value = 2;</code>
        */
       public boolean hasInitialValue() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initialValue = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initial_value = 2;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getInitialValue() {
         return initialValue_;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initialValue = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initial_value = 2;</code>
        */
       public Builder setInitialValue(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
         if (value == null) {
@@ -20193,7 +20328,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initialValue = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initial_value = 2;</code>
        */
       public Builder setInitialValue(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.Builder builderForValue) {
@@ -20203,7 +20338,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initialValue = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initial_value = 2;</code>
        */
       public Builder mergeInitialValue(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
         if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -20218,7 +20353,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initialValue = 2;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression initial_value = 2;</code>
        */
       public Builder clearInitialValue() {
         initialValue_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
@@ -21238,11 +21373,11 @@ public final class JsAstProtoBuf {
     int getNameId();
 
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement innerStatement = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement inner_statement = 2;</code>
      */
     boolean hasInnerStatement();
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement innerStatement = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement inner_statement = 2;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement getInnerStatement();
   }
@@ -21363,16 +21498,16 @@ public final class JsAstProtoBuf {
       return nameId_;
     }
 
-    public static final int INNERSTATEMENT_FIELD_NUMBER = 2;
+    public static final int INNER_STATEMENT_FIELD_NUMBER = 2;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement innerStatement_;
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement innerStatement = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement inner_statement = 2;</code>
      */
     public boolean hasInnerStatement() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement innerStatement = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement inner_statement = 2;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement getInnerStatement() {
       return innerStatement_;
@@ -21645,19 +21780,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement innerStatement_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement.getDefaultInstance();
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement innerStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement inner_statement = 2;</code>
        */
       public boolean hasInnerStatement() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement innerStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement inner_statement = 2;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement getInnerStatement() {
         return innerStatement_;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement innerStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement inner_statement = 2;</code>
        */
       public Builder setInnerStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement value) {
         if (value == null) {
@@ -21669,7 +21804,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement innerStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement inner_statement = 2;</code>
        */
       public Builder setInnerStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement.Builder builderForValue) {
@@ -21679,7 +21814,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement innerStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement inner_statement = 2;</code>
        */
       public Builder mergeInnerStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement value) {
         if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -21694,7 +21829,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement innerStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement inner_statement = 2;</code>
        */
       public Builder clearInnerStatement() {
         innerStatement_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement.getDefaultInstance();
@@ -21728,20 +21863,20 @@ public final class JsAstProtoBuf {
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getCondition();
 
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement thenStatement = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement then_statement = 2;</code>
      */
     boolean hasThenStatement();
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement thenStatement = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement then_statement = 2;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement getThenStatement();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement elseStatement = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement else_statement = 3;</code>
      */
     boolean hasElseStatement();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement elseStatement = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement else_statement = 3;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement getElseStatement();
   }
@@ -21883,31 +22018,31 @@ public final class JsAstProtoBuf {
       return condition_;
     }
 
-    public static final int THENSTATEMENT_FIELD_NUMBER = 2;
+    public static final int THEN_STATEMENT_FIELD_NUMBER = 2;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement thenStatement_;
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement thenStatement = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement then_statement = 2;</code>
      */
     public boolean hasThenStatement() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement thenStatement = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement then_statement = 2;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement getThenStatement() {
       return thenStatement_;
     }
 
-    public static final int ELSESTATEMENT_FIELD_NUMBER = 3;
+    public static final int ELSE_STATEMENT_FIELD_NUMBER = 3;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement elseStatement_;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement elseStatement = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement else_statement = 3;</code>
      */
     public boolean hasElseStatement() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement elseStatement = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement else_statement = 3;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement getElseStatement() {
       return elseStatement_;
@@ -22245,19 +22380,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement thenStatement_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement.getDefaultInstance();
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement thenStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement then_statement = 2;</code>
        */
       public boolean hasThenStatement() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement thenStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement then_statement = 2;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement getThenStatement() {
         return thenStatement_;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement thenStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement then_statement = 2;</code>
        */
       public Builder setThenStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement value) {
         if (value == null) {
@@ -22269,7 +22404,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement thenStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement then_statement = 2;</code>
        */
       public Builder setThenStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement.Builder builderForValue) {
@@ -22279,7 +22414,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement thenStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement then_statement = 2;</code>
        */
       public Builder mergeThenStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement value) {
         if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -22294,7 +22429,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement thenStatement = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.Statement then_statement = 2;</code>
        */
       public Builder clearThenStatement() {
         thenStatement_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement.getDefaultInstance();
@@ -22305,19 +22440,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement elseStatement_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement.getDefaultInstance();
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement elseStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement else_statement = 3;</code>
        */
       public boolean hasElseStatement() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement elseStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement else_statement = 3;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement getElseStatement() {
         return elseStatement_;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement elseStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement else_statement = 3;</code>
        */
       public Builder setElseStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement value) {
         if (value == null) {
@@ -22329,7 +22464,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement elseStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement else_statement = 3;</code>
        */
       public Builder setElseStatement(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement.Builder builderForValue) {
@@ -22339,7 +22474,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement elseStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement else_statement = 3;</code>
        */
       public Builder mergeElseStatement(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement value) {
         if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -22354,7 +22489,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement elseStatement = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Statement else_statement = 3;</code>
        */
       public Builder clearElseStatement() {
         elseStatement_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Statement.getDefaultInstance();
@@ -28306,113 +28441,113 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
      */
     java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule> 
         getImportedModuleList();
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule getImportedModule(int index);
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
      */
     int getImportedModuleCount();
 
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
      */
     java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import> 
         getImportEntryList();
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import getImportEntry(int index);
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
      */
     int getImportEntryCount();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declarationBlock = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declaration_block = 3;</code>
      */
     boolean hasDeclarationBlock();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declarationBlock = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declaration_block = 3;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getDeclarationBlock();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock exportBlock = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock export_block = 4;</code>
      */
     boolean hasExportBlock();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock exportBlock = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock export_block = 4;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getExportBlock();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializerBlock = 5;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializer_block = 5;</code>
      */
     boolean hasInitializerBlock();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializerBlock = 5;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializer_block = 5;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getInitializerBlock();
 
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
      */
     java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding> 
         getNameBindingList();
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding getNameBinding(int index);
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
      */
     int getNameBindingCount();
 
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
      */
     java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel> 
         getClassModelList();
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel getClassModel(int index);
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
      */
     int getClassModelCount();
 
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
      */
     java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression> 
         getModuleExpressionList();
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getModuleExpression(int index);
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
      */
     int getModuleExpressionCount();
 
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
      */
     java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule> 
         getInlineModuleList();
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule getInlineModule(int index);
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
      */
     int getInlineModuleCount();
   }
@@ -28605,255 +28740,255 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int IMPORTEDMODULE_FIELD_NUMBER = 1;
+    public static final int IMPORTED_MODULE_FIELD_NUMBER = 1;
     private java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule> importedModule_;
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
      */
     public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule> getImportedModuleList() {
       return importedModule_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
      */
     public java.util.List<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModuleOrBuilder> 
         getImportedModuleOrBuilderList() {
       return importedModule_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
      */
     public int getImportedModuleCount() {
       return importedModule_.size();
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule getImportedModule(int index) {
       return importedModule_.get(index);
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModuleOrBuilder getImportedModuleOrBuilder(
         int index) {
       return importedModule_.get(index);
     }
 
-    public static final int IMPORTENTRY_FIELD_NUMBER = 2;
+    public static final int IMPORT_ENTRY_FIELD_NUMBER = 2;
     private java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import> importEntry_;
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
      */
     public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import> getImportEntryList() {
       return importEntry_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
      */
     public java.util.List<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportOrBuilder> 
         getImportEntryOrBuilderList() {
       return importEntry_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
      */
     public int getImportEntryCount() {
       return importEntry_.size();
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import getImportEntry(int index) {
       return importEntry_.get(index);
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportOrBuilder getImportEntryOrBuilder(
         int index) {
       return importEntry_.get(index);
     }
 
-    public static final int DECLARATIONBLOCK_FIELD_NUMBER = 3;
+    public static final int DECLARATION_BLOCK_FIELD_NUMBER = 3;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock declarationBlock_;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declarationBlock = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declaration_block = 3;</code>
      */
     public boolean hasDeclarationBlock() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declarationBlock = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declaration_block = 3;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getDeclarationBlock() {
       return declarationBlock_;
     }
 
-    public static final int EXPORTBLOCK_FIELD_NUMBER = 4;
+    public static final int EXPORT_BLOCK_FIELD_NUMBER = 4;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock exportBlock_;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock exportBlock = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock export_block = 4;</code>
      */
     public boolean hasExportBlock() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock exportBlock = 4;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock export_block = 4;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getExportBlock() {
       return exportBlock_;
     }
 
-    public static final int INITIALIZERBLOCK_FIELD_NUMBER = 5;
+    public static final int INITIALIZER_BLOCK_FIELD_NUMBER = 5;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock initializerBlock_;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializerBlock = 5;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializer_block = 5;</code>
      */
     public boolean hasInitializerBlock() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializerBlock = 5;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializer_block = 5;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getInitializerBlock() {
       return initializerBlock_;
     }
 
-    public static final int NAMEBINDING_FIELD_NUMBER = 6;
+    public static final int NAME_BINDING_FIELD_NUMBER = 6;
     private java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding> nameBinding_;
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
      */
     public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding> getNameBindingList() {
       return nameBinding_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
      */
     public java.util.List<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBindingOrBuilder> 
         getNameBindingOrBuilderList() {
       return nameBinding_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
      */
     public int getNameBindingCount() {
       return nameBinding_.size();
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding getNameBinding(int index) {
       return nameBinding_.get(index);
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBindingOrBuilder getNameBindingOrBuilder(
         int index) {
       return nameBinding_.get(index);
     }
 
-    public static final int CLASSMODEL_FIELD_NUMBER = 7;
+    public static final int CLASS_MODEL_FIELD_NUMBER = 7;
     private java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel> classModel_;
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
      */
     public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel> getClassModelList() {
       return classModel_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
      */
     public java.util.List<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModelOrBuilder> 
         getClassModelOrBuilderList() {
       return classModel_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
      */
     public int getClassModelCount() {
       return classModel_.size();
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel getClassModel(int index) {
       return classModel_.get(index);
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModelOrBuilder getClassModelOrBuilder(
         int index) {
       return classModel_.get(index);
     }
 
-    public static final int MODULEEXPRESSION_FIELD_NUMBER = 8;
+    public static final int MODULE_EXPRESSION_FIELD_NUMBER = 8;
     private java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression> moduleExpression_;
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
      */
     public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression> getModuleExpressionList() {
       return moduleExpression_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
      */
     public java.util.List<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ExpressionOrBuilder> 
         getModuleExpressionOrBuilderList() {
       return moduleExpression_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
      */
     public int getModuleExpressionCount() {
       return moduleExpression_.size();
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getModuleExpression(int index) {
       return moduleExpression_.get(index);
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ExpressionOrBuilder getModuleExpressionOrBuilder(
         int index) {
       return moduleExpression_.get(index);
     }
 
-    public static final int INLINEMODULE_FIELD_NUMBER = 9;
+    public static final int INLINE_MODULE_FIELD_NUMBER = 9;
     private java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule> inlineModule_;
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
      */
     public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule> getInlineModuleList() {
       return inlineModule_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
      */
     public java.util.List<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModuleOrBuilder> 
         getInlineModuleOrBuilderList() {
       return inlineModule_;
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
      */
     public int getInlineModuleCount() {
       return inlineModule_.size();
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule getInlineModule(int index) {
       return inlineModule_.get(index);
     }
     /**
-     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+     * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModuleOrBuilder getInlineModuleOrBuilder(
         int index) {
@@ -29354,25 +29489,25 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule> getImportedModuleList() {
         return java.util.Collections.unmodifiableList(importedModule_);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public int getImportedModuleCount() {
         return importedModule_.size();
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule getImportedModule(int index) {
         return importedModule_.get(index);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public Builder setImportedModule(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule value) {
@@ -29385,7 +29520,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public Builder setImportedModule(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule.Builder builderForValue) {
@@ -29395,7 +29530,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public Builder addImportedModule(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule value) {
         if (value == null) {
@@ -29407,7 +29542,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public Builder addImportedModule(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule value) {
@@ -29420,7 +29555,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public Builder addImportedModule(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule.Builder builderForValue) {
@@ -29430,7 +29565,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public Builder addImportedModule(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule.Builder builderForValue) {
@@ -29440,7 +29575,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public Builder addAllImportedModule(
           java.lang.Iterable<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ImportedModule> values) {
@@ -29451,7 +29586,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public Builder clearImportedModule() {
         importedModule_ = java.util.Collections.emptyList();
@@ -29460,7 +29595,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule importedModule = 1;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ImportedModule imported_module = 1;</code>
        */
       public Builder removeImportedModule(int index) {
         ensureImportedModuleIsMutable();
@@ -29479,25 +29614,25 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import> getImportEntryList() {
         return java.util.Collections.unmodifiableList(importEntry_);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public int getImportEntryCount() {
         return importEntry_.size();
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import getImportEntry(int index) {
         return importEntry_.get(index);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public Builder setImportEntry(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import value) {
@@ -29510,7 +29645,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public Builder setImportEntry(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import.Builder builderForValue) {
@@ -29520,7 +29655,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public Builder addImportEntry(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import value) {
         if (value == null) {
@@ -29532,7 +29667,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public Builder addImportEntry(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import value) {
@@ -29545,7 +29680,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public Builder addImportEntry(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import.Builder builderForValue) {
@@ -29555,7 +29690,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public Builder addImportEntry(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import.Builder builderForValue) {
@@ -29565,7 +29700,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public Builder addAllImportEntry(
           java.lang.Iterable<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Import> values) {
@@ -29576,7 +29711,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public Builder clearImportEntry() {
         importEntry_ = java.util.Collections.emptyList();
@@ -29585,7 +29720,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import importEntry = 2;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Import import_entry = 2;</code>
        */
       public Builder removeImportEntry(int index) {
         ensureImportEntryIsMutable();
@@ -29596,19 +29731,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock declarationBlock_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.getDefaultInstance();
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declaration_block = 3;</code>
        */
       public boolean hasDeclarationBlock() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declaration_block = 3;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getDeclarationBlock() {
         return declarationBlock_;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declaration_block = 3;</code>
        */
       public Builder setDeclarationBlock(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock value) {
         if (value == null) {
@@ -29620,7 +29755,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declaration_block = 3;</code>
        */
       public Builder setDeclarationBlock(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.Builder builderForValue) {
@@ -29630,7 +29765,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declaration_block = 3;</code>
        */
       public Builder mergeDeclarationBlock(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock value) {
         if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -29645,7 +29780,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock declaration_block = 3;</code>
        */
       public Builder clearDeclarationBlock() {
         declarationBlock_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.getDefaultInstance();
@@ -29656,19 +29791,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock exportBlock_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.getDefaultInstance();
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock exportBlock = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock export_block = 4;</code>
        */
       public boolean hasExportBlock() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock exportBlock = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock export_block = 4;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getExportBlock() {
         return exportBlock_;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock exportBlock = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock export_block = 4;</code>
        */
       public Builder setExportBlock(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock value) {
         if (value == null) {
@@ -29680,7 +29815,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock exportBlock = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock export_block = 4;</code>
        */
       public Builder setExportBlock(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.Builder builderForValue) {
@@ -29690,7 +29825,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock exportBlock = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock export_block = 4;</code>
        */
       public Builder mergeExportBlock(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock value) {
         if (((bitField0_ & 0x00000008) == 0x00000008) &&
@@ -29705,7 +29840,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock exportBlock = 4;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock export_block = 4;</code>
        */
       public Builder clearExportBlock() {
         exportBlock_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.getDefaultInstance();
@@ -29716,19 +29851,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock initializerBlock_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.getDefaultInstance();
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializerBlock = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializer_block = 5;</code>
        */
       public boolean hasInitializerBlock() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializerBlock = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializer_block = 5;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getInitializerBlock() {
         return initializerBlock_;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializerBlock = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializer_block = 5;</code>
        */
       public Builder setInitializerBlock(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock value) {
         if (value == null) {
@@ -29740,7 +29875,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializerBlock = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializer_block = 5;</code>
        */
       public Builder setInitializerBlock(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.Builder builderForValue) {
@@ -29750,7 +29885,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializerBlock = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializer_block = 5;</code>
        */
       public Builder mergeInitializerBlock(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock value) {
         if (((bitField0_ & 0x00000010) == 0x00000010) &&
@@ -29765,7 +29900,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializerBlock = 5;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock initializer_block = 5;</code>
        */
       public Builder clearInitializerBlock() {
         initializerBlock_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.getDefaultInstance();
@@ -29784,25 +29919,25 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding> getNameBindingList() {
         return java.util.Collections.unmodifiableList(nameBinding_);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public int getNameBindingCount() {
         return nameBinding_.size();
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding getNameBinding(int index) {
         return nameBinding_.get(index);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public Builder setNameBinding(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding value) {
@@ -29815,7 +29950,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public Builder setNameBinding(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding.Builder builderForValue) {
@@ -29825,7 +29960,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public Builder addNameBinding(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding value) {
         if (value == null) {
@@ -29837,7 +29972,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public Builder addNameBinding(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding value) {
@@ -29850,7 +29985,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public Builder addNameBinding(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding.Builder builderForValue) {
@@ -29860,7 +29995,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public Builder addNameBinding(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding.Builder builderForValue) {
@@ -29870,7 +30005,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public Builder addAllNameBinding(
           java.lang.Iterable<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameBinding> values) {
@@ -29881,7 +30016,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public Builder clearNameBinding() {
         nameBinding_ = java.util.Collections.emptyList();
@@ -29890,7 +30025,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding nameBinding = 6;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.NameBinding name_binding = 6;</code>
        */
       public Builder removeNameBinding(int index) {
         ensureNameBindingIsMutable();
@@ -29909,25 +30044,25 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel> getClassModelList() {
         return java.util.Collections.unmodifiableList(classModel_);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public int getClassModelCount() {
         return classModel_.size();
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel getClassModel(int index) {
         return classModel_.get(index);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public Builder setClassModel(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel value) {
@@ -29940,7 +30075,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public Builder setClassModel(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel.Builder builderForValue) {
@@ -29950,7 +30085,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public Builder addClassModel(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel value) {
         if (value == null) {
@@ -29962,7 +30097,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public Builder addClassModel(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel value) {
@@ -29975,7 +30110,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public Builder addClassModel(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel.Builder builderForValue) {
@@ -29985,7 +30120,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public Builder addClassModel(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel.Builder builderForValue) {
@@ -29995,7 +30130,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public Builder addAllClassModel(
           java.lang.Iterable<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.ClassModel> values) {
@@ -30006,7 +30141,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public Builder clearClassModel() {
         classModel_ = java.util.Collections.emptyList();
@@ -30015,7 +30150,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel classModel = 7;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.ClassModel class_model = 7;</code>
        */
       public Builder removeClassModel(int index) {
         ensureClassModelIsMutable();
@@ -30034,25 +30169,25 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression> getModuleExpressionList() {
         return java.util.Collections.unmodifiableList(moduleExpression_);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public int getModuleExpressionCount() {
         return moduleExpression_.size();
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getModuleExpression(int index) {
         return moduleExpression_.get(index);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public Builder setModuleExpression(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
@@ -30065,7 +30200,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public Builder setModuleExpression(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.Builder builderForValue) {
@@ -30075,7 +30210,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public Builder addModuleExpression(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
         if (value == null) {
@@ -30087,7 +30222,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public Builder addModuleExpression(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
@@ -30100,7 +30235,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public Builder addModuleExpression(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.Builder builderForValue) {
@@ -30110,7 +30245,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public Builder addModuleExpression(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.Builder builderForValue) {
@@ -30120,7 +30255,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public Builder addAllModuleExpression(
           java.lang.Iterable<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression> values) {
@@ -30131,7 +30266,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public Builder clearModuleExpression() {
         moduleExpression_ = java.util.Collections.emptyList();
@@ -30140,7 +30275,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression moduleExpression = 8;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.Expression module_expression = 8;</code>
        */
       public Builder removeModuleExpression(int index) {
         ensureModuleExpressionIsMutable();
@@ -30159,25 +30294,25 @@ public final class JsAstProtoBuf {
       }
 
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public java.util.List<org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule> getInlineModuleList() {
         return java.util.Collections.unmodifiableList(inlineModule_);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public int getInlineModuleCount() {
         return inlineModule_.size();
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule getInlineModule(int index) {
         return inlineModule_.get(index);
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public Builder setInlineModule(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule value) {
@@ -30190,7 +30325,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public Builder setInlineModule(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule.Builder builderForValue) {
@@ -30200,7 +30335,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public Builder addInlineModule(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule value) {
         if (value == null) {
@@ -30212,7 +30347,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public Builder addInlineModule(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule value) {
@@ -30225,7 +30360,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public Builder addInlineModule(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule.Builder builderForValue) {
@@ -30235,7 +30370,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public Builder addInlineModule(
           int index, org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule.Builder builderForValue) {
@@ -30245,7 +30380,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public Builder addAllInlineModule(
           java.lang.Iterable<? extends org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.InlineModule> values) {
@@ -30256,7 +30391,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public Builder clearInlineModule() {
         inlineModule_ = java.util.Collections.emptyList();
@@ -30265,7 +30400,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inlineModule = 9;</code>
+       * <code>repeated .org.jetbrains.kotlin.serialization.js.ast.InlineModule inline_module = 9;</code>
        */
       public Builder removeInlineModule(int index) {
         ensureInlineModuleIsMutable();
@@ -30290,29 +30425,29 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 externalNameId = 1;</code>
+     * <code>required int32 external_name_id = 1;</code>
      */
     boolean hasExternalNameId();
     /**
-     * <code>required int32 externalNameId = 1;</code>
+     * <code>required int32 external_name_id = 1;</code>
      */
     int getExternalNameId();
 
     /**
-     * <code>required int32 internalNameId = 2;</code>
+     * <code>required int32 internal_name_id = 2;</code>
      */
     boolean hasInternalNameId();
     /**
-     * <code>required int32 internalNameId = 2;</code>
+     * <code>required int32 internal_name_id = 2;</code>
      */
     int getInternalNameId();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plainReference = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plain_reference = 3;</code>
      */
     boolean hasPlainReference();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plainReference = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plain_reference = 3;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getPlainReference();
   }
@@ -30423,46 +30558,46 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int EXTERNALNAMEID_FIELD_NUMBER = 1;
+    public static final int EXTERNAL_NAME_ID_FIELD_NUMBER = 1;
     private int externalNameId_;
     /**
-     * <code>required int32 externalNameId = 1;</code>
+     * <code>required int32 external_name_id = 1;</code>
      */
     public boolean hasExternalNameId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 externalNameId = 1;</code>
+     * <code>required int32 external_name_id = 1;</code>
      */
     public int getExternalNameId() {
       return externalNameId_;
     }
 
-    public static final int INTERNALNAMEID_FIELD_NUMBER = 2;
+    public static final int INTERNAL_NAME_ID_FIELD_NUMBER = 2;
     private int internalNameId_;
     /**
-     * <code>required int32 internalNameId = 2;</code>
+     * <code>required int32 internal_name_id = 2;</code>
      */
     public boolean hasInternalNameId() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required int32 internalNameId = 2;</code>
+     * <code>required int32 internal_name_id = 2;</code>
      */
     public int getInternalNameId() {
       return internalNameId_;
     }
 
-    public static final int PLAINREFERENCE_FIELD_NUMBER = 3;
+    public static final int PLAIN_REFERENCE_FIELD_NUMBER = 3;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression plainReference_;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plainReference = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plain_reference = 3;</code>
      */
     public boolean hasPlainReference() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plainReference = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plain_reference = 3;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getPlainReference() {
       return plainReference_;
@@ -30724,19 +30859,19 @@ public final class JsAstProtoBuf {
 
       private int externalNameId_ ;
       /**
-       * <code>required int32 externalNameId = 1;</code>
+       * <code>required int32 external_name_id = 1;</code>
        */
       public boolean hasExternalNameId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 externalNameId = 1;</code>
+       * <code>required int32 external_name_id = 1;</code>
        */
       public int getExternalNameId() {
         return externalNameId_;
       }
       /**
-       * <code>required int32 externalNameId = 1;</code>
+       * <code>required int32 external_name_id = 1;</code>
        */
       public Builder setExternalNameId(int value) {
         bitField0_ |= 0x00000001;
@@ -30745,7 +30880,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 externalNameId = 1;</code>
+       * <code>required int32 external_name_id = 1;</code>
        */
       public Builder clearExternalNameId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -30756,19 +30891,19 @@ public final class JsAstProtoBuf {
 
       private int internalNameId_ ;
       /**
-       * <code>required int32 internalNameId = 2;</code>
+       * <code>required int32 internal_name_id = 2;</code>
        */
       public boolean hasInternalNameId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required int32 internalNameId = 2;</code>
+       * <code>required int32 internal_name_id = 2;</code>
        */
       public int getInternalNameId() {
         return internalNameId_;
       }
       /**
-       * <code>required int32 internalNameId = 2;</code>
+       * <code>required int32 internal_name_id = 2;</code>
        */
       public Builder setInternalNameId(int value) {
         bitField0_ |= 0x00000002;
@@ -30777,7 +30912,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 internalNameId = 2;</code>
+       * <code>required int32 internal_name_id = 2;</code>
        */
       public Builder clearInternalNameId() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -30788,19 +30923,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression plainReference_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plainReference = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plain_reference = 3;</code>
        */
       public boolean hasPlainReference() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plainReference = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plain_reference = 3;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression getPlainReference() {
         return plainReference_;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plainReference = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plain_reference = 3;</code>
        */
       public Builder setPlainReference(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
         if (value == null) {
@@ -30812,7 +30947,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plainReference = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plain_reference = 3;</code>
        */
       public Builder setPlainReference(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.Builder builderForValue) {
@@ -30822,7 +30957,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plainReference = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plain_reference = 3;</code>
        */
       public Builder mergePlainReference(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression value) {
         if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -30837,7 +30972,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plainReference = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.Expression plain_reference = 3;</code>
        */
       public Builder clearPlainReference() {
         plainReference_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.Expression.getDefaultInstance();
@@ -30862,11 +30997,11 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     boolean hasSignatureId();
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     int getSignatureId();
 
@@ -30981,16 +31116,16 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int SIGNATUREID_FIELD_NUMBER = 1;
+    public static final int SIGNATURE_ID_FIELD_NUMBER = 1;
     private int signatureId_;
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     public boolean hasSignatureId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     public int getSignatureId() {
       return signatureId_;
@@ -31246,19 +31381,19 @@ public final class JsAstProtoBuf {
 
       private int signatureId_ ;
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public boolean hasSignatureId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public int getSignatureId() {
         return signatureId_;
       }
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public Builder setSignatureId(int value) {
         bitField0_ |= 0x00000001;
@@ -31267,7 +31402,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public Builder clearSignatureId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -31352,11 +31487,11 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     boolean hasSignatureId();
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     int getSignatureId();
 
@@ -31463,16 +31598,16 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int SIGNATUREID_FIELD_NUMBER = 1;
+    public static final int SIGNATURE_ID_FIELD_NUMBER = 1;
     private int signatureId_;
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     public boolean hasSignatureId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     public int getSignatureId() {
       return signatureId_;
@@ -31720,19 +31855,19 @@ public final class JsAstProtoBuf {
 
       private int signatureId_ ;
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public boolean hasSignatureId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public int getSignatureId() {
         return signatureId_;
       }
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public Builder setSignatureId(int value) {
         bitField0_ |= 0x00000001;
@@ -31741,7 +31876,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public Builder clearSignatureId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -31798,29 +31933,29 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     boolean hasNameId();
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     int getNameId();
 
     /**
-     * <code>optional int32 superNameId = 2;</code>
+     * <code>optional int32 super_name_id = 2;</code>
      */
     boolean hasSuperNameId();
     /**
-     * <code>optional int32 superNameId = 2;</code>
+     * <code>optional int32 super_name_id = 2;</code>
      */
     int getSuperNameId();
 
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock postDeclarationBlock = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock post_declaration_block = 3;</code>
      */
     boolean hasPostDeclarationBlock();
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock postDeclarationBlock = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock post_declaration_block = 3;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getPostDeclarationBlock();
   }
@@ -31931,46 +32066,46 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int NAMEID_FIELD_NUMBER = 1;
+    public static final int NAME_ID_FIELD_NUMBER = 1;
     private int nameId_;
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     public boolean hasNameId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 nameId = 1;</code>
+     * <code>required int32 name_id = 1;</code>
      */
     public int getNameId() {
       return nameId_;
     }
 
-    public static final int SUPERNAMEID_FIELD_NUMBER = 2;
+    public static final int SUPER_NAME_ID_FIELD_NUMBER = 2;
     private int superNameId_;
     /**
-     * <code>optional int32 superNameId = 2;</code>
+     * <code>optional int32 super_name_id = 2;</code>
      */
     public boolean hasSuperNameId() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional int32 superNameId = 2;</code>
+     * <code>optional int32 super_name_id = 2;</code>
      */
     public int getSuperNameId() {
       return superNameId_;
     }
 
-    public static final int POSTDECLARATIONBLOCK_FIELD_NUMBER = 3;
+    public static final int POST_DECLARATION_BLOCK_FIELD_NUMBER = 3;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock postDeclarationBlock_;
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock postDeclarationBlock = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock post_declaration_block = 3;</code>
      */
     public boolean hasPostDeclarationBlock() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock postDeclarationBlock = 3;</code>
+     * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock post_declaration_block = 3;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getPostDeclarationBlock() {
       return postDeclarationBlock_;
@@ -32224,19 +32359,19 @@ public final class JsAstProtoBuf {
 
       private int nameId_ ;
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public boolean hasNameId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public int getNameId() {
         return nameId_;
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public Builder setNameId(int value) {
         bitField0_ |= 0x00000001;
@@ -32245,7 +32380,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 nameId = 1;</code>
+       * <code>required int32 name_id = 1;</code>
        */
       public Builder clearNameId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -32256,19 +32391,19 @@ public final class JsAstProtoBuf {
 
       private int superNameId_ ;
       /**
-       * <code>optional int32 superNameId = 2;</code>
+       * <code>optional int32 super_name_id = 2;</code>
        */
       public boolean hasSuperNameId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional int32 superNameId = 2;</code>
+       * <code>optional int32 super_name_id = 2;</code>
        */
       public int getSuperNameId() {
         return superNameId_;
       }
       /**
-       * <code>optional int32 superNameId = 2;</code>
+       * <code>optional int32 super_name_id = 2;</code>
        */
       public Builder setSuperNameId(int value) {
         bitField0_ |= 0x00000002;
@@ -32277,7 +32412,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional int32 superNameId = 2;</code>
+       * <code>optional int32 super_name_id = 2;</code>
        */
       public Builder clearSuperNameId() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -32288,19 +32423,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock postDeclarationBlock_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.getDefaultInstance();
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock postDeclarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock post_declaration_block = 3;</code>
        */
       public boolean hasPostDeclarationBlock() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock postDeclarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock post_declaration_block = 3;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock getPostDeclarationBlock() {
         return postDeclarationBlock_;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock postDeclarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock post_declaration_block = 3;</code>
        */
       public Builder setPostDeclarationBlock(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock value) {
         if (value == null) {
@@ -32312,7 +32447,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock postDeclarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock post_declaration_block = 3;</code>
        */
       public Builder setPostDeclarationBlock(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.Builder builderForValue) {
@@ -32322,7 +32457,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock postDeclarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock post_declaration_block = 3;</code>
        */
       public Builder mergePostDeclarationBlock(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock value) {
         if (((bitField0_ & 0x00000004) == 0x00000004) &&
@@ -32337,7 +32472,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock postDeclarationBlock = 3;</code>
+       * <code>optional .org.jetbrains.kotlin.serialization.js.ast.GlobalBlock post_declaration_block = 3;</code>
        */
       public Builder clearPostDeclarationBlock() {
         postDeclarationBlock_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.GlobalBlock.getDefaultInstance();
@@ -32362,20 +32497,20 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     boolean hasSignatureId();
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     int getSignatureId();
 
     /**
-     * <code>required int32 expressionId = 2;</code>
+     * <code>required int32 expression_id = 2;</code>
      */
     boolean hasExpressionId();
     /**
-     * <code>required int32 expressionId = 2;</code>
+     * <code>required int32 expression_id = 2;</code>
      */
     int getExpressionId();
   }
@@ -32473,31 +32608,31 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int SIGNATUREID_FIELD_NUMBER = 1;
+    public static final int SIGNATURE_ID_FIELD_NUMBER = 1;
     private int signatureId_;
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     public boolean hasSignatureId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 signatureId = 1;</code>
+     * <code>required int32 signature_id = 1;</code>
      */
     public int getSignatureId() {
       return signatureId_;
     }
 
-    public static final int EXPRESSIONID_FIELD_NUMBER = 2;
+    public static final int EXPRESSION_ID_FIELD_NUMBER = 2;
     private int expressionId_;
     /**
-     * <code>required int32 expressionId = 2;</code>
+     * <code>required int32 expression_id = 2;</code>
      */
     public boolean hasExpressionId() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required int32 expressionId = 2;</code>
+     * <code>required int32 expression_id = 2;</code>
      */
     public int getExpressionId() {
       return expressionId_;
@@ -32730,19 +32865,19 @@ public final class JsAstProtoBuf {
 
       private int signatureId_ ;
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public boolean hasSignatureId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public int getSignatureId() {
         return signatureId_;
       }
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public Builder setSignatureId(int value) {
         bitField0_ |= 0x00000001;
@@ -32751,7 +32886,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 signatureId = 1;</code>
+       * <code>required int32 signature_id = 1;</code>
        */
       public Builder clearSignatureId() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -32762,19 +32897,19 @@ public final class JsAstProtoBuf {
 
       private int expressionId_ ;
       /**
-       * <code>required int32 expressionId = 2;</code>
+       * <code>required int32 expression_id = 2;</code>
        */
       public boolean hasExpressionId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required int32 expressionId = 2;</code>
+       * <code>required int32 expression_id = 2;</code>
        */
       public int getExpressionId() {
         return expressionId_;
       }
       /**
-       * <code>required int32 expressionId = 2;</code>
+       * <code>required int32 expression_id = 2;</code>
        */
       public Builder setExpressionId(int value) {
         bitField0_ |= 0x00000002;
@@ -32783,7 +32918,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required int32 expressionId = 2;</code>
+       * <code>required int32 expression_id = 2;</code>
        */
       public Builder clearExpressionId() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -34193,20 +34328,20 @@ public final class JsAstProtoBuf {
       org.jetbrains.kotlin.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable stringTable = 1;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable string_table = 1;</code>
      */
     boolean hasStringTable();
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable stringTable = 1;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable string_table = 1;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringTable getStringTable();
 
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable nameTable = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable name_table = 2;</code>
      */
     boolean hasNameTable();
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable nameTable = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable name_table = 2;</code>
      */
     org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameTable getNameTable();
 
@@ -34342,31 +34477,31 @@ public final class JsAstProtoBuf {
     }
 
     private int bitField0_;
-    public static final int STRINGTABLE_FIELD_NUMBER = 1;
+    public static final int STRING_TABLE_FIELD_NUMBER = 1;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringTable stringTable_;
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable stringTable = 1;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable string_table = 1;</code>
      */
     public boolean hasStringTable() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable stringTable = 1;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable string_table = 1;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringTable getStringTable() {
       return stringTable_;
     }
 
-    public static final int NAMETABLE_FIELD_NUMBER = 2;
+    public static final int NAME_TABLE_FIELD_NUMBER = 2;
     private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameTable nameTable_;
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable nameTable = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable name_table = 2;</code>
      */
     public boolean hasNameTable() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable nameTable = 2;</code>
+     * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable name_table = 2;</code>
      */
     public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameTable getNameTable() {
       return nameTable_;
@@ -34655,19 +34790,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringTable stringTable_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringTable.getDefaultInstance();
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable stringTable = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable string_table = 1;</code>
        */
       public boolean hasStringTable() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable stringTable = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable string_table = 1;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringTable getStringTable() {
         return stringTable_;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable stringTable = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable string_table = 1;</code>
        */
       public Builder setStringTable(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringTable value) {
         if (value == null) {
@@ -34679,7 +34814,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable stringTable = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable string_table = 1;</code>
        */
       public Builder setStringTable(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringTable.Builder builderForValue) {
@@ -34689,7 +34824,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable stringTable = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable string_table = 1;</code>
        */
       public Builder mergeStringTable(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringTable value) {
         if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -34704,7 +34839,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable stringTable = 1;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.StringTable string_table = 1;</code>
        */
       public Builder clearStringTable() {
         stringTable_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.StringTable.getDefaultInstance();
@@ -34715,19 +34850,19 @@ public final class JsAstProtoBuf {
 
       private org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameTable nameTable_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameTable.getDefaultInstance();
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable nameTable = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable name_table = 2;</code>
        */
       public boolean hasNameTable() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable nameTable = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable name_table = 2;</code>
        */
       public org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameTable getNameTable() {
         return nameTable_;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable nameTable = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable name_table = 2;</code>
        */
       public Builder setNameTable(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameTable value) {
         if (value == null) {
@@ -34739,7 +34874,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable nameTable = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable name_table = 2;</code>
        */
       public Builder setNameTable(
           org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameTable.Builder builderForValue) {
@@ -34749,7 +34884,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable nameTable = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable name_table = 2;</code>
        */
       public Builder mergeNameTable(org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameTable value) {
         if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -34764,7 +34899,7 @@ public final class JsAstProtoBuf {
         return this;
       }
       /**
-       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable nameTable = 2;</code>
+       * <code>required .org.jetbrains.kotlin.serialization.js.ast.NameTable name_table = 2;</code>
        */
       public Builder clearNameTable() {
         nameTable_ = org.jetbrains.kotlin.serialization.js.ast.JsAstProtoBuf.NameTable.getDefaultInstance();
