@@ -18,12 +18,13 @@ package org.jetbrains.kotlin.js.facade;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jetbrains.kotlin.descriptors.DeclarationDescriptor;
 import org.jetbrains.kotlin.descriptors.ModuleDescriptor;
 import org.jetbrains.kotlin.js.analyze.TopDownAnalyzerFacadeForJS;
 import org.jetbrains.kotlin.js.analyzer.JsAnalysisResult;
 import org.jetbrains.kotlin.js.backend.ast.JsImportedModule;
-import org.jetbrains.kotlin.js.backend.ast.JsProgram;
 import org.jetbrains.kotlin.js.backend.ast.JsProgramFragment;
+import org.jetbrains.kotlin.js.config.JSConfigurationKeys;
 import org.jetbrains.kotlin.js.config.JsConfig;
 import org.jetbrains.kotlin.js.coroutine.CoroutineTransformer;
 import org.jetbrains.kotlin.js.facade.exceptions.TranslationException;
@@ -31,6 +32,7 @@ import org.jetbrains.kotlin.js.inline.JsInliner;
 import org.jetbrains.kotlin.js.inline.clean.RemoveUnusedImportsKt;
 import org.jetbrains.kotlin.js.inline.clean.ResolveTemporaryNamesKt;
 import org.jetbrains.kotlin.js.translate.general.AstGenerationResult;
+import org.jetbrains.kotlin.js.translate.general.FileTranslationResult;
 import org.jetbrains.kotlin.js.translate.general.Translation;
 import org.jetbrains.kotlin.js.translate.utils.ExpandIsCallsKt;
 import org.jetbrains.kotlin.progress.ProgressIndicatorAndCompilationCanceledStatus;
@@ -43,7 +45,9 @@ import org.jetbrains.kotlin.serialization.js.ast.JsAstSerializer;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.jetbrains.kotlin.diagnostics.DiagnosticUtils.hasError;
 
@@ -87,28 +91,34 @@ public final class K2JSTranslator {
         ProgressIndicatorAndCompilationCanceledStatus.checkCanceled();
         if (hasError(diagnostics)) return new TranslationResult.Fail(diagnostics);
 
-        JsInliner.process(config, analysisResult.getBindingTrace(), translationResult.getInnerModuleName(),
-                          translationResult.getFragments(), translationResult.getFragments());
-
-        // TODO: temporary code for testing purposes, remove later
-        JsAstSerializer serializer = new JsAstSerializer();
-        JsAstDeserializer deserializer = new JsAstDeserializer(new JsProgram());
-        JsProgram program = translationResult.getProgram();
-        int bytesTotal = 0;
-        for (JsProgramFragment fragment : translationResult.getFragments()) {
-            ByteArrayOutputStream output = new ByteArrayOutputStream();
-            serializer.serialize(fragment, output);
-            bytesTotal += output.size();
-
-            ByteArrayInputStream input = new ByteArrayInputStream(output.toByteArray());
-            JsProgramFragment deserializedFragment = deserializer.deserialize(input);
-
-            String expected = fragmentToString(fragment);
-            String actual = fragmentToString(deserializedFragment);
-            assert expected.equals(actual) : "Deserialization: " + expected + "\n\nvs.\n\n" + actual;
+        List<JsProgramFragment> newFragments = translationResult.getFragments();
+        List<JsProgramFragment> allFragments = new ArrayList<JsProgramFragment>(newFragments);
+        List<byte[]> deserializedFragmentsData = config.getConfiguration().get(JSConfigurationKeys.DESERIALIZED_FRAGMENTS);
+        if (deserializedFragmentsData != null) {
+            JsAstDeserializer deserializer = new JsAstDeserializer(translationResult.getProgram());
+            for (byte[] fragmentData : deserializedFragmentsData) {
+                allFragments.add(deserializer.deserialize(new ByteArrayInputStream(fragmentData)));
+            }
         }
 
-        program.getGlobalBlock().getStatements().add(program.getNumberLiteral(bytesTotal).makeStmt());
+        JsInliner.process(config, analysisResult.getBindingTrace(), translationResult.getInnerModuleName(), allFragments, newFragments);
+
+        Map<KtFile, FileTranslationResult> fileMap = new HashMap<KtFile, FileTranslationResult>();
+        JsAstSerializer serializer = new JsAstSerializer();
+        boolean serializeFragments = config.getConfiguration().get(JSConfigurationKeys.SERIALIZE_FRAGMENTS, false);
+        for (KtFile file : files) {
+            List<DeclarationDescriptor> scope = translationResult.getFileMemberScopes().get(file);
+            byte[] binaryAst = null;
+            if (serializeFragments) {
+                JsProgramFragment fragment = translationResult.getFragmentMap().get(file);
+                if (fragment != null) {
+                    ByteArrayOutputStream output = new ByteArrayOutputStream();
+                    serializer.serialize(fragment, output);
+                    binaryAst = output.toByteArray();
+                }
+            }
+            fileMap.put(file, new FileTranslationResult(file, scope, binaryAst));
+        }
 
         ResolveTemporaryNamesKt.resolveTemporaryNames(translationResult.getProgram());
         ProgressIndicatorAndCompilationCanceledStatus.checkCanceled();
@@ -120,7 +130,7 @@ public final class K2JSTranslator {
         ProgressIndicatorAndCompilationCanceledStatus.checkCanceled();
         if (hasError(diagnostics)) return new TranslationResult.Fail(diagnostics);
 
-        ExpandIsCallsKt.expandIsCalls(translationResult.getFragments());
+        ExpandIsCallsKt.expandIsCalls(newFragments);
         ProgressIndicatorAndCompilationCanceledStatus.checkCanceled();
 
         List<String> importedModules = new ArrayList<String>();
@@ -128,11 +138,6 @@ public final class K2JSTranslator {
             importedModules.add(module.getExternalName());
         }
         return new TranslationResult.Success(config, files, translationResult.getProgram(), diagnostics, importedModules,
-                                             moduleDescriptor, bindingTrace.getBindingContext());
-    }
-
-    private static String fragmentToString(JsProgramFragment fragment) {
-        return fragment.getDeclarationBlock().toString() + fragment.getInitializerBlock().toString() +
-               fragment.getExportBlock().toString();
+                                             moduleDescriptor, bindingTrace.getBindingContext(), fileMap);
     }
 }

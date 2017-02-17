@@ -17,9 +17,11 @@
 package org.jetbrains.kotlin.js.config;
 
 import org.jetbrains.kotlin.config.CompilerConfigurationKey;
+import org.jetbrains.kotlin.descriptors.PackageFragmentProvider;
 import org.jetbrains.kotlin.serialization.js.ModuleKind;
 
 import java.util.List;
+import java.util.Map;
 
 public class JSConfigurationKeys {
     public static final CompilerConfigurationKey<List<String>> LIBRARIES =
@@ -38,4 +40,13 @@ public class JSConfigurationKeys {
 
     public static final CompilerConfigurationKey<ModuleKind> MODULE_KIND =
             CompilerConfigurationKey.create("module kind");
+
+    // TODO: temporary code
+    public static final CompilerConfigurationKey<byte[]> FALLBACK_METADATA =
+            CompilerConfigurationKey.create("fallback metadata");
+
+    public static final CompilerConfigurationKey<List<byte[]>> DESERIALIZED_FRAGMENTS =
+            CompilerConfigurationKey.create("deserialized fragments");
+
+    public static final CompilerConfigurationKey<Boolean> SERIALIZE_FRAGMENTS = CompilerConfigurationKey.create("serialize fragments");
 }

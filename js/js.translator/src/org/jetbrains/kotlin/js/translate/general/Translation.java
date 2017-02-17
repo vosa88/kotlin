@@ -19,6 +19,7 @@ package org.jetbrains.kotlin.js.translate.general;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.kotlin.builtins.KotlinBuiltIns;
+import org.jetbrains.kotlin.descriptors.DeclarationDescriptor;
 import org.jetbrains.kotlin.descriptors.FunctionDescriptor;
 import org.jetbrains.kotlin.descriptors.ModuleDescriptor;
 import org.jetbrains.kotlin.idea.MainFunctionDetector;
@@ -56,10 +57,7 @@ import org.jetbrains.kotlin.types.KotlinType;
 import org.jetbrains.kotlin.types.TypeUtils;
 import org.jetbrains.kotlin.utils.ExceptionUtilsKt;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static org.jetbrains.kotlin.js.translate.general.ModuleWrapperTranslation.wrapIfNecessary;
 import static org.jetbrains.kotlin.js.translate.utils.BindingUtils.getFunctionDescriptor;
@@ -264,13 +262,18 @@ public final class Translation {
         JsName internalModuleName = program.getScope().declareName("_");
         Merger merger = new Merger(rootFunction, internalModuleName, moduleDescriptor);
 
+        Map<KtFile, JsProgramFragment> fragmentMap = new HashMap<KtFile, JsProgramFragment>();
         List<JsProgramFragment> fragments = new ArrayList<JsProgramFragment>();
+
+        Map<KtFile, List<DeclarationDescriptor>> fileMemberScopes = new HashMap<KtFile, List<DeclarationDescriptor>>();
         for (KtFile file : files) {
             StaticContext staticContext = new StaticContext(bindingTrace, config, moduleDescriptor);
             TranslationContext context = TranslationContext.rootContext(staticContext);
-            translateFile(context, file);
+            List<DeclarationDescriptor> fileMemberScope = new ArrayList<DeclarationDescriptor>();
+            translateFile(context, file, fileMemberScope);
             fragments.add(staticContext.getFragment());
             merger.addFragment(staticContext.getFragment());
+            fragmentMap.put(file, staticContext.getFragment());
         }
 
         JsProgramFragment testFragment = mayBeGenerateTests(files, config, bindingTrace, moduleDescriptor);
@@ -312,7 +315,7 @@ public final class Translation {
         block.getStatements().addAll(wrapIfNecessary(config.getModuleId(), rootFunction, importedModuleList, program,
                                                      config.getModuleKind()));
 
-        return new AstGenerationResult(program, internalModuleName, fragments, importedModuleList);
+        return new AstGenerationResult(program, internalModuleName, fragments, fragmentMap, fileMemberScopes, importedModuleList);
     }
 
     private static boolean isBuiltinModule(@NotNull List<JsProgramFragment> fragments) {
@@ -326,12 +329,18 @@ public final class Translation {
         return false;
     }
 
-    private static void translateFile(@NotNull TranslationContext context, @NotNull KtFile file) {
+    private static void translateFile(
+            @NotNull TranslationContext context,
+            @NotNull KtFile file,
+            @NotNull List<DeclarationDescriptor> fileMemberScope
+    ) {
         FileDeclarationVisitor fileVisitor = new FileDeclarationVisitor(context);
 
         try {
             for (KtDeclaration declaration : file.getDeclarations()) {
-                if (!AnnotationsUtils.isPredefinedObject(BindingUtils.getDescriptorForElement(context.bindingContext(), declaration))) {
+                DeclarationDescriptor descriptor = BindingUtils.getDescriptorForElement(context.bindingContext(), declaration);
+                fileMemberScope.add(descriptor);
+                if (!AnnotationsUtils.isPredefinedObject(descriptor)) {
                     declaration.accept(fileVisitor, context);
                 }
             }

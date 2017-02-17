@@ -16,12 +16,12 @@
 
 package org.jetbrains.kotlin.js.test
 
-import org.jetbrains.kotlin.js.backend.ast.JsProgram
 import com.intellij.openapi.util.io.FileUtil
 import com.intellij.openapi.util.text.StringUtil
 import com.intellij.openapi.vfs.StandardFileSystems
 import com.intellij.openapi.vfs.VirtualFileManager
 import com.intellij.psi.PsiManager
+import junit.framework.TestCase
 import org.jetbrains.kotlin.cli.common.messages.AnalyzerWithCompilerReport
 import org.jetbrains.kotlin.cli.common.messages.MessageRenderer
 import org.jetbrains.kotlin.cli.common.messages.PrintingMessageCollector
@@ -31,6 +31,7 @@ import org.jetbrains.kotlin.cli.jvm.compiler.KotlinCoreEnvironment
 import org.jetbrains.kotlin.config.*
 import org.jetbrains.kotlin.idea.KotlinFileType
 import org.jetbrains.kotlin.js.JavaScript
+import org.jetbrains.kotlin.js.backend.ast.JsProgram
 import org.jetbrains.kotlin.js.config.EcmaVersion
 import org.jetbrains.kotlin.js.config.JSConfigurationKeys
 import org.jetbrains.kotlin.js.config.JsConfig
@@ -52,6 +53,7 @@ import org.jetbrains.kotlin.test.KotlinTestUtils
 import org.jetbrains.kotlin.test.KotlinTestUtils.TestFileFactory
 import org.jetbrains.kotlin.test.KotlinTestWithEnvironment
 import org.jetbrains.kotlin.utils.DFS
+import org.jetbrains.kotlin.utils.KotlinJavascriptMetadataUtils
 import java.io.ByteArrayOutputStream
 import java.io.Closeable
 import java.io.File
@@ -92,7 +94,7 @@ abstract class BasicBoxTest(
                 val dependencies = module.dependencies.mapNotNull { modules[it]?.outputFileName(outputDir) + ".meta.js" }
 
                 val outputFileName = module.outputFileName(outputDir) + ".js"
-                generateJavaScriptFile(file.parent, module, outputFileName, dependencies, modules.size > 1)
+                generateJavaScriptFile(outputDir, file.parent, module, outputFileName, dependencies, modules.size > 1)
 
                 if (!module.name.endsWith(OLD_MODULE_SUFFIX)) outputFileName else null
             }
@@ -188,6 +190,7 @@ abstract class BasicBoxTest(
     }
 
     private fun generateJavaScriptFile(
+            outputDir: File,
             directory: String,
             module: TestModule,
             outputFileName: String,
@@ -204,10 +207,22 @@ abstract class BasicBoxTest(
         }
         val psiFiles = createPsiFiles(testFiles + globalCommonFiles + localCommonFiles + additionalCommonFiles)
 
-        val config = createConfig(module, dependencies, multiModule)
+        val config = createConfig(outputDir, module, dependencies, multiModule, filesToRecompile = null)
         val outputFile = File(outputFileName)
 
         translateFiles(psiFiles, outputFile, config)
+
+        if (module.hasFilesToRecompile) {
+            val filesToRecompile = module.files.filter { it.recompile }.map { it.fileName }.filter { it.endsWith(".kt") }
+            val recompiledConfig = createConfig(outputDir, module, dependencies, multiModule, filesToRecompile)
+            val recompiledOutputFile = File(outputFile.parentFile, outputFile.nameWithoutExtension + "-recompiled.js")
+
+            translateFiles(createPsiFiles(filesToRecompile), recompiledOutputFile, recompiledConfig)
+
+            val originalOutput = FileUtil.loadFile(outputFile)
+            val recompiledOutput = FileUtil.loadFile(recompiledOutputFile)
+            TestCase.assertEquals("Output file changed after recompilaction", originalOutput, recompiledOutput)
+        }
     }
 
     protected fun translateFiles(psiFiles: List<KtFile>, outputFile: File, config: JsConfig) {
@@ -234,6 +249,14 @@ abstract class BasicBoxTest(
             FileUtil.writeToFile(outputFile, wrappedContent)
         }
 
+        for (fileTranslationResult in translationResult.fileTranslationResults.values) {
+            val binaryAst = fileTranslationResult.binaryAst
+            if (binaryAst != null) {
+                val fragmentOutFile = File(outputDir, fileTranslationResult.file.viewProvider.virtualFile.path + "." + AST_EXTENSION)
+                FileUtil.writeToFile(fragmentOutFile, binaryAst)
+            }
+        }
+
         processJsProgram(translationResult.program, psiFiles)
     }
 
@@ -251,7 +274,10 @@ abstract class BasicBoxTest(
         return fileNames.map { fileName -> psiManager.findFile(fileSystem.findFileByPath(fileName)!!) as KtFile }
     }
 
-    private fun createConfig(module: TestModule, dependencies: List<String>, multiModule: Boolean): JsConfig {
+    private fun createConfig(
+            outputDir: File, module: TestModule, dependencies: List<String>,
+            multiModule: Boolean, filesToRecompile: List<String>?
+    ): JsConfig {
         val configuration = environment.configuration.copy()
 
         configuration.put(CommonConfigurationKeys.DISABLE_INLINE, module.inliningDisabled)
@@ -266,7 +292,25 @@ abstract class BasicBoxTest(
         configuration.put(JSConfigurationKeys.TARGET, EcmaVersion.v5)
 
         //configuration.put(JSConfigurationKeys.SOURCE_MAP, shouldGenerateSourceMap())
-        configuration.put(JSConfigurationKeys.META_INFO, multiModule)
+        val hasFilesToRecompile = module.hasFilesToRecompile
+        configuration.put(JSConfigurationKeys.META_INFO, multiModule || hasFilesToRecompile)
+        configuration.put(JSConfigurationKeys.SERIALIZE_FRAGMENTS, hasFilesToRecompile)
+
+        if (filesToRecompile != null) {
+            val oldMetadataFile = module.outputFileName(outputDir) + ".meta.js"
+            val metadata = KotlinJavascriptMetadataUtils.loadMetadata(oldMetadataFile).single()
+            configuration.put(JSConfigurationKeys.FALLBACK_METADATA, metadata.body)
+
+            val filesToSkip = filesToRecompile.map { it.removeSuffix(".kt") + "." + AST_EXTENSION }
+            val serializedFragments = mutableListOf<ByteArray>()
+            FileUtil.processFilesRecursively(outputDir) { file ->
+                if (file.isFile && file.extension == AST_EXTENSION && file.relativeTo(outputDir).path !in filesToSkip) {
+                    serializedFragments += FileUtil.loadFileBytes(file)
+                }
+                true
+            }
+            configuration.put(JSConfigurationKeys.DESERIALIZED_FRAGMENTS, serializedFragments)
+        }
 
         return LibrarySourcesConfig(project, configuration)
     }
@@ -307,7 +351,9 @@ abstract class BasicBoxTest(
                 currentModule.languageVersion = LanguageVersion.fromVersionString(version)
             }
 
-            return TestFile(temporaryFile.absolutePath, currentModule)
+            return TestFile(temporaryFile.absolutePath, currentModule).apply {
+                recompile = RECOMPILE_PATTERN.matcher(text).find()
+            }
         }
 
         override fun createModule(name: String, dependencies: List<String>): TestModule? {
@@ -323,6 +369,8 @@ abstract class BasicBoxTest(
         init {
             module.files += this
         }
+
+        var recompile = false
     }
 
     private class TestModule(
@@ -334,6 +382,8 @@ abstract class BasicBoxTest(
         var inliningDisabled = false
         val files = mutableListOf<TestFile>()
         var languageVersion: LanguageVersion? = null
+
+        val hasFilesToRecompile get() = files.any { it.recompile }
     }
 
     override fun createEnvironment(): KotlinCoreEnvironment {
@@ -347,6 +397,8 @@ abstract class BasicBoxTest(
         private val NO_MODULE_SYSTEM_PATTERN = Pattern.compile("^// *NO_JS_MODULE_SYSTEM", Pattern.MULTILINE)
         private val NO_INLINE_PATTERN = Pattern.compile("^// *NO_INLINE *$", Pattern.MULTILINE)
         private val SKIP_NODE_JS = Pattern.compile("^// *SKIP_NODE_JS *$", Pattern.MULTILINE)
+        private val RECOMPILE_PATTERN = Pattern.compile("^// *RECOMPILE *$", Pattern.MULTILINE)
+        private val AST_EXTENSION = "jsast"
 
         const val KOTLIN_TEST_INTERNAL = "\$kotlin_test_internal\$"
     }
