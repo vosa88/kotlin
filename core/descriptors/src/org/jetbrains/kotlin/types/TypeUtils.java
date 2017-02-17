@@ -304,7 +304,7 @@ public class TypeUtils {
         }
 
         for (KotlinType supertype : getImmediateSupertypes(type)) {
-            if (supertype.isMarkedNullable()) return true;
+            if (isNullableType(supertype)) return true;
             if (hasNullableSuperType(supertype)) return true;
         }
 
