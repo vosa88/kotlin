@@ -102,8 +102,8 @@ class KotlinSteppingCommandProvider : JvmSteppingCommandProvider() {
             // TODO: How to know coroutine for this suspend call if there're nested calls
             val file = sourcePosition.elementAt.containingFile
 
-            return DebugProcessImplHelper.createStepOverCommandWithCustomFilter(
-                    suspendContext, ignoreBreakpoints, KotlinSuspendCallStepOverFilter(sourcePosition.line, file))
+//            return DebugProcessImplHelper.createStepOverCommandWithCustomFilter(
+//                    suspendContext, ignoreBreakpoints, KotlinSuspendCallStepOverFilter(sourcePosition.line, file))
         }
 
         return null
